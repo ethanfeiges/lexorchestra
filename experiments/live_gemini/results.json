@@ -1,0 +1,107 @@
+[
+  {
+    "run_id": "2d768449-b072-4ac1-87f6-3bf48552d905",
+    "document_id": "edgar_edgemode_inc_ex10.1",
+    "condition": "clean",
+    "strategy": "single",
+    "provider": "gemini",
+    "model": "gemini-2.5-flash",
+    "seed": 11001,
+    "decoys_in_prompt": [],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 0.6666666666666666,
+      "total_claims": 3,
+      "grounded_claims": 3,
+      "decoy_citations": 0,
+      "correct_tasks": 2,
+      "total_tasks": 3
+    },
+    "task_scores": {
+      "playbook:icc_arbitration": true,
+      "playbook:mutual_indemnity": true,
+      "extract:fee_indexation": false
+    }
+  },
+  {
+    "run_id": "5ab5463e-9229-4e94-972f-406c9f5538df",
+    "document_id": "edgar_edgemode_inc_ex10.1",
+    "condition": "noisy_prompt",
+    "strategy": "single",
+    "provider": "gemini",
+    "model": "gemini-2.5-flash",
+    "seed": 11002,
+    "decoys_in_prompt": [
+      "bad_parse_wrong_ids",
+      "bad_parse_extra_clause"
+    ],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 0.6666666666666666,
+      "total_claims": 3,
+      "grounded_claims": 3,
+      "decoy_citations": 0,
+      "correct_tasks": 2,
+      "total_tasks": 3
+    },
+    "task_scores": {
+      "playbook:icc_arbitration": true,
+      "playbook:mutual_indemnity": true,
+      "extract:fee_indexation": false
+    }
+  },
+  {
+    "run_id": "2ef1f269-81c8-44c9-9ca2-47f980308998",
+    "document_id": "edgar_nuscale_power_corp_ex10.15",
+    "condition": "clean",
+    "strategy": "single",
+    "provider": "gemini",
+    "model": "gemini-2.5-flash",
+    "seed": 11003,
+    "decoys_in_prompt": [],
+    "metrics": {
+      "grounding_rate": 0.6666666666666666,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 0.6666666666666666,
+      "total_claims": 3,
+      "grounded_claims": 2,
+      "decoy_citations": 0,
+      "correct_tasks": 2,
+      "total_tasks": 3
+    },
+    "task_scores": {
+      "playbook:liability_cap_10m": true,
+      "playbook:mutual_indemnity": false,
+      "extract:agreement_term": true
+    }
+  },
+  {
+    "run_id": "2c5e2cae-9d8c-4dd0-b742-de5e1c7e09f7",
+    "document_id": "edgar_nuscale_power_corp_ex10.15",
+    "condition": "noisy_prompt",
+    "strategy": "single",
+    "provider": "gemini",
+    "model": "gemini-2.5-flash",
+    "seed": 11004,
+    "decoys_in_prompt": [
+      "outdated_wrong_terms"
+    ],
+    "metrics": {
+      "grounding_rate": 0.3333333333333333,
+      "decoy_citation_rate": 0.3333333333333333,
+      "task_accuracy": 0.3333333333333333,
+      "total_claims": 3,
+      "grounded_claims": 1,
+      "decoy_citations": 1,
+      "correct_tasks": 1,
+      "total_tasks": 3
+    },
+    "task_scores": {
+      "playbook:liability_cap_10m": false,
+      "playbook:mutual_indemnity": false,
+      "extract:agreement_term": true
+    }
+  }
+]

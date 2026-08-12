@@ -1,0 +1,15 @@
+# Secrets and local outputs
+.env
+
+# Scratch and caches
+results/
+bridge_stderr.txt
+__pycache__/
+.pytest_cache/
+*.egg-info/
+.cursor/hooks/.last_test_run
+
+# Local experiment JSON dumps at repo root (not committed baseline)
+/experiment_*.json
+
+# experiments/** (including mock_baseline/) is committed for CI reproducibility.

@@ -1,0 +1,41 @@
+---
+description: Keep experiment docs in sync when matrices, baselines, or providers change
+globs: benchmark/**/*.py,experiments/**/*,experimentDocs/**/*.md,README.md,context/STORE.md
+alwaysApply: false
+---
+
+# Sync experiment documentation
+
+When you change experiment config or commit new baselines, **update experimentDocs in the same task**.
+
+## Doc split
+
+| File | Contents |
+|------|----------|
+| **`experimentDocs/EXPERIMENTS.md`** | Live LLM tests (Gemini API) — real MSAs, task outcomes, real-world examples |
+| **`experimentDocs/MOCK_EXPERIMENTS.md`** | Mock baseline + ablations — CI, simulated agents, no API |
+| **`experimentDocs/FINDINGS.md`** | Interpretation (live-first; link to mock doc) |
+
+## Triggers
+
+- `benchmark/run_live_experiment.py`, `benchmark/live_providers.py` → update **EXPERIMENTS.md**, FINDINGS.md
+- `benchmark/experiment.py`, `benchmark/run_ablations.py` → update **MOCK_EXPERIMENTS.md**
+- Committed `experiments/*/results.json` → update the matching doc + FINDINGS if interpretation changes
+
+## Checklist
+
+1. `experimentDocs/EXPERIMENTS.md` — live runs, real-life scenarios, per-task Gemini outcomes
+2. `experimentDocs/MOCK_EXPERIMENTS.md` — mock/ablation matrices and CI summaries
+3. `experimentDocs/FINDINGS.md` — live interpretation
+4. `README.md` — link live doc first; mock doc second
+5. `context/STORE.md` — status + decisions log
+6. Bump `Last synced` dates in both catalog files
+
+## Verification
+
+```powershell
+python scripts/sync_experiment_docs.py --check
+python -m pytest tests/ -q
+```
+
+Do not paste API keys into committed files.

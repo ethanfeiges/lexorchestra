@@ -1,0 +1,1139 @@
+Exhibit
+10.1
+
+ 
+
+ 
+
+MASTER
+SERVICES AGREEMENT
+
+ 
+
+MASTER
+SERVICES AGREEMENT Number ASP0001 (this “Agreement”) is dated to be effective as of September 2, 2025, (the “Effective
+Date”), by and between Hungerford Consulting LLC d/b/a H4D Consulting (hereinafter “Consultant”), having its principal
+office at [REDACTED] and Aspira Women’s Health, Inc (hereinafter “Client,” each a “Party” and, together
+with Consultant, the “Parties”), having its principal office at Building III, 12117 Bee Caves Rd Suite 100, Austin, TX 78738.
+
+ 
+
+WITNESSETH:
+
+ 
+
+WHEREAS,
+the Consultant will provide certain services with regard to accounting services, systems design and implementation, project management,
+and process automation for and on behalf of the Client’s Business; and
+
+ 
+
+WHEREAS,
+Client desires to retain Consultant from time to time to provide such services, subject to the terms and conditions of this Agreement.
+
+ 
+
+NOW,
+THEREFORE, in consideration of the mutual promises and covenants set forth herein, and other consideration, the receipt and adequacy
+of which are hereby acknowledged, the Parties hereto agree as follows:
+
+ 
+
+1.
+Scope. This Agreement shall serve as a master agreement and shall govern and control with respect to all services performed
+by Consultant for Client, unless the Parties agree otherwise in a later, separate, project-specific written agreement, in which case,
+such agreement shall control solely with respect to that specific project as provided for therein. The services, as described in a signed
+Statement of Work, which Consultant shall render under this Agreement shall be as an independent contractor. Nothing contained in this
+Agreement shall be construed to create the relationship of servant, employee, partnership or joint venture between the Parties. Except
+as provided herein or otherwise agreed to by the Parties in writing, neither Party shall have any authority to bind the other Party to
+any commitment, contract, agreement or other obligation. All Assigned Employees, including Brian Hungerford, are solely employees of
+Consultant and are not employees of Client.
+
+ 
+
+2.
+Certain Definitions.
+
+ 
+
+“Affiliate”
+means, with respect to any Person, any other Person that directly, or indirectly through one or more intermediaries, controls or is controlled
+by or is under common control with the Person specified, or is an immediate family member of such Person or an Affiliate thereof. The
+term “control” (including the terms “controlling”, “controlled by” and “under common control
+with”) means possession, direct or indirect, of the power to direct or cause the direction of the management and policies of a
+Person, whether through the ownership of voting securities, by contract or otherwise.
+
+ 
+
+Certain
+identified information has been excluded from this exhibit because it is both (1) not material and (2) is the type that the registrant
+treats as private or confidential.
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+MASTER
+SERVICES AGREEMENT
+
+ 
+
+“Cause”
+shall mean, without limitation: (i) Consultant’s material breach of this Agreement or any written policy of Client; (ii) Consultant’s
+gross negligence, willful misconduct, fraud, dishonesty, or misappropriation relating to Client’s business; (iii) Consultant’s
+conviction of, or plea of guilty or nolo contendere to, a felony or any crime involving moral turpitude; (iv) Consultant’s failure
+or refusal to perform assigned duties or to comply with lawful directives of Client, which remains uncured (if curable) for ten (10)
+days after written notice; or (v) any act or omission by Consultant that, in the reasonable judgment of Client, materially harms or could
+reasonably be expected to materially harm Client’s business, reputation, or goodwill. In the event of a termination for Cause,
+Consultant shall not be entitled to any further payments, fees, bonus, severance, or benefits of any kind following the effective date
+of termination, except for accrued but unpaid amounts properly invoiced and earned through the termination date.
+
+ 
+
+“Completion”
+for Statements of Work shall mean that date when Client accepts all Deliverables as provided for in Section 5(d) from such Statement
+of Work.
+
+ 
+
+“Consultant
+Personnel” means, individually and collectively, Consultant’s employees, subcontractors, suppliers, or agents engaged
+to perform services under this Agreement; provided, however, that the primary individual as assigned by Consultant to perform services
+on a full time basis at Client, Brian Hungerford shall not be considered Consultant Personnel for purposes of any non-solicitation or
+fee-based provisions. The Parties agree that Consultant Personnel, including Brian Hungerford, are not employees of Client and shall
+not be entitled to holidays, vacations, disability, insurance, pensions, retirement plan participation or any other benefits offered
+or provided by Client to its own employees, except as expressly provided by a signed written agreement between Client and Consultant.
+The Parties further agree that Consultant’s assignment of Brian Hungerford to perform services on a full time basis for Client
+is a material term of this Agreement.
+
+ 
+
+“Deliverables”
+shall mean those items prepared by Consultant for Client pursuant to this Agreement, including preliminary work products, regardless
+of whether such items are actually delivered to Client.
+
+ 
+
+“Person”
+shall mean an individual, corporation, limited liability company, partnership, unincorporated association, trust, joint venture or other
+organization or entity.
+
+ 
+
+3.
+Term and Termination.
+
+ 
+
+(a)
+Term. This Agreement shall commence on the Effective Date and shall, unless terminated sooner in accordance with the terms
+of this Agreement or extended by agreement between the Parties, expire one (1) year after the date upon which all Statements of Work
+have either expired or been completed, such date, in the event of disagreement, to be determined by Client. Each Statement of Work shall
+commence on the date specified therein and unless terminated earlier by Client in accordance with the terms of this Agreement continue
+for the duration specified therein.
+
+ 
+
+Page 2 of 15
+
+ 
+
+ 
+
+ 
+
+MASTER
+SERVICES AGREEMENT
+
+ 
+
+(b)
+Statements of Work. Unless otherwise provided for in the relevant Statement of Work, all Statements of Work may be terminated
+immediately upon thirty (30) days’ written notice from Consultant to Client. Unless otherwise specified in the notice, notice of
+termination of the Agreement as provided for in Section 3(d) shall constitute a notice of termination of all outstanding Statements
+of Work. Statements of Work shall terminate upon Completion but in no event later than the thirty day notice period referenced herein.
+
+ 
+
+(c)
+Severance: In the event the Client terminates Consultant’s engagement for reasons other than for Cause at any time
+following the date which is (a) six (6) months or (b) twelve (12) months following the Effective Date, and provided that Consultant signs
+and does not revoke a standard separation agreement release of all claims against the Client, in a form reasonably satisfactory to the
+Client, does not breach any provision of this Agreement, and continues to comply with the Clients Proprietary Information and Inventions
+Agreement, Consultant shall be entitled to receive:
+
+ 
+
+(i)
+After six (6) months of engagement, continued payment of Consultant’s base salary as then in effect for a period of three (3) months
+following the date of termination (the “Severance Period”), to be paid periodically in accordance with the Client’s
+standard payroll practices, provided that Consultant shall immediately repay to the Client any amounts that Consultant receives hereunder
+if within sixty (60) days following termination of Consultant’s engagement Consultant either has failed to execute the standard
+release described above or has revoked the general release after its execution; and
+
+ 
+
+(ii)
+After twelve (12) months of engagement, continued payment of Consultant’s base salary as then in effect for a period of six (6)
+months following the date of termination (the “Severance Period”), to be paid periodically in accordance with the Client’s
+standard payroll practices, provided that you shall immediately repay to the Client any amounts that Consultant receives hereunder if
+within sixty days following termination of Consultant’s engagement Consultant either has failed to execute the standard release
+described above or has revoked the general release after its execution; and
+
+ 
+
+(iii)
+Consultant will not be eligible for any bonus or other benefits not described above after termination, except as may be required by law.
+
+ 
+
+(d)
+Termination after Change of Control. If Consultant’s engagement is terminated by the Client for reasons other than for Cause
+within the twelve (12) month period following a Change of Control (as defined below), then, in addition to the severance obligations
+due to Consultant under Section 3(c) above (disregarding the six (6) month and twelve (12) month probationary periods set forth in this
+Section 3), one-hundred percent (100%) of any then-unvested shares under Client equity compensation program held by Consultant will vest
+upon the date of such termination and the period of time for their exercise will be at the discretion of the Client, but in no event
+with less than 30 days’ notice, provided that no option shall be exercisable after expiration of its original term. It may very
+well be necessary for the Consultant to exercise such shares on the day of Change in Control, and the Client shall use its best efforts
+to provide Consultant with a reasonable period of advance written notice in such event.
+
+ 
+
+Page 3 of 15
+
+ 
+
+ 
+
+ 
+
+MASTER
+SERVICES AGREEMENT
+
+ 
+
+(e)
+Obligations of the Client Upon Termination.
+
+ 
+
+Upon
+the termination of this Agreement: the Client shall have no further obligations hereunder other than the payment of all fees and pre-approved
+expenses payable to the Consultant through the date of such termination, all of which shall be paid within 15 days. (provided that in
+the case of a termination by the Client Consultant shall be entitled to receive payment of any bonus earned in the year prior to the
+year of termination but that is unpaid as of the termination date, to be paid at the same time such bonus would have been paid if no
+such termination had occurred (the “Earned But Unpaid Bonus”) and (2) all unvested stock options and RSUs will all vest upon
+the termination date and the time for the Consultant to exercise all options granted and vested shall be equal to the term of the option
+(the “Termination Options”). Any other payments or equity vesting, will be governed solely by the applicable Statement
+of Work or a separate written agreement between the Parties. The Client shall have no obligation to provide post-termination payments,
+equity or benefits except as expressly stated in such documents.
+
+ 
+
+(f)
+Resignation as Officer and Director. Upon termination of this Agreement and the Consultant’s engagement hereunder
+for any reason by either party, the Consultant Personnel, including Brian Hungerford, shall be deemed to have resigned from all offices
+and positions they may hold with the Client at such time including without limitation Board membership and/or positions as an officer
+of the Client.
+
+ 
+
+(g)
+No Further Liability. Upon notice of termination of this Agreement or any Statement of Work, Client shall only be required
+to pay Consultant the amount that would otherwise be owed under this Agreement through the date of termination.
+
+ 
+
+4.
+Compensation and Payment.
+
+ 
+
+(a)
+Payment Terms. Each Statement of Work shall establish the rates to be paid.
+
+ 
+
+(b)
+Invoicing and Payment. Invoices will be submitted semi-monthly on the 15th and 30th of each month
+in US Dollars (USD) and payment shall be remitted in USD by ACH as set forth in Appendix A. Invoices will be sent to accountspayable@aspirawh.com
+.
+
+ 
+
+Invoices
+shall be payable within five (5) days of receipt. In the event of a good-faith dispute over any invoiced amount, the Client shall promptly
+notify Consultant and may withhold the disputed portion until resolved. Any undisputed amounts not paid within thirty (30) days
+of the invoice date shall accrue interest at the lesser of 1.0% per month (12% annually) or the maximum rate permitted by law.
+Consultant shall not assess any penalty or refer unpaid invoices for collection without first notifying Client in writing and allowing
+ten (10) business days to cure.
+
+ 
+
+Page 4 of 15
+
+ 
+
+ 
+
+ 
+
+MASTER
+SERVICES AGREEMENT
+
+ 
+
+(c)
+Disputes. In the event the Client disputes one or more items in an invoice, Client shall, within fifteen (15) days of receipt
+of such invoice, notify Consultant of the item or items under dispute and the reasons therefore. Client may withhold payment of such
+disputed items until settlement of the dispute but shall otherwise pay all undisputed amounts due and owing.
+
+ 
+
+(d)
+Business Expenses. The Client will reimburse the Consultant for reasonable travel, entertainment, and other pre-approved
+expenses incurred by the Consultant in the furtherance of the performance of the Consultant’s duties hereunder, in accordance with
+the Client’s expense reimbursement policy for Consultants as in effect from time to time, or as expressly agreed in writing, provided,
+however, that the Client will make the reimbursement only if the corresponding expense was pre-approved, incurred during the term of
+this Agreement, and the reimbursement is made on or before the last day of the calendar year following the calendar year in which the
+expense is incurred, the amount of expenses eligible for such reimbursement during a calendar year will not affect the amount of expenses
+eligible for such reimbursement in another calendar year, and the right to such reimbursement is not subject to liquidation or exchange
+for another benefit from the Client.
+
+ 
+
+5.
+Statements of Work. Statements of Work shall be written and executed by both Parties. Statements of Work shall specify, at
+a minimum: requirements for services; deliverables to be tendered; and payment terms.
+
+ 
+
+a.
+Scope. Statements of Work shall serve to provide project-specific terms and shall be limited in scope to individual projects.
+Unless explicitly provided for in this Agreement or referred by Section number in the relevant Statement of Work, Statements of Work
+shall not serve to alter or modify the terms of this Agreement, and in the event of a conflict of any terms, this Agreement shall control.
+
+ 
+
+b.
+Project Log. Consultant shall maintain a Project Log for the Statement of Work. Such Project Log shall contain, at a minimum:
+
+ 
+
+i.
+A summary of the overall progress of the Statement of Work to date along with a report of any problems encountered and how such problems
+were resolved, if so resolved, or a plan for resolving such problems along with a timeframe for resolution; and
+
+ 
+
+ii.
+Any description of any additional items, materials, and/or assistance that Consultant needs from Client or Client Personnel.
+
+ 
+
+Page 5 of 15
+
+ 
+
+ 
+
+ 
+
+MASTER
+SERVICES AGREEMENT
+
+ 
+
+6.
+Surrender of Records and Materials. Upon the termination of this Agreement for any reason whatsoever or upon demand at any
+time by the Client, whichever occurs first, Consultant shall promptly return to the Client all Client property, including, but not limited
+to, capital equipment, product samples, formulation data, test results of any kind, statistical data, sales or marketing manuals, pricing
+data, copies of invoices and mailing lists pertaining to services. Consultant acknowledges that all of the foregoing items are the Client’s
+property. Consultant further agrees that on termination of this Agreement, for any reason whatsoever, Consultant shall deliver to the
+Client, in good condition, all records kept by Consultant that contain the names, addresses and other information with regard to the
+Client’s customers or potential customers served by Consultant. Consultant acknowledges that these items are also the Client’s
+property, except for those names, addresses and information that were in possession of the Consultant prior to the execution of this
+agreement.
+
+ 
+
+7.
+Indemnification and D&O Coverage:
+
+ 
+
+(a)
+Coverage. The Company will indemnify and hold harmless Consultant, and Consultant Personnel, including Brian Hungerford, for actions
+taken in Consultant Personnel/Brian Hungerford’s capacity as a duly authorized officer of the Client, to the fullest extent permitted
+by law, subject to the terms and limitations of the Client’s indemnification policies and governing documents. Consultant shall
+be entitled to coverage under the Client’s Directors and Officers insurance policy to the extent such policy extends to non-employee
+officers, on terms no less favorable than those provided to other officers of the Client. For the avoidance of doubt, the Client does
+not agree to provide separate or extended tail coverage following the termination of Consultant’s services.
+
+ 
+
+(b)
+Limitations. Notwithstanding the foregoing, the Client shall have no obligation to indemnify Consultant, Consultant Personnel and/or
+Brian Hungerford or provide insurance coverage for any claim, liability, or expense arising from (i) acts or omissions that were outside
+the scope of their authorized duties as an officer of the Client; (ii) gross negligence, willful misconduct, fraud, or criminal activity;
+(iii) any violation of Client policy or applicable law; or (iv) any matter for which indemnification is prohibited by applicable law.
+The Client shall have the right to determine, in good faith and in its sole discretion, whether an act or omission falls within the scope
+of authorized duties for purposes of indemnification and insurance coverage.
+
+ 
+
+(c)
+Consultant’s Indemnification. Consultant agrees to defend, indemnify, and hold Client, its owners, directors, officers,
+employees and agents harmless from any and all third party demands, claims, actions, suits, proceedings, costs, expenses, damages and
+liabilities including any claims or demands by any government agencies as well as by any employees assigned to Client (including reasonable
+attorney’s fees) arising out of the fault, negligence, omission, gross negligence, or recklessness of Consultant or Consultant
+Personnel including Brian Hungerford, or which arise from Consultant’s breach of this Agreement or which arise from an injury to
+any employee assigned to Client including Brian Hungerford, irrespective of fault or causation. Consultant specifically waives any statutory
+immunity conferred upon it as an employer under any workers’ compensation laws).
+
+ 
+
+Page 6 of 15
+
+ 
+
+ 
+
+ 
+
+MASTER
+SERVICES AGREEMENT
+
+ 
+
+8.
+Restrictive Covenants. Consultant including Brian Hungerford acknowledges that in the course of this engagement, they will
+have extensive contact with customers, vendors, suppliers, and/or access to confidential or proprietary information relating to customers,
+suppliers, vendors and confidential financial information as well as information related to Client’s employees. Consultant including
+Brian Hungerford also acknowledge Client’s need to protect its good will with its customers, vendors, suppliers and other third
+parties. Consultant including Brian Hungerford further understands that they have obligations not to interfere with Client’s business
+relationships with customers, vendors, suppliers and its employees and that those obligations continue beyond this engagement. Therefore,
+in consideration of the terms set forth in this Agreement, which the parties both acknowledge is good, valuable, and sufficient consideration
+Consultant, including Brian Hungerford both expressly agree that:
+
+ 
+
+(a)
+From the date of this Agreement through two years following the end of engagement, Consultant including Brian Hungerford will not, for
+themselves or on behalf of any other person, firm, partnership, corporation, association, or any other entity, engage in, or become interested
+in, directly or indirectly, any Business which is in competition with Client or its related entities, whether as a principal, partner,
+agent, executive, director, officer, contractor, distributor, or in any other capacity. For the purposes of this Agreement, “Business”
+means any business, whether via an entity or individual involved in any way in gynecologic or women’s health diagnostic devices
+or services.
+
+ 
+
+(b)
+From the date of this Agreement through two years following the end of engagement, Consultant, including Brian Hungerford, will not,
+for themselves or on behalf of any other person, firm, partnership, corporation, association, or any other entity, whether as a principal,
+partner, agent, executive, director, officer, contractor, distributor, or in any other capacity, initiate contact with and/or call upon
+any customers, suppliers or vendors of Client or any others doing business with Client or its related entities, (collectively “Client’s
+Business Partners”) for the purpose of soliciting Business from Client, or diverting or taking away such Business from Client or
+any of its related entities.
+
+ 
+
+(c)
+From the date of this Agreement through two years following the end of this engagement, Consultant including Brian Hungerford, will not
+either directly or indirectly, whether as a principal, partner, agent, executive, director, officer, contractor, distributor, or in any
+other capacity, solicit or entice any employee of Client or its related entities to leave the employment of Client or any of its related
+entities.
+
+ 
+
+Consultant
+including Brian Hungerford agree and acknowledge that the restrictions in this Agreement are reasonable in scope, area, and duration,
+given the highly competitive nature of Client’s business and are required for Client’s protection of its legitimate business
+interests in its customer, prospective customer, vendor, supplier, contractor and employee relationships, and will not result in any
+undue hardship for Consultant including Brian Hungerford.
+
+ 
+
+The
+time frames referenced in this Section 6 Non-Competition/Non-Solicitation provision of this Agreement shall be tolled and extended during
+any period in which Consultant including Brian Hungerford is in violation of this Section 6 and that all restrictions set forth in this
+Section 6 shall automatically be extended by the period Consultant including Brian Hungerford is in violation of any such restrictions.
+
+ 
+
+Page 7 of 15
+
+ 
+
+ 
+
+ 
+
+MASTER
+SERVICES AGREEMENT
+
+ 
+
+9.
+Confidentiality.
+
+ 
+
+(a)
+Purpose. Each Party hereto may disclose to the other certain confidential technical and business information which the
+Disclosing Party desires the Receiving Party to treat as confidential.
+
+ 
+
+(b)
+“Confidential Information” means all information, whether in written, verbal, graphic, electronic and any other
+form, that is valuable and not generally known by Disclosing Party’s competitors, nor is available in the public domain including
+without limitation, business plans, forecasts, information strategies, projections or analyses, software, hardware or systems designs,
+specifications, data processes, documentation, architecture, structure, protocols and customer information, plans, programs, plants,
+processes, equipment, instruments, costs, operations, materials, compounds, formulations, annual or quarterly financial reports or other
+financial information, balance sheets, and profit and loss statements, disclosed by one Party (the “Disclosing Party”) to
+the other (the “Receiving Party”) which is designated as “Confidential,” “Proprietary” or some similar
+designation, provided, that the failure to so mark information shall not prevent its being treated as Confidential Information if it
+is reasonably clear that the information is commercially sensitive information. Confidential Information shall not, however, include
+any information which (i) was publicly known and made generally available in the public domain prior to the time of disclosure by the
+Disclosing Party; (ii) becomes publicly known and made generally available after disclosure by the Disclosing Party to the Receiving
+Party through no action or inaction of the Receiving Party; (iii) is already in the possession of the Receiving Party at the time of
+disclosure by the Disclosing Party as shown by the Receiving Party’s files and records immediately prior to the time of disclosure;
+(iv) is obtained by the Receiving Party from a third Party without a breach of such third Party’s obligations of confidentiality;
+(v) is independently developed by the Receiving Party without use of or reference to the Disclosing Party’s Confidential Information,
+as shown by documents and other competent evidence in the Receiving Party’s possession; or (vi) is required by law to be disclosed
+by the Receiving Party, provided that the Receiving Party gives the Disclosing Party prompt written notice of such requirement prior
+to such disclosure and cooperation in Disclosing Party’s efforts to obtain an order protecting the information from public disclosure,
+provided that, after providing notice to Disclosing Party, Receiving Party may disclose such Confidential Information required by law
+when it is advised by counsel to do so.
+
+ 
+
+(c)
+Non-use and Non-disclosure. The Receiving Party agrees not to use any Confidential Information of the Disclosing Party
+for any purpose except in connection with business relationship and services provided by and between the Parties. The Receiving Party
+agrees to disclose any Confidential Information of the Disclosing Party only to the Receiving Party’s employees, agents, or contractors
+who are required to have the information for the permissible uses of set forth above and have agreed to keep such information confidential
+in accordance with this Agreement. The Receiving Party shall not reverse engineer, disassemble or decompile any prototypes or other tangible
+objects which embody the Disclosing Party’s Confidential Information.
+
+ 
+
+Page 8 of 15
+
+ 
+
+ 
+
+ 
+
+MASTER
+SERVICES AGREEMENT
+
+ 
+
+(d)
+Maintenance of Confidentiality. The Receiving Party agrees that it shall take at least those measures that it takes to
+protect its own Confidential Information, which in no event shall be less protective than reasonable measures, to protect the secrecy
+of and avoid disclosure and unauthorized use of the Confidential Information of the Disclosing Party. If copies of Confidential Information
+are made, each Party shall reproduce the other Party’s proprietary rights notices (if any) on any such copies, in the same manner
+in which such notices were set forth in or on the original.
+
+ 
+
+(e)
+No obligation. Nothing herein shall obligate either Party to proceed with a Transaction between them, and each Party reserves
+the right, in its sole discretion, to terminate the discussions contemplated by this Agreement concerning a Transaction.
+
+ 
+
+(f)
+Return of Materials. All documents and other tangible objects containing or representing Confidential Information which
+have been disclosed by either Party to the other Party, and all copies thereof which are in the possession of the other Party, shall
+be and remain the property of the Disclosing Party and shall be promptly returned to the Disclosing Party or destroyed upon the Disclosing
+Party’s written request. Notwithstanding the return or destruction of the Confidential Information, each Party will continue to
+be bound by its obligations of the confidentiality and other obligations hereunder.
+
+ 
+
+(g)
+No License. Nothing in this Agreement is intended to grant any rights to either Party under any patent, trademark, service
+mark or copyright of the other Party, nor shall this Agreement grant any Party any rights in or to the Confidential Information of the
+other Party except as expressly set forth herein.
+
+ 
+
+10.
+Consultant Representations, Covenants; Performance. Consultant represents, warrants and covenants to the Client as follows:
+(i) it shall use established, sound and professional principles and practices in accordance with the customary professional and industry
+standards; (ii) all work product shall be of professional quality, technical accuracy and completeness; (iii) Consultant shall comply
+with all applicable laws, ordinances, codes and regulations in performing the services under this Agreement; (iv) Consultant shall withhold
+all necessary taxes incident to the employer-employee relationship, and pay all such related employer taxes, assessments and other legal
+obligations with respect to Consultant Personnel including Brian Hungerford and indemnify Client for all such employer related taxes
+and assessments and legal obligations including but not limited to FICA; and (v) this Agreement will not violate any other agreement
+to which Consultant, or Consultant Personnel including Brian Hungerford are or becomes a Party, nor any law, court order or decree to
+which Consultant is subject. Consultant further represents that it is an equal employment opportunity employer and is and will remain
+in full compliance with any and all applicable anti-discrimination laws, rules, and regulations. Consultant and Consultant Personnel
+including Brian Hungerford agree not to harass, discriminate against, or retaliate against any employee of Client because of race, national
+origin, age, sex, religion, disability, marital status, sexual orientation, gender identity or other category protected by law; In the
+event of any complaint of unlawful discrimination, harassment, or retaliation by any ASSIGNED EMPLOYEE, Consultant including Brian Hungerford
+agree to cooperate in the prompt investigation and resolution of such complaint.
+
+ 
+
+Page 9 of 15
+
+ 
+
+ 
+
+ 
+
+MASTER
+SERVICES AGREEMENT
+
+ 
+
+11.
+Notices. All notices and other communications under this Agreement shall be in writing and shall be deemed duly given (i)
+when delivered personally or by prepaid overnight courier, with a record of receipt, (ii) the 4th day after mailing if mailed by certified
+mail, return receipt requested, or (iii) the day of transmission, if sent by email during regular business hours, or the day after transmission,
+if sent after regular business hours (with a copy promptly sent by prepaid overnight courier with record of receipt or by certified mail,
+return receipt requested), to Consultant and the Client at their respective addresses or emails set forth below (or to such other address
+or email as each Party may have specified by notice given to the other Party pursuant to this provision):
+
+ 
+
+ 
+
+If
+    to the Consultant, addressed to:
+
+ 
+
+Hungerford
+    Consulting LLC
+
+ 
+
+ 
+
+ 
+
+c/o
+    Brian Hungerford
+
+ 
+
+ 
+
+ 
+
+[REDACTED]
+
+ 
+
+ 
+
+ 
+
+[REDACTED]
+
+ 
+
+ 
+
+ 
+
+Email:
+    brian@h4dconsulting.com
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+With
+    a copy to:
+
+ 
+
+George
+    A. Kurisky, Jr.
+
+ 
+
+ 
+
+ 
+
+1221
+    Lamar Street, Suite 1000
+
+ 
+
+ 
+
+ 
+
+Houston,
+    Texas 77010
+
+ 
+
+ 
+
+ 
+
+Email:
+    gkurisky@jdkglaw.com
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+If
+    to the Client, addressed to:
+
+ 
+
+Aspira
+    Women’s Health, Inc.
+
+ 
+
+ 
+
+ 
+
+c/o
+    Michael Buhle
+
+ 
+
+ 
+
+ 
+
+3
+    Enterprise Dr. Ste 220
+
+ 
+
+ 
+
+ 
+
+Shelton
+    CT 06484
+
+ 
+
+ 
+
+ 
+
+Address
+    line 2 (from above)
+
+ 
+
+ 
+
+ 
+
+Email:
+    mbuhle@aspirawh.com
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+With
+    an email copy to:
+
+ 
+
+John
+    Kallassy
+
+ 
+
+ 
+
+ 
+
+jkallassy@aspirawh.com
+
+ 
+
+12.
+Amendments and Waivers. This Agreement may be amended, supplemented, or changed, and any provision hereof may be waived, only
+by written instrument making specific reference to this Agreement signed by the Party against whom enforcement of any such amendment,
+supplement, modification or waiver is sought. No action taken pursuant to this Agreement, including, without limitation, any investigation
+by or on behalf of a Party, shall be deemed to constitute a waiver by the Party taking such action of compliance with any representation,
+warranty, covenant or agreement contained herein. The waiver by a Party of a breach of any provision of this Agreement shall not operate
+or be construed as a further or continuing waiver of such breach or as a waiver of any other or subsequent breach. No failure on the
+part of a Party to exercise, and no delay in exercising, any right, power or remedy hereunder shall operate as a waiver thereof, nor
+shall any single or partial exercise of such right, power or remedy by such Party preclude any other or further exercise thereof or the
+exercise of any other right, power or remedy. All remedies hereunder are cumulative and are not exclusive of any other remedies provided
+by applicable law.
+
+ 
+
+Page 10 of 15
+
+ 
+
+ 
+
+ 
+
+MASTER
+SERVICES AGREEMENT
+
+ 
+
+13.
+No Presumption against Drafter. Each of the Parties has jointly participated in the negotiation and drafting of this Agreement.
+In the event there arises any ambiguity or question of intent or interpretation with respect to this Agreement, this Agreement shall
+be construed as if drafted jointly by both Parties and no presumptions or burdens of proof shall arise favoring any Party by virtue of
+the authorship of any of the provisions of this Agreement.
+
+ 
+
+14.
+Interpretation. The headings preceding the text of sections and subsections included in this Agreement are for convenience
+only and shall not be deemed part of this Agreement or be given any effect in interpreting this Agreement. The use of the masculine,
+feminine or neuter gender herein shall not limit any provision of this Agreement. The use of the terms “including” or “include”
+shall in all cases herein mean “including, without limitation” or “include, without limitation,” respectively.
+References to any “Section” shall refer to a section of this Agreement. The symbol “$” shall be deemed to mean
+United States dollars.
+
+ 
+
+15.
+Nonassignability. Neither Party may assign this Agreement or of any rights or obligations hereunder (by operation of law or
+otherwise) without the prior written consent of the other Party and any attempted assignment without the required consent shall be void.
+
+ 
+
+16.
+Binding Effect. This Agreement shall be binding upon and inure to the benefit of the Parties and their respective successors
+and permitted assigns consistent with the above Section 13. Except as disclosed in Section 9, nothing in this Agreement shall
+create or be deemed to create any third-Party beneficiary rights in any person or entity not a Party to this Agreement.
+
+ 
+
+17.
+Equitable Remedies. Consultant acknowledges that should Consultant, or Consultant Personnel including Brian Hungerford violate
+any of the Restrictive Covenants, it will be difficult to determine the resulting damages to the Client and, in addition to any other
+remedies the Client may have, (a) the Client shall be entitled to temporary injunctive relief without being required to post a bond and
+permanent injunctive relief without the necessity of proving actual damage; and (b) the Client shall have the right to offset payments
+of compensation hereunder to the extent of any money damages incurred or suffered by the Client which have been agreed to by the Client
+and Consultant in writing or determined with finality by a court of competent jurisdiction. Consultant shall be liable to pay all costs
+including reasonable attorneys’ fees and expenses which the Client may incur in enforcing or defending, to any extent, any of the
+Restrictive Covenants, including litigation of any appeal taken or defended by the Client where such Party succeeds in enforcing any
+of the Restrictive Covenants. The Client may elect to seek one or more of these remedies at its sole discretion on a case-by-case basis.
+Failure to seek any or all remedies in one case shall not restrict the Client from seeking any remedies in another situation. Such action
+by the Client shall not constitute a waiver of any of its rights.
+
+ 
+
+Page 11 of 15
+
+ 
+
+ 
+
+ 
+
+MASTER
+SERVICES AGREEMENT
+
+ 
+
+18.
+Governing Law. THIS AGREEMENT, THE RIGHTS AND OBLIGATIONS OF THE PARTIES HEREUNDER, ANY CLAIM OR CONTROVERSY DIRECTLY OR INDIRECTLY
+BASED UPON OR ARISING OUT OF THIS AGREEMENT (WHETHER BASED ON CONTRACT, TORT, OR ANY OTHER THEORY), INCLUDING ALL MATTERS OF CONSTRUCTION,
+VALIDITY AND PERFORMANCE, SHALL IN ALL RESPECTS BE GOVERNED BY AND INTERPRETED, CONSTRUED, AND DETERMINED IN ACCORDANCE WITH, THE APPLICABLE
+PROVISIONS OF THE INTERNAL LAWS OF THE STATE OF TEXAS (EXCEPTING THE CHOICE OF LAW RULES OF SUCH STATE).
+
+ 
+
+19.
+Mediation and Alternate Dispute Resolution Procedures.
+
+ 
+
+a.
+Amicable Dispute Resolution. In the event a dispute is submitted by one Party to the other to include Consultant Personnel/Brian
+Hungerford, in writing (the “Dispute Notice”), the Parties shall, within ten (10) days, make a good faith effort to meet,
+actively discuss, and attempt to amicably resolve any outstanding issues.
+
+ 
+
+b.
+Mediation. In the event the Parties are unable to amicably resolve any dispute arising out of or in connection with this
+Agreement, the Parties, including Consultant Personnel and Brian Hungerford, agree to submit the matter to mediation, not later than
+forty-five (45) days after the Dispute Notice, prior to the institution of any arbitration proceedings. Such mediation shall be conducted
+exclusively in Connecticut, before a mediator agreed upon by the Parties. Costs for the mediator shall be borne equally by the Parties.
+Each Party shall bear its own legal costs and other expenses related to any dispute.
+
+ 
+
+c.
+Arbitration. If the dispute has not been settled pursuant to mediation, within forty-five (45) days or within such other
+period as the Parties may agree in writing, such dispute, except as provided below, shall be finally settled under the Rules of the American
+Arbitration Association (the “Arbitration Rules”) by one or more arbitrators appointed in accordance with the Arbitration
+Rules.
+
+ 
+
+d.
+Place of Arbitration. Unless otherwise agreed by all Parties to the arbitration, the arbitration shall be conducted in
+Connecticut.
+
+ 
+
+e.
+Language. The arbitration proceedings shall be conducted in the English language with appropriate arrangements made for
+the translation of any oral testimony.
+
+ 
+
+Page 12 of 15
+
+ 
+
+ 
+
+ 
+
+MASTER
+SERVICES AGREEMENT
+
+ 
+
+20.
+Waiver of Jury Trial. THE PARTIES INCLUDING CONSULTANT PERSONNEL/BRIAN HUNGERFORD, HEREBY IRREVOCABLY AND UNCONDITIONALLY
+WAIVE, TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, ANY RIGHT THAT THEY MAY HAVE TO TRIAL BY JURY OF ANY CLAIM OR CAUSE OF ACTION,
+OR IN ANY LEGAL PROCEEDING, DIRECTLY OR INDIRECTLY BASED UPON OR ARISING OUT OF THIS AGREEMENT OR THE TRANSACTIONS CONTEMPLATED BY THIS
+AGREEMENT (WHETHER BASED ON CONTRACT, TORT, OR ANY OTHER THEORY). EACH PARTY (A) CERTIFIES THAT NO REPRESENTATIVE, AGENT, ATTORNEY OF
+THE OTHER PARTY HAS REPRESENTED, EXPRESSLY OR OTHERWISE, THAT SUCH OTHER PARTY WOULD NOT, IN THE EVENT OF LITIGATION, SEEK TO ENFORCE
+THE FOREGOING WAIVER AND (B) ACKNOWLEDGES THAT IT AND THE OTHER PARTY HAVE BEEN INDUCED TO ENTER INTO THIS AGREEMENT BY, AMONG OTHER
+THINGS, THE MUTUAL WAIVERS AND CERTIFICATIONS IN THIS SECTION.
+
+ 
+
+21.
+Severability. If any term or provision of this Agreement shall, to any extent, be held by a court of competent jurisdiction
+to be invalid or unenforceable, the remainder of this Agreement or the application of such term or provision to persons or circumstances
+other than those as to which it has been held invalid or unenforceable, shall not be affected thereby and this Agreement shall be deemed
+severable and shall be enforced otherwise to the full extent permitted by applicable law; provided, however, that such enforcement does
+not deprive any Party hereto of the benefit of the bargain.
+
+ 
+
+22.
+Entire Agreement. This Agreement constitutes the entire understanding and agreement among the Parties and supersede all prior
+agreements and understandings, oral and written, among the Parties with respect to the subject matter hereof and thereof.
+
+ 
+
+23.
+Counterparts. This Agreement may be executed electronically and in one or more counterparts, each of which shall be deemed
+to constitute an original and shall become effective when one or more counterparts have been signed by each Party and delivered to the
+other Party, but all of which together shall constitute one and the same instrument.
+
+ 
+
+[Remainder
+of Page Intentionally Left Blank – Signature Page Follows]
+
+ 
+
+Page 13 of 15
+
+ 
+
+ 
+
+ 
+
+MASTER
+SERVICES AGREEMENT
+
+ 
+
+IN
+WITNESS WHEREOF, the Parties hereto have executed this Agreement the day and year first above written.
+
+ 
+
+ 
+
+“CONSULTANT”
+
+ 
+
+ 
+
+ 
+
+ 
+
+Hungerford
+    Consulting LLC
+
+ 
+
+ 
+
+ 
+
+ 
+
+By:
+
+/s/
+    Brian Hungerford
+
+ 
+
+Name:
+
+ Brian
+    Hungerford
+
+ 
+
+Title:
+
+CEO
+
+ 
+
+ 
+
+ 
+
+ 
+
+“CLIENT”
+
+ 
+
+ 
+
+ 
+
+ 
+
+Aspira
+    Women’s Health
+
+ 
+
+ 
+
+ 
+
+ 
+
+By:
+
+/s/
+    Michael Buhle
+
+ 
+
+Name:
+
+Michael
+    Buhle
+
+ 
+
+Title:
+
+CEO
+
+ 
+
+I,
+Brian Hungerford, in consideration of the terms and conditions set forth in this Master Services Agreement as well as in any Statement
+of Work, guarantee performance of Consultant’s obligations set forth herein and agree that I am personally subject to and will
+comply with Sections 8 (Restrictive Covenants), 9 (Confidentiality), 17 (Equitable Remedies), 18 (Choice of Law), 19 (Mediation and Arbitration)
+and 20 (Waiver of Jury Trial) of this Master Services Agreement.
+
+ 
+
+/s/
+    Brian Hungerford
+
+Date:
+
+Sept
+    2, 2025
+
+Brian
+    Hungerford
+
+ 
+
+ 
+
+ 
+
+Page 14 of 15
+
+ 
+
+ 
+
+ 
+
+MASTER
+SERVICES AGREEMENT
+
+ 
+
+APPENDIX
+A
+
+ 
+
+ACH
+Instructions
+
+ 
+
+[REDACTED]
+
+ 
+
+Page 15 of 15

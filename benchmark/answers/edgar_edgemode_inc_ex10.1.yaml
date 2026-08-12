@@ -1,0 +1,19 @@
+document_id: edgar_edgemode_inc_ex10.1
+rules:
+  - id: icc_arbitration
+    question: "Is dispute resolution via the ICC International Court of Arbitration?"
+    expected: pass
+    canonical_clause_ids: ["c-007"]
+    required_substrings: ["ICC International Court of Arbitration"]
+
+  - id: mutual_indemnity
+    question: "Is indemnification mutual (both parties indemnify each other)?"
+    expected: fail
+    canonical_clause_ids: ["c-004", "c-005", "c-007"]
+    notes: "EdgeMode MSA does not provide mutual indemnification"
+
+extract_questions:
+  - id: fee_indexation
+    question: "What is the minimum annual fee indexation percentage?"
+    acceptable_clause_ids: ["c-005"]
+    required_substrings: ["three per cent"]

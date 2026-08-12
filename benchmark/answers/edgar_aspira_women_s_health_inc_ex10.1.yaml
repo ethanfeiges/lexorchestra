@@ -1,0 +1,20 @@
+document_id: edgar_aspira_women_s_health_inc_ex10.1
+rules:
+  - id: icc_arbitration
+    question: "Is dispute resolution via the ICC International Court of Arbitration?"
+    expected: fail
+    canonical_clause_ids: ["c-022"]
+    required_substrings: ["Mediation"]
+    notes: "Aspira MSA requires mediation before arbitration; not ICC-specific"
+
+  - id: mutual_indemnity
+    question: "Is indemnification mutual (both parties indemnify each other)?"
+    expected: fail
+    canonical_clause_ids: ["c-009"]
+    notes: "Client indemnifies Consultant/D&O; not mutual"
+
+extract_questions:
+  - id: agreement_term
+    question: "What is the initial term of the master agreement?"
+    acceptable_clause_ids: ["c-004"]
+    required_substrings: ["one (1) year"]

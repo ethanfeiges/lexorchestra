@@ -1,0 +1,15 @@
+---
+description: Agents run pytest themselves after code changes; never ask the user to run tests
+alwaysApply: true
+---
+
+# Run tests yourself
+
+After every code change in this project:
+
+1. **Run tests yourself** using the Shell tool: `python -m pytest tests/ -q`
+2. If tests fail, fix them and re-run until green.
+3. **Never ask the user to run tests** or paste test commands for them to execute.
+4. Do not mark a phase or task complete until pytest passes.
+
+Hooks in `.cursor/hooks.json` may also run tests, but the agent is still responsible for running and reporting test results in chat.

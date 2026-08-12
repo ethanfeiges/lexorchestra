@@ -1,0 +1,19 @@
+document_id: edgar_chime_financial_inc_ex10.1
+rules:
+  - id: aaa_arbitration
+    question: "Does the agreement require arbitration under American Arbitration Association rules?"
+    expected: pass
+    canonical_clause_ids: ["c-084"]
+    required_substrings: ["American Arbitration Association"]
+
+  - id: mutual_indemnity
+    question: "Is indemnification mutual (both parties indemnify each other)?"
+    expected: fail
+    canonical_clause_ids: ["c-086"]
+    notes: "Client indemnifies Bank only"
+
+extract_questions:
+  - id: arbitration_venue
+    question: "Where must arbitration take place?"
+    acceptable_clause_ids: ["c-084"]
+    required_substrings: ["Wilmington, Delaware"]

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "hooks": {
+    "afterFileEdit": [
+      {
+        "command": "python .cursor/hooks/run_tests.py --mode after-edit",
+        "timeout": 120
+      }
+    ],
+    "stop": [
+      {
+        "command": "python .cursor/hooks/run_tests.py --mode stop",
+        "timeout": 120
+      }
+    ]
+  }
+}

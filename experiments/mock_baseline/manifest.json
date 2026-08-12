@@ -1,0 +1,22 @@
+{
+  "mode": "mock",
+  "documents": [
+    "edgar_edgemode_inc_ex10.1",
+    "edgar_nuscale_power_corp_ex10.15",
+    "edgar_chime_financial_inc_ex10.1"
+  ],
+  "conditions": [
+    "clean",
+    "noisy_prompt"
+  ],
+  "strategies": [
+    "single",
+    "parallel_grounded"
+  ],
+  "profiles": [
+    "canonical",
+    "decoy_anchored"
+  ],
+  "deterministic": true,
+  "generated": "2026-08-12T19:31:28.323659+00:00"
+}
