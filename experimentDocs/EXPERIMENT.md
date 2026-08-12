@@ -30,7 +30,7 @@ Written to `experiments/mock_baseline/`:
 - **`REPORT.md`** — aggregated tables
 - **`manifest.json`** — configuration snapshot
 
-Commit these files to GitHub so reviewers can see expected metric patterns without re-running.
+Commit these files so CI and others can compare against expected metrics without re-running.
 
 ### Customize
 
@@ -132,7 +132,7 @@ Written to `experiments/live_gemini/`:
 - **`REPORT.md`** — aggregated tables
 - **`manifest.json`** — configuration snapshot (`status: completed` after a run)
 
-Commit these files after a live run so reviewers can inspect real LLM baseline metrics.
+Commit these files after a live run to preserve the baseline for comparison.
 
 ### Customize
 

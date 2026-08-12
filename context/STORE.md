@@ -6,9 +6,7 @@
 
 ## Purpose
 
-LexOrchestra is a resume project for legal-document AI orchestration. It runs parallel LLM subtasks on contracts, keeps the parsed document as the single source of truth (SoT), and verifies that model outputs are grounded in that document.
-
-**Not building:** A Harvey clone, a production legal product, or a broad legal benchmark suite.
+LexOrchestra runs parallel LLM subtasks on contracts, keeps the parsed document as the single source of truth (SoT), and verifies that model outputs are grounded in that document.
 
 **Committed experiments:** Live Gemini — [`experimentDocs/EXPERIMENTS.md`](../experimentDocs/EXPERIMENTS.md). Mock/CI — [`experimentDocs/MOCK_EXPERIMENTS.md`](../experimentDocs/MOCK_EXPERIMENTS.md). Findings — [`experimentDocs/FINDINGS.md`](../experimentDocs/FINDINGS.md).
 
@@ -421,7 +419,7 @@ Compare strategies under increasing difficulty:
 | **Cross-model agreement**    | When models disagree, is the grounded winner correct?                 |
 
 
-Expect `clean` ≈ high, `noisy_prompt` ≈ 70–90% depending on model, `noisy_task` lower. That spread is the resume story.
+Expect `clean` ≈ high, `noisy_prompt` ≈ 70–90% depending on model, `noisy_task` lower.
 
 ### End-to-end flow with SoT candidates
 
@@ -687,19 +685,10 @@ Future phase prompts should include: *"Run pytest yourself before finishing; do 
 
 
 
-## Resume framing
-
-- Built LexOrchestra: parallel multi-LLM contract analysis with document-canonical source of truth and automated citation grounding.
-- Measured model susceptibility to **invalid SoT candidates** (decoy citation rate) under parallel vs single-model orchestration.
-
----
-
-
-
 ## Open questions
 
 - Parser: rule-based section detection vs off-the-shelf (e.g. unstructured.io).
 - Chime in live/ablation matrices: 184 clauses / 284k chars — prompt size vs coverage tradeoff.
-- Live Gemini Pro (`gemini-2.5-pro`) vs Flash: quality vs cost for resume baseline.
+- Live Gemini Pro (`gemini-2.5-pro`) vs Flash: quality vs cost tradeoff.
 - `noisy_task` condition: spec'd but not in default committed matrices.
 

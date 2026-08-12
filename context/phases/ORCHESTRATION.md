@@ -484,7 +484,7 @@ Gold files are authored once from canonical review (agent-assisted OK), then fro
 ### Step 5 — Eval harness
 
 - `run_experiment.py`: for each MSA × condition × strategy, fresh seed, N repetitions
-- Output CSV/JSON for resume charts
+- Output CSV/JSON for experiment charts
 
 ---
 
