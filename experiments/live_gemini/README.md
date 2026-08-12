@@ -1,22 +1,13 @@
-# Live Gemini baseline
+# Live Gemini experiments
 
-Committed output of:
+Results from `python -m benchmark.run_experiment --provider gemini`.
 
-```powershell
-python -m benchmark.run_experiment --provider gemini --model gemini-2.0-flash
-```
+Default model: **`gemini-flash-latest`** (alias to current Flash; replaces retired `gemini-2.0-flash`).
 
-**4 runs:** Edgemode + NuScale × `clean` + `noisy_prompt`, strategy `single`, seeds `11001`–`11004`.
-
-| Condition | Grounding | Decoy rate | Task accuracy |
-|-----------|-----------|------------|---------------|
-| clean | 83% | 0% | 67% |
-| noisy_prompt | 67% | 17% | 50% |
-
-Re-run (requires `GEMINI_API_KEY` in `.env`):
+Default matrix: **5 document types × 2 conditions = 10 runs**.
 
 ```powershell
-python -m benchmark.run_experiment --provider gemini
+python -m benchmark.run_experiment --provider gemini --model gemini-flash-latest
 ```
 
-Full test write-up: [`experimentDocs/EXPERIMENTS.md`](../../experimentDocs/EXPERIMENTS.md).
+If the API quota is exhausted mid-run, the runner saves completed rows incrementally and sets `manifest.json` status to `partial`. Re-run when quota resets to fill remaining cells.

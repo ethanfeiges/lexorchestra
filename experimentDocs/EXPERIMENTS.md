@@ -1,6 +1,6 @@
 # LexOrchestra — Gemini Experiments
 
-> **All experiments run through the Gemini API** — real MSAs, orchestrated subtasks, mechanical verification.
+> **All experiments run through the Gemini API** — real SEC contracts across **five document types**, orchestrated subtasks, mechanical verification.
 
 Last synced: **2026-08-12**
 
@@ -10,7 +10,14 @@ Last synced: **2026-08-12**
 
 Runs use **`parallel_grounded`** by default: Gemini runs **extract** and **playbook** **in parallel** (two subtasks, same model), then the **grounding verifier** checks all claims against the canonical signed contract only.
 
-Use `--strategy single` for one model doing extract → playbook sequentially (fewer API calls).
+Additional strategies:
+
+| Strategy | What it tests |
+|----------|---------------|
+| `single` | One model, extract → playbook sequentially (fewer API calls) |
+| `parallel_source_probe` | Canonical extract ∥ playbook ∥ decoy extract ∥ discrimination extract |
+
+Use `parallel_source_probe` to measure whether agents cite the **correct or incorrect labeled source** when decoys appear in the prompt.
 
 ---
 
@@ -20,13 +27,15 @@ Deal teams rarely have one clean file. LexOrchestra models:
 
 | Production problem | Decoy type |
 |--------------------|------------|
-| Executed MSA on EDGAR | `signed_contract` (canonical) |
+| Executed contract on EDGAR | `signed_contract` (canonical) |
 | Stale SharePoint draft with old pricing | `outdated_wrong_terms` |
 | Draft missing a section | `draft_missing_section` |
 | Bad OCR / wrong clause IDs | `bad_parse_wrong_ids` |
 | Parser adding a fake clause | `bad_parse_extra_clause` |
 
-**Example:** Counsel asks "Is Fluor capped at $10M?" The model sees the **signed NuScale–Fluor MSA** and an **old draft** with different liability language. LexOrchestra measures whether answers stay grounded in the executed copy.
+**Example (MSA):** Counsel asks "Is Fluor capped at $10M?" The model sees the **signed NuScale–Fluor MSA** and an **old draft** with different liability language.
+
+**Example (NDA):** Counterparty asks "Is confidentiality mutual?" against a one-way NDA with a stale draft showing different survival terms.
 
 ---
 
@@ -35,59 +44,49 @@ Deal teams rarely have one clean file. LexOrchestra models:
 | Setting | Value |
 |---------|--------|
 | Provider | Google Gemini (AI Studio) |
-| Model | `gemini-2.0-flash` |
+| Model | `gemini-flash-latest` |
 | Strategy | `parallel_grounded` (extract ∥ playbook) |
 | Conditions | `clean`, `noisy_prompt` |
-| MSAs | **4** with answer keys (Chime excluded by default — 184 clauses, token quota) |
-| Runs | **8** (4 docs × 2 conditions) |
+| Documents | **5** primaries (one per document type) |
+| Runs | **10 runs** (5 types × 2 conditions) |
 | Verification | On |
 
-### MSAs tested
+### Documents by type
 
-| Document | Company / deal | Example playbook questions |
-|----------|----------------|----------------------------|
-| `edgar_edgemode_inc_ex10.1` | EdgeMode ↔ Cudo Ventures | ICC arbitration? Mutual indemnity? Fee indexation %? |
-| `edgar_nuscale_power_corp_ex10.15` | NuScale ↔ Fluor | $10M liability cap? Mutual indemnity? Term length? |
-| `edgar_aspira_women_s_health_inc_ex10.1` | Aspira consultant MSA | ICC arbitration? Mutual indemnity? Initial term? |
-| `edgar_pulmatrix_inc_ex10.6` | Pulmatrix ↔ MannKind | ICC arbitration? Mutual indemnity? Initial term? |
-| `edgar_chime_financial_inc_ex10.1` | Chime ↔ Bank (optional) | AAA arbitration? `--include-chime` only |
+| Document type | Primary fixture | Company / deal | Example tasks |
+|---------------|-----------------|----------------|---------------|
+| MSA | `edgar_edgemode_inc_ex10.1` | EdgeMode ↔ Cudo Ventures | ICC arbitration, mutual indemnity, fee indexation |
+| Software license | `edgar_amd_ex10.79` | AMD ↔ Broadcom | Perpetual license, license fees, CA governing law |
+| NDA | `edgar_hg_holdings_inc_ex10.2` | HG Holdings | Mutual confidentiality, return of materials, 5-year term |
+| Employment | `edgar_emerald_holding_inc_ex10.43` | Emerald Holding | Confidentiality duty, governing law |
+| Credit | `edgar_enviri_corp_ex10.1` | Enviri | NY governing law, Amendment No. 14 |
+
+Additional MSAs (NuScale, Aspira, Pulmatrix, Chime) remain available via `--documents`; Chime excluded from defaults due to token quota.
 
 Answer keys: `benchmark/answers/{document_id}.yaml`
+
+Design: [`context/phases/MULTI_TYPE.md`](../context/phases/MULTI_TYPE.md)
 
 ---
 
 ## Committed results status
 
-**Last committed run:** 4 runs (Edgemode + NuScale only, `single` strategy) — see [`experiments/live_gemini/REPORT.md`](../experiments/live_gemini/REPORT.md).
+See [`experiments/live_gemini/REPORT.md`](../experiments/live_gemini/REPORT.md) for the latest committed baseline.
 
-**Full 8-run matrix** (4 MSAs, `parallel_grounded`) is configured in code; re-run when Gemini quota allows:
+Re-run the full matrix:
 
 ```powershell
-python -m benchmark.run_experiment --provider gemini --model gemini-2.0-flash
+python -m benchmark.run_experiment --provider gemini --model gemini-flash-latest
 ```
 
-Free tier limits may require splitting runs or waiting for quota reset.
+Source-probe smoke test:
 
----
-
-## Prior 4-run findings (Edgemode + NuScale, single strategy)
-
-| Document | Condition | Ground | Decoy | Acc |
-|----------|-----------|--------|-------|-----|
-| Edgemode | clean | 100% | 0% | 67% |
-| Edgemode | noisy | 100% | 0% | 67% |
-| NuScale | clean | 67% | 0% | 67% |
-| NuScale | noisy | 33% | 33% | 33% |
-
-**NuScale under noise** cited decoy text (`outdated_wrong_terms`) — the core failure mode this project detects.
-
-### Task-level detail (prior run)
-
-**Edgemode:** ICC arbitration ✅ · mutual indemnity ✅ · fee indexation ❌ (both conditions).
-
-**NuScale clean:** $10M cap ✅ · term ✅ · mutual indemnity ❌.
-
-**NuScale noisy:** $10M cap ❌ · mutual indemnity ❌ · term ✅ · **decoy citation detected**.
+```powershell
+python -m benchmark.run_experiment --provider gemini `
+  --strategy parallel_source_probe `
+  --documents edgar_edgemode_inc_ex10.1 `
+  --conditions noisy_prompt
+```
 
 ---
 
@@ -96,30 +95,30 @@ Free tier limits may require splitting runs or waiting for quota reset.
 ```powershell
 # GEMINI_API_KEY in .env
 
-# Default: 4 MSAs × 2 conditions, parallel subtasks
+# Default: 5 document types × 2 conditions, parallel subtasks
 python -m benchmark.run_experiment --provider gemini
+
+# Source-probe strategy (4 parallel agents per run)
+python -m benchmark.run_experiment --provider gemini --strategy parallel_source_probe
 
 # Fewer API calls (sequential subtasks)
 python -m benchmark.run_experiment --provider gemini --strategy single
 
-# Include Chime (large; may hit token limits)
-python -m benchmark.run_experiment --provider gemini --include-chime
-
-# One MSA smoke test
+# One document smoke test
 python -m benchmark.run_experiment --provider gemini `
-  --documents edgar_pulmatrix_inc_ex10.6 --conditions noisy_prompt
+  --documents edgar_amd_ex10.79 --conditions noisy_prompt
 ```
 
 ---
 
 ## Pipeline per API call
 
-1. Parse SEC EX-10 → canonical clauses.
+1. Parse SEC EX-10 → canonical clauses (type-tuned decoy targets).
 2. Build decoy bundle (seeded).
 3. Prompt Gemini with document block + task instructions (JSON claims schema).
-4. **Parallel:** extract subtask ∥ playbook subtask.
+4. **Parallel:** extract subtask ∥ playbook subtask (or source probes).
 5. Verify every claim against canonical SoT.
-6. Score vs answer YAML.
+6. Score vs answer YAML; report metrics by document type.
 
 ---
 

@@ -2,9 +2,9 @@
 
 > **Use this file as a Cursor prompt** to implement the orchestration layer for LexOrchestra.
 >
-> **Gemini experiments:** [`experimentDocs/EXPERIMENTS.md`](../experimentDocs/EXPERIMENTS.md).
+> **Gemini experiments:** `[experimentDocs/EXPERIMENTS.md](../experimentDocs/EXPERIMENTS.md)`.
 >
-> Before starting, read [`context/STORE.md`](../STORE.md) and confirm the documents layer is complete (`context/phases/DOCUMENTS.md`).
+> Before starting, read `[context/STORE.md](../STORE.md)` and confirm the documents layer is complete (`context/phases/DOCUMENTS.md`).
 
 ---
 
@@ -16,6 +16,8 @@ You are implementing **Phase 2: Orchestration** (plus the grounding verifier and
 
 ---
 
+
+
 ## The core research question
 
 > When subagents receive multiple plausible document versions (one true, several corrupted), can orchestration + canonical verification produce correct legal subtask answers — and can we **measure** whether agents anchored on noise?
@@ -23,6 +25,8 @@ You are implementing **Phase 2: Orchestration** (plus the grounding verifier and
 This is **not** a test of whether models memorized which fixture file is "the real MSA." It is a test of **in-run discrimination**: given fresh noise every run, does the pipeline still ground answers in `signed_contract`?
 
 ---
+
+
 
 ## How SoT is determined (ground truth chain)
 
@@ -41,14 +45,18 @@ Real MSA file (SEC EDGAR EX-10)
                └── bad_parse_wrong_ids         valid=False
 ```
 
+
+
 ### What "canonical" means
 
-| Layer | What it is | Who sees it |
-|-------|------------|-------------|
-| **Raw file** | `fixtures/contracts/public/edgar_*.txt` — the executed MSA text | Parser only |
-| **Canonical clauses** | `SoTBundle.canonical` — parsed, ID'd chunks from that file | Verifier, answer-key authoring, never written by agents |
-| **signed_contract candidate** | One entry in `bundle.candidates` with `valid=True`; clause text **must equal** canonical (enforced by Pydantic validator) | Agents (in prompt, labeled) |
-| **Decoy candidates** | Programmatic corruptions of canonical (`missing_clause`, `altered_text`, etc.) | Agents (in prompt, labeled) |
+
+| Layer                         | What it is                                                                                                                | Who sees it                                             |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| **Raw file**                  | `fixtures/contracts/public/edgar_*.txt` — the executed MSA text                                                           | Parser only                                             |
+| **Canonical clauses**         | `SoTBundle.canonical` — parsed, ID'd chunks from that file                                                                | Verifier, answer-key authoring, never written by agents |
+| **signed_contract candidate** | One entry in `bundle.candidates` with `valid=True`; clause text **must equal** canonical (enforced by Pydantic validator) | Agents (in prompt, labeled)                             |
+| **Decoy candidates**          | Programmatic corruptions of canonical (`missing_clause`, `altered_text`, etc.)                                            | Agents (in prompt, labeled)                             |
+
 
 **Invariant:** Exactly one candidate has `valid=True` and label `signed_contract`. The grounding verifier **always** checks claims against `bundle.canonical` via `SoTStore` — never against decoys.
 
@@ -59,21 +67,29 @@ Real MSA file (SEC EDGAR EX-10)
 3. **Decoys are derived** — every fake version is a corruption of the same canonical parse, so comparisons are controlled.
 4. **Labels are honest in prompts** — agents are told `signed_contract` is the executed copy; the experiment tests whether they **follow** that instruction under distraction.
 
+
+
 ### Answer keys (task correctness)
 
 Task accuracy is judged against **canonical-derived answers**, not model opinion:
 
-| Answer source | How it is produced |
-|-------------|-------------------|
+
+| Answer source          | How it is produced                                                                                                             |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | **Playbook pass/fail** | Rule engine or one-time human/script annotation over canonical clauses (YAML rules → expected answer + supporting `clause_id`) |
-| **Extract answers** | Expected statement + `clause_id` + quote substring from canonical |
-| **Grounding** | Mechanical: `clause_id` exists in canonical AND quote matches clause text |
+| **Extract answers**    | Expected statement + `clause_id` + quote substring from canonical                                                              |
+| **Grounding**          | Mechanical: `clause_id` exists in canonical AND quote matches clause text                                                      |
+
 
 Answer keys are authored **once per document** from canonical and stored in `benchmark/answers/{document_id}.yaml`. They do not depend on which decoys appear in a given run.
 
 ---
 
+
+
 ## Per-run fresh noise (anti-memorization design)
+
+
 
 ### The concern
 
@@ -81,14 +97,18 @@ If every benchmark run uses `seed=42` on the same three MSAs with the same decoy
 
 ### Principle: separate **document identity** from **run identity**
 
-| Concept | Stable across runs | Varies per run |
-|---------|-------------------|----------------|
-| Which MSA | Yes — fixture set from SEC | No |
-| Canonical parse | Yes — deterministic parser | No |
-| Gold labels | Yes — from canonical | No |
-| **Decoy instances** | No | **Yes — new seed each run** |
-| **Which decoys shown** | No | **Yes — sampled per run** |
-| **Decoy parameters** | No | **Yes — which clause altered, which substitution** |
+
+| Concept                | Stable across runs         | Varies per run                                     |
+| ---------------------- | -------------------------- | -------------------------------------------------- |
+| Which MSA              | Yes — fixture set from SEC | No                                                 |
+| Canonical parse        | Yes — deterministic parser | No                                                 |
+| Gold labels            | Yes — from canonical       | No                                                 |
+| **Decoy instances**    | No                         | **Yes — new seed each run**                        |
+| **Which decoys shown** | No                         | **Yes — sampled per run**                          |
+| **Decoy parameters**   | No                         | **Yes — which clause altered, which substitution** |
+
+
+
 
 ### Run manifest
 
@@ -116,16 +136,22 @@ prompt_block = format_candidates_for_prompt(
 )
 ```
 
+
+
 ### What changes with a new seed
 
 Even with the same four corruption **types**, a new seed changes:
 
-| Corruption | Seed-sensitive behavior |
-|------------|-------------------------|
-| `altered_text` | Which substitution applies; which numeric phrase is halved |
+
+| Corruption       | Seed-sensitive behavior                                                                |
+| ---------------- | -------------------------------------------------------------------------------------- |
+| `altered_text`   | Which substitution applies; which numeric phrase is halved                             |
 | `missing_clause` | Target clause if multiple match "liability" (future: extend to random eligible clause) |
-| `reordered` | Shuffle order of clauses |
-| `extra_clause` | Currently static template — **extend** to pick among N boilerplate templates via `rng` |
+| `reordered`      | Shuffle order of clauses                                                               |
+| `extra_clause`   | Currently static template — **extend** to pick among N boilerplate templates via `rng` |
+
+
+
 
 ### Prompt composition varies per run
 
@@ -143,11 +169,15 @@ Optionally shuffle candidate order in the prompt (signed_contract not always fir
 
 ### Conditions (experimental arms)
 
-| Condition | Prompt contents | Purpose |
-|-----------|-----------------|---------|
-| `clean` | `signed_contract` only | Upper bound baseline |
-| `noisy_prompt` | `signed_contract` + 1–2 random decoys | Primary discrimination test |
-| `noisy_task` | Same as noisy_prompt + playbook rules that **flip** if a decoy is used | Task accuracy drops when agent anchors on wrong version |
+
+| Condition      | Prompt contents                                                        | Purpose                                                 |
+| -------------- | ---------------------------------------------------------------------- | ------------------------------------------------------- |
+| `clean`        | `signed_contract` only                                                 | Upper bound baseline                                    |
+| `noisy_prompt` | `signed_contract` + 1–2 random decoys                                  | Primary discrimination test                             |
+| `noisy_task`   | Same as noisy_prompt + playbook rules that **flip** if a decoy is used | Task accuracy drops when agent anchors on wrong version |
+
+
+
 
 ### Anti-caching checklist
 
@@ -160,18 +190,26 @@ Optionally shuffle candidate order in the prompt (signed_contract not always fir
 
 ---
 
+
+
 ## Why tasks must require SoT (not noise)
 
 A task is well-designed for this experiment if:
 
 > **A subagent that faithfully cites the wrong decoy will fail** task accuracy and/or canonical grounding — even if the answer is internally consistent with that decoy.
 
+
+
 ### Task types (v1)
 
-| Task | Input | Output | SoT-dependent because… |
-|------|-------|--------|------------------------|
-| **extract** | Question about a clause topic | Claim: statement + `clause_id` + quote | Decoys alter/remove/shuffle clauses; correct quote exists only in canonical |
-| **playbook** | Firm rule (YAML) | Claim: pass/fail + justification cite | Rules keyed to canonical facts (e.g. liability cap amount, term length) |
+
+| Task         | Input                         | Output                                 | SoT-dependent because…                                                      |
+| ------------ | ----------------------------- | -------------------------------------- | --------------------------------------------------------------------------- |
+| **extract**  | Question about a clause topic | Claim: statement + `clause_id` + quote | Decoys alter/remove/shuffle clauses; correct quote exists only in canonical |
+| **playbook** | Firm rule (YAML)              | Claim: pass/fail + justification cite  | Rules keyed to canonical facts (e.g. liability cap amount, term length)     |
+
+
+
 
 ### Example: liability cap (discriminating)
 
@@ -196,12 +234,14 @@ Playbook rule:
   canonical_clause_ids: [c-017]
 ```
 
-| Agent behavior | Task result | Grounding result |
-|----------------|-------------|------------------|
-| Cites canonical, $10M quote | **Correct** | grounded |
-| Cites decoy, $5M quote | **Wrong** (answer key expects canonical fact) | ungrounded vs canonical |
-| Cites decoy clause_id with canonical quote | **Wrong** | text_mismatch |
-| Hallucinates clause | **Wrong** | missing_clause |
+
+| Agent behavior                             | Task result                                   | Grounding result        |
+| ------------------------------------------ | --------------------------------------------- | ----------------------- |
+| Cites canonical, $10M quote                | **Correct**                                   | grounded                |
+| Cites decoy, $5M quote                     | **Wrong** (answer key expects canonical fact) | ungrounded vs canonical |
+| Cites decoy clause_id with canonical quote | **Wrong**                                     | text_mismatch           |
+| Hallucinates clause                        | **Wrong**                                     | missing_clause          |
+
 
 The agent **cannot** pass by using `outdated_wrong_terms` — the answer key and verifier both reference canonical only.
 
@@ -219,6 +259,8 @@ Extract task "What is the aggregate liability cap?":
 - Canonical: answer with quote containing `$10,000,000`
 - Decoy-only agent: "No limitation of liability section" → task wrong
 
+
+
 ### Example: extra clause (discriminating)
 
 Decoy `bad_parse_extra_clause` adds arbitration boilerplate not in the real MSA.
@@ -232,48 +274,37 @@ Design playbook rules to reference **canonical-only** facts where decoys diverge
 
 ### Tasks to avoid (non-discriminating)
 
-| Bad task | Why |
-|----------|-----|
-| "Which document version is the signed contract?" | Trivial label read, not legal reasoning |
-| "List all clause IDs" | Same IDs across reordered decoy (different text mapping) — confusing but not legal |
-| Rules satisfied by text identical in all candidates | No discrimination |
+
+| Bad task                                            | Why                                                                                |
+| --------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| "Which document version is the signed contract?"    | Trivial label read, not legal reasoning                                            |
+| "List all clause IDs"                               | Same IDs across reordered decoy (different text mapping) — confusing but not legal |
+| Rules satisfied by text identical in all candidates | No discrimination                                                                  |
+
 
 ---
 
-## Architecture
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        RunOrchestrator                          │
-│  1. Load MSA path + playbook + run config                       │
-│  2. seed ← fresh random                                         │
-│  3. bundle ← build_bundle_from_file(path, seed)                 │
-│  4. store ← SoTStore(bundle.canonical)   ← verifier truth       │
-│  5. answers ← load_answers(document_id)  ← task truth           │
-│  6. prompt_ctx ← sample decoys + format_candidates_for_prompt   │
-│  7. spawn tasks in parallel (asyncio)                           │
-│  8. parse responses → Claim[]                                   │
-│  9. verify each claim vs store (canonical only)                 │
-│ 10. score vs answers → RunResult + metrics                       │
-└─────────────────────────────────────────────────────────────────┘
-         │                    │                    │
-         ▼                    ▼                    ▼
-   docProcessing/ (existing)    models/ clients     grounding/ verifier
-```
 
 ### Layer boundaries (critical)
 
-| Component | Reads canonical | Reads decoys | Writes truth |
-|-----------|-----------------|--------------|--------------|
-| `docProcessing/build_bundle` | Yes (creates) | Yes (creates) | Yes (defines) |
-| Prompt builder | Yes | Yes (for display) | No |
-| Subagents (LLMs) | Yes (in prompt) | Yes (in prompt) | No |
-| Grounding verifier | **Yes only** | **Never** | No |
-| Gold / scoring | **Yes only** | **Never** | No |
+
+| Component                    | Reads canonical | Reads decoys  | Writes truth  |
+| ---------------------------- | --------------- | ------------- | ------------- |
+| `docProcessing/build_bundle` | Yes (creates)   | Yes (creates) | Yes (defines) |
+| Prompt builder               |                 |               |               |
+| Subagents (LLMs)             |                 |               |               |
+| Grounding verifier           |                 |               |               |
+| Gold / scoring               |                 |               |               |
+
 
 ---
 
+
+
 ## Subagent design
+
+
 
 ### One prompt per (task × model)
 
@@ -290,6 +321,8 @@ Subagents do **not** receive:
 - Gold labels
 - Verifier logic
 - Other models' outputs (v1 — no cross-agent debate)
+
+
 
 ### Claim schema
 
@@ -322,6 +355,8 @@ results = await asyncio.gather(*tasks)
 
 ---
 
+
+
 ## Grounding verifier
 
 For each claim, against **canonical store only**:
@@ -332,21 +367,29 @@ For each claim, against **canonical store only**:
 
 Optional enhancement for decoy metric:
 
-4. If quote matches decoy candidate but not canonical → tag `decoy_match: {label}`
+1. If quote matches decoy candidate but not canonical → tag `decoy_match: {label}`
 
 Do **not** accept a claim as grounded because it matches a decoy.
 
 ---
 
+
+
 ## Scoring (how we know subagents succeeded)
+
+
 
 ### Per-claim metrics
 
-| Metric | Definition |
-|--------|------------|
-| **Grounding rate** | grounded claims / total claims |
+
+| Metric                  | Definition                                                                            |
+| ----------------------- | ------------------------------------------------------------------------------------- |
+| **Grounding rate**      | grounded claims / total claims                                                        |
 | **Decoy citation rate** | claims where quote matches decoy but not canonical, OR `sot_label != signed_contract` |
-| **Task accuracy** | playbook verdict matches answer key AND extract statement matches answer key |
+| **Task accuracy**       | playbook verdict matches answer key AND extract statement matches answer key          |
+
+
+
 
 ### Per-run aggregation
 
@@ -362,6 +405,8 @@ class RunResult(BaseModel):
     task_scores: dict[str, bool]   # rule_id or extract_q → correct?
     metrics: RunMetrics
 ```
+
+
 
 ### Task correctness logic
 
@@ -390,6 +435,8 @@ def score_extract(claim, answers) -> bool:
 A subagent **passes** the experiment only if it produces **grounded, task-correct** claims — which requires canonical SoT for discriminating tasks.
 
 ---
+
+
 
 ## Repository layout (create this)
 
@@ -428,6 +475,8 @@ tests/
 
 ---
 
+
+
 ## Playbook format (answer-aligned)
 
 ```yaml
@@ -456,7 +505,11 @@ Gold files are authored once from canonical review (agent-assisted OK), then fro
 
 ---
 
+
+
 ## Implementation phases (suggested order)
+
+
 
 ### Step 1 — Grounding verifier (no LLM)
 
@@ -464,11 +517,15 @@ Gold files are authored once from canonical review (agent-assisted OK), then fro
 - Unit tests with **injected claims** (including quotes copied from decoys)
 - Expect decoy quotes → `ungrounded`
 
+
+
 ### Step 2 — Orchestrator skeleton (mock LLM)
 
 - `RunManifest`, task prompt assembly, parallel runner
 - Mock model returns canned JSON claims
 - End-to-end test: bundle → prompt → mock → verify → score
+
+
 
 ### Step 3 — Gold labels + metrics
 
@@ -476,10 +533,14 @@ Gold files are authored once from canonical review (agent-assisted OK), then fro
 - `benchmark/metrics.py` computes decoy rate, accuracy
 - Deterministic tests with fixed seed
 
+
+
 ### Step 4 — Real model clients
 
 - OpenAI + Anthropic adapters behind `ModelClient` protocol
 - Env-var API keys; skip integration tests in CI without keys
+
+
 
 ### Step 5 — Eval harness
 
@@ -487,6 +548,8 @@ Gold files are authored once from canonical review (agent-assisted OK), then fro
 - Output CSV/JSON for experiment charts
 
 ---
+
+
 
 ## End-to-end run example
 
@@ -502,61 +565,7 @@ Gold files are authored once from canonical review (agent-assisted OK), then fro
 
 ---
 
+
+
 ## FAQ (design decisions)
 
-### Q: How is SoT determined to begin with?
-
-**A:** The real SEC-filed MSA is parsed into canonical clauses. That parse is the sole truth. Decoys are algorithmically derived corruptions. The verifier and answer keys never consult decoys.
-
-### Q: How do we prevent models from caching real vs fake?
-
-**A:** Fresh seed and decoy sampling every eval run; multiple MSAs; discriminating tasks where decoy-faithful answers fail; unit tests use fixed seeds but live eval does not.
-
-### Q: Should we hide decoy labels in prompts?
-
-**A:** No for v1. Real deal rooms label documents ("Draft", "Executed"). The instruction is "cite signed_contract only" — the hardness comes from **conflicting text**, not hidden metadata. Optional v2: neutral labels (`version_a`, `version_b`) with one mapping logged in manifest only.
-
-### Q: Does the orchestrator pick which candidate is truth?
-
-**A:** No. Truth is fixed at bundle creation. Orchestrator only chooses **which candidates to show**, not which is valid.
-
-### Q: What if all models fail under noise?
-
-**A:** That is a valid experimental outcome — report decoy rate and compare `single` vs `parallel_grounded` and `clean` vs `noisy_prompt`. The spread is the story.
-
----
-
-## Deliverables checklist
-
-| # | Deliverable | Description |
-|---|-------------|-------------|
-| 1 | `orchestrator/models.py` | Claim, RunManifest, RunResult |
-| 2 | `orchestrator/tasks.py` | Prompt templates for extract + playbook |
-| 3 | `orchestrator/runner.py` | Async parallel task execution |
-| 4 | `grounding/verifier.py` | Canonical-only claim verification |
-| 5 | `models/base.py` | Pluggable LLM client |
-| 6 | `benchmark/answers/*.yaml` | Answer keys per fixture MSA |
-| 7 | `benchmark/metrics.py` | Decoy rate, task accuracy, grounding rate |
-| 8 | `benchmark/conditions.py` | clean / noisy_prompt / noisy_task |
-| 9 | `tests/` | Verifier, orchestrator (mock LLM), metrics |
-| 10 | Update `context/STORE.md` | Implementation status |
-
----
-
-## Success criteria
-
-- [ ] Eval run with fresh seed produces different decoy text than previous run
-- [ ] Claims grounded in decoy text are always rejected
-- [ ] Task accuracy under `clean` ≈ high; under `noisy_prompt` lower with measurable decoy rate
-- [ ] Same verifier and answer keys for all strategies — only scheduling differs
-- [ ] `python -m pytest tests/ -q` passes
-
----
-
-## Open questions (resolve during implementation)
-
-1. **Gold authoring:** Script-assisted pass over canonical to draft YAML, then human spot-check?
-2. **Decoys per prompt:** Start with 1 decoy + signed; increase to 2 if discrimination is weak.
-3. **Prompt order:** Shuffle candidate blocks or always signed first?
-4. **Extend `extra_clause` corruption** to seed-select among multiple templates (stronger fresh noise).
-5. **Extend `altered_text`** to target random eligible clauses, not only liability.

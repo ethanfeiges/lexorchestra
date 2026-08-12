@@ -14,12 +14,12 @@ This runs a fixed matrix:
 
 | Axis | Values |
 |------|--------|
-| Documents | Edgemode, NuScale, Aspira, Pulmatrix MSAs |
+| Documents | One primary per type: MSA, software license, NDA, employment, credit |
 | Conditions | `clean`, `noisy_prompt` |
-| Strategy | `parallel_grounded` (default) |
-| Model | `gemini-2.0-flash` (default) |
+| Strategy | `parallel_grounded` (default); also `single`, `parallel_source_probe` |
+| Model | `gemini-flash-latest` (default) |
 | Seeds | Deterministic (`DETERMINISTIC_SEEDS`) |
-| Runs | **8** (4 docs × 2 conditions) |
+| Runs | **10** (5 types × 2 conditions) |
 
 ### Outputs
 

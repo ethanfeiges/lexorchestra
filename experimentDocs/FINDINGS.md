@@ -6,34 +6,36 @@ Regenerate: `python -m benchmark.run_experiment --provider gemini`
 
 ---
 
-## Live Gemini (`gemini-2.0-flash`, 4 runs committed)
+## Live Gemini (`gemini-flash-latest`, five document types)
 
 ### Headline
 
-On **real SEC-filed MSAs**, Gemini stayed grounded on Edgemode even with decoys in context, but on **NuScale under noise** accuracy dropped from 67% to 33% with a measured decoy citation — the scenario this project is designed to detect (stale draft vs executed contract).
+On **real SEC-filed contracts across five document types**, Gemini (`gemini-flash-latest`) stayed **100% grounded** on all completed runs — including under `noisy_prompt` with decoys present. Task accuracy varied by document type and task design, not by grounding failures. No decoy citations were detected in the completed 9/10 run matrix (free-tier daily quota blocked the final run).
 
-### By condition
+### By condition (9 completed runs)
 
 | Condition | Runs | Grounding | Decoy rate | Task accuracy |
 |-----------|------|-----------|------------|---------------|
-| clean | 2 | 83% | 0% | 67% |
-| noisy_prompt | 2 | 67% | 17% | 50% |
+| clean | 5 | 100% | 0% | 73% |
+| noisy_prompt | 4 | 100% | 0% | 58% |
 
-### Task-level outcomes
+### By document type (completed runs)
 
-**Edgemode (EdgeMode ↔ Cudo Ventures MSA)**
-
-- ICC arbitration playbook: **correct** (clean and noisy).
-- Mutual indemnity playbook: **correct** (clean and noisy).
-- Fee indexation extract: **wrong** (clean and noisy) — mechanical quote mismatch, not decoy-related.
-
-**NuScale (NuScale ↔ Fluor MSA)**
-
-- Clean: $10M cap **correct**, term **correct**, mutual indemnity **wrong**.
-- Noisy (`outdated_wrong_terms`): $10M cap **wrong**, mutual indemnity **wrong**, term **correct**; **decoy citation detected**.
+| Type | Document | Clean acc | Noisy acc | Notes |
+|------|----------|-----------|-----------|-------|
+| MSA | Edgemode | 67% | 67% | Fee indexation extract missed |
+| Software license | AMD | 100% | 67% | Strong on license playbook |
+| NDA | HG Holdings | 100% | — | Noisy run blocked by API quota |
+| Employment | Emerald | 67% | 67% | Confidentiality playbook correct |
+| Credit | Enviri | 33% | 33% | Amendment-number extract difficult |
 
 ### Implications
 
-1. **Noise is document-dependent.** Edgemode resisted decoys; NuScale did not — you cannot assume one MSA result generalizes.
-2. **Playbook errors happen without noise too.** Mutual indemnity failed on NuScale even in `clean` — live models need verification even without decoys.
-3. **Verification adds signal.** Decoy citation rate surfaced the NuScale noisy failure; task accuracy alone would not distinguish "wrong quote" from "wrong document version."
+1. **Grounding generalizes across types.** 100% grounding on MSAs, licenses, NDAs, employment, and credit amendments — decoys in prompt did not cause canonical mis-citation in completed runs.
+2. **Task accuracy is type-dependent.** Credit agreement amendment (Enviri) scored lowest; software license (AMD) scored highest on clean runs.
+3. **Noise effect is modest so far.** Aggregate task accuracy dropped from 73% (clean) to 58% (noisy) on four noisy runs — without decoy citation rate rising, suggesting errors are quote-selection or rule interpretation, not wrong-document anchoring.
+4. **Re-run needed.** Full 10-run committed baseline pending quota reset for `edgar_hg_holdings_inc_ex10.2` noisy_prompt.
+
+### Prior MSA-only baseline (4 runs, `single` strategy)
+
+NuScale under noise showed decoy citation (33% accuracy, 33% decoy rate) — see git history for `experiments/live_gemini/REPORT.md` from the MSA-only era.

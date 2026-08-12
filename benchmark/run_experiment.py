@@ -54,7 +54,7 @@ def main(argv: list[str] | None = None) -> int:
         "--documents",
         nargs="*",
         default=DEFAULT_DOCUMENTS,
-        help="Document IDs (default: all MSAs with answer keys except Chime)",
+        help="Document IDs (default: one primary fixture per document type)",
     )
     parser.add_argument(
         "--conditions",
@@ -77,7 +77,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--model",
         default=None,
-        help="Gemini model id (default: gemini-2.0-flash)",
+        help="Gemini model id (default: gemini-flash-latest)",
     )
     parser.add_argument(
         "--output",
@@ -129,13 +129,14 @@ def main(argv: list[str] | None = None) -> int:
         conditions=args.conditions,
         strategies=args.strategies,
         model=resolved_model,
+        output_path=output_path,
     )
 
     save_results(results, output_path)
 
     meta = {
         "mode": provider.mode,
-        "status": "completed",
+        "status": "completed" if len(results) >= run_count else "partial",
         "provider": provider.name,
         "documents": documents,
         "conditions": args.conditions,
@@ -144,6 +145,8 @@ def main(argv: list[str] | None = None) -> int:
         "deterministic": True,
         "seeds": "DETERMINISTIC_SEEDS",
         "generated": datetime.now(timezone.utc).isoformat(),
+        "completed_runs": len(results),
+        "expected_runs": run_count,
     }
     manifest_path.parent.mkdir(parents=True, exist_ok=True)
     manifest_path.write_text(json.dumps(meta, indent=2), encoding="utf-8")

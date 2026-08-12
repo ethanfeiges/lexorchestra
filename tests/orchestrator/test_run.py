@@ -100,6 +100,23 @@ def test_e2e_decoy_response_fails():
     assert result.task_scores.get("playbook:liability_cap_10m") is False
 
 
+def test_e2e_parallel_source_probe_stub():
+    client = _stub_client_for_document(PRIMARY)
+    result = run_benchmark_case(
+        PRIMARY,
+        condition="noisy_prompt",
+        strategy="parallel_source_probe",
+        seed=42,
+        client_factory=lambda _m: client,
+        model="stub",
+    )
+    assert result.metrics.source_fidelity == 1.0
+    assert result.metrics.task_accuracy == 1.0
+    tasks = {v.task for v in result.verified_claims}
+    assert "extract_decoy" in tasks
+    assert "extract_discriminate" in tasks
+
+
 def test_fresh_seed_changes_bundle():
     r1 = run_benchmark_case(
         PRIMARY,

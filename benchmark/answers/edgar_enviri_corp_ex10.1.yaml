@@ -1,0 +1,20 @@
+document_id: edgar_enviri_corp_ex10.1
+document_type: credit
+rules:
+  - id: ny_governing_law
+    question: "Is this amendment governed by New York law?"
+    expected: pass
+    canonical_clause_ids: ["c-010"]
+    required_substrings: ["STATE OF NEW YORK"]
+
+  - id: icc_arbitration
+    question: "Is dispute resolution via the ICC International Court of Arbitration?"
+    expected: fail
+    canonical_clause_ids: ["c-010"]
+    notes: "Credit amendment; no ICC arbitration clause"
+
+extract_questions:
+  - id: amendment_number
+    question: "Which amendment number is this credit agreement?"
+    acceptable_clause_ids: ["c-002", "c-003", "c-005", "c-008"]
+    required_substrings: ["Amendment No. 14"]

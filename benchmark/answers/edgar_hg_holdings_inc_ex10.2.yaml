@@ -1,0 +1,20 @@
+document_id: edgar_hg_holdings_inc_ex10.2
+document_type: nda
+rules:
+  - id: mutual_confidentiality
+    question: "Is confidentiality mutual (both parties disclose and receive obligations)?"
+    expected: fail
+    canonical_clause_ids: ["c-021", "c-022"]
+    notes: "Company discloses to Counterparty; one-way NDA"
+
+  - id: return_of_materials
+    question: "Must Counterparty return Confidential Information upon written request?"
+    expected: pass
+    canonical_clause_ids: ["c-027"]
+    required_substrings: ["return all originals and copies"]
+
+extract_questions:
+  - id: nda_term
+    question: "How long does the Non-Disclosure Agreement remain effective?"
+    acceptable_clause_ids: ["c-028"]
+    required_substrings: ["five (5) years"]

@@ -48,7 +48,7 @@ def test_main_parses_gemini_args_and_runs_matrix(monkeypatch, tmp_path):
             "condition": "clean",
             "strategy": DEFAULT_STRATEGY,
             "provider": "gemini",
-            "model": "gemini-2.0-flash",
+            "model": "gemini-flash-latest",
             "seed": 11001,
             "decoys_in_prompt": [],
             "metrics": {
@@ -69,7 +69,7 @@ def test_main_parses_gemini_args_and_runs_matrix(monkeypatch, tmp_path):
                     "--conditions",
                     "clean",
                     "--model",
-                    "gemini-2.0-flash",
+                    "gemini-flash-latest",
                     "--output",
                     str(output),
                     "--skip-answers-check",
@@ -79,18 +79,18 @@ def test_main_parses_gemini_args_and_runs_matrix(monkeypatch, tmp_path):
     assert code == 0
     mock_run.assert_called_once()
     assert mock_run.call_args.kwargs["provider"].name == "gemini"
-    assert mock_run.call_args.kwargs["model"] == "gemini-2.0-flash"
+    assert mock_run.call_args.kwargs["model"] == "gemini-flash-latest"
     manifest = json.loads(output.with_name("manifest.json").read_text(encoding="utf-8"))
     assert manifest["mode"] == "live_gemini"
     assert manifest["provider"] == "gemini"
-    assert manifest["model"] == "gemini-2.0-flash"
+    assert manifest["model"] == "gemini-flash-latest"
 
 
 def test_build_gemini_client_factory_returns_gemini_client():
     factory = build_gemini_client_factory(default_model=DEFAULT_GEMINI_MODEL)
-    client = factory("gemini-2.0-flash")
+    client = factory(DEFAULT_GEMINI_MODEL)
     assert isinstance(client, GeminiClient)
-    assert client.model == "gemini-2.0-flash"
+    assert client.model == DEFAULT_GEMINI_MODEL
 
 
 def test_resolve_gemini_api_key_prefers_gemini_env(monkeypatch):
@@ -120,13 +120,16 @@ def test_parse_claims_response_handles_json_object_shape():
             ]
         }
     )
-    claims = parse_claims_response(raw, "playbook", "gemini-2.0-flash")
+    claims = parse_claims_response(raw, "playbook", "gemini-flash-latest")
     assert len(claims) == 1
     assert claims[0]["clause_id"] == "c-007"
 
 
-def test_default_documents_includes_new_msas():
-    assert "edgar_aspira_women_s_health_inc_ex10.1" in DEFAULT_DOCUMENTS
-    assert "edgar_pulmatrix_inc_ex10.6" in DEFAULT_DOCUMENTS
+def test_default_documents_primary_per_type():
+    assert len(DEFAULT_DOCUMENTS) == 5
+    assert "edgar_edgemode_inc_ex10.1" in DEFAULT_DOCUMENTS
+    assert "edgar_amd_ex10.79" in DEFAULT_DOCUMENTS
+    assert "edgar_hg_holdings_inc_ex10.2" in DEFAULT_DOCUMENTS
+    assert "edgar_emerald_holding_inc_ex10.43" in DEFAULT_DOCUMENTS
+    assert "edgar_enviri_corp_ex10.1" in DEFAULT_DOCUMENTS
     assert "edgar_chime_financial_inc_ex10.1" not in DEFAULT_DOCUMENTS
-    assert len(DEFAULT_DOCUMENTS) == 4

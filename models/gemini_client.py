@@ -8,7 +8,7 @@ from collections.abc import Callable
 
 from models.base import ModelClient
 
-DEFAULT_GEMINI_MODEL = "gemini-2.0-flash"
+DEFAULT_GEMINI_MODEL = "gemini-flash-latest"
 MAX_RETRIES = 5
 RETRY_BASE_SEC = 5.0
 
@@ -41,20 +41,27 @@ class GeminiClient:
     def __init__(self, model: str = DEFAULT_GEMINI_MODEL) -> None:
         self.model = model
         self._api_key = resolve_gemini_api_key()
+        self._client: object | None = None
+
+    def _get_client(self):
+        if self._client is None:
+            from google import genai
+
+            self._client = genai.Client(api_key=self._api_key)
+        return self._client
 
     async def complete(self, system: str, user: str) -> str:
         if not self._api_key:
             raise RuntimeError("GEMINI_API_KEY or GOOGLE_API_KEY not set")
 
         try:
-            from google import genai
             from google.genai import types
         except ImportError as exc:
             raise RuntimeError(
                 "Install google-genai: pip install google-genai"
             ) from exc
 
-        client = genai.Client(api_key=self._api_key)
+        client = self._get_client()
         last_exc: Exception | None = None
         for attempt in range(MAX_RETRIES):
             try:
@@ -70,7 +77,13 @@ class GeminiClient:
             except Exception as exc:
                 last_exc = exc
                 msg = str(exc).lower()
-                if "429" in msg or "resource_exhausted" in msg or "quota" in msg:
+                if (
+                    "429" in msg
+                    or "503" in msg
+                    or "resource_exhausted" in msg
+                    or "quota" in msg
+                    or "unavailable" in msg
+                ):
                     delay = RETRY_BASE_SEC * (attempt + 1)
                     await asyncio.sleep(delay)
                     continue

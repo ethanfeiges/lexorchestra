@@ -28,6 +28,7 @@ class ExtractQuestionAnswer(BaseModel):
 
 class DocumentAnswers(BaseModel):
     document_id: str
+    document_type: str = "msa"
     rules: list[PlaybookRuleAnswer]
     extract_questions: list[ExtractQuestionAnswer]
 

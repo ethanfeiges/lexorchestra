@@ -1,0 +1,20 @@
+document_id: edgar_emerald_holding_inc_ex10.43
+document_type: employment
+rules:
+  - id: confidentiality_duty
+    question: "Must the Employee refrain from disclosing confidential information?"
+    expected: pass
+    canonical_clause_ids: ["c-008"]
+    required_substrings: ["not to disclose"]
+
+  - id: mutual_indemnity
+    question: "Is indemnification mutual (both parties indemnify each other)?"
+    expected: fail
+    canonical_clause_ids: ["c-008", "c-007"]
+    notes: "Employment agreement; no mutual indemnity clause"
+
+extract_questions:
+  - id: governing_law
+    question: "Which jurisdiction's laws govern this agreement?"
+    acceptable_clause_ids: ["c-018"]
+    required_substrings: ["laws of the Province"]

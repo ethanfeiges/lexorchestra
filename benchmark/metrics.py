@@ -59,18 +59,20 @@ def build_task_scores(
     playbook_scorer = score_playbook_claim_naive if naive else score_playbook_claim
     extract_scorer = score_extract_claim_naive if naive else score_extract_claim
 
+    canonical_verified = [v for v in verified if v.task in ("extract", "playbook")]
+
     for rule in answers.rules:
         key = f"playbook:{rule.id}"
         rule_claims = [
-            v for v in verified if v.task == "playbook" and v.claim.rule_id == rule.id
+            v for v in canonical_verified if v.task == "playbook" and v.claim.rule_id == rule.id
         ]
         if not rule_claims:
-            rule_claims = [v for v in verified if v.task == "playbook"]
+            rule_claims = [v for v in canonical_verified if v.task == "playbook"]
         scores[key] = any(playbook_scorer(v, rule) for v in rule_claims)
 
     for question in answers.extract_questions:
         key = f"extract:{question.id}"
-        extract_claims = [v for v in verified if v.task == "extract"]
+        extract_claims = [v for v in canonical_verified if v.task == "extract"]
         scores[key] = any(extract_scorer(v, question) for v in extract_claims)
 
     return scores
@@ -117,6 +119,30 @@ def compute_metrics(
     correct = sum(1 for ok in task_scores.values() if ok)
     total_tasks = len(task_scores)
 
+    canonical = [v for v in verified if v.task in ("extract", "playbook")]
+    probe = [v for v in verified if v.task == "extract_decoy"]
+    discriminate = [v for v in verified if v.task == "extract_discriminate"]
+
+    source_fidelity: float | None = None
+    decoy_probe_match_rate: float | None = None
+    explicit_mislabel_rate: float | None = None
+
+    if canonical:
+        canon_grounded = sum(1 for v in canonical if v.status == "grounded")
+        source_fidelity = canon_grounded / len(canonical)
+
+    if probe:
+        probe_decoy = sum(1 for v in probe if v.decoy_match is not None)
+        decoy_probe_match_rate = probe_decoy / len(probe)
+
+    if discriminate:
+        mislabeled = sum(
+            1
+            for v in discriminate
+            if v.claim.sot_label is not None and v.claim.sot_label != "signed_contract"
+        )
+        explicit_mislabel_rate = mislabeled / len(discriminate)
+
     return RunMetrics(
         grounding_rate=grounded / total if total else 0.0,
         decoy_citation_rate=decoy / total if total else 0.0,
@@ -126,4 +152,7 @@ def compute_metrics(
         decoy_citations=decoy,
         correct_tasks=correct,
         total_tasks=total_tasks,
+        source_fidelity=source_fidelity,
+        decoy_probe_match_rate=decoy_probe_match_rate,
+        explicit_mislabel_rate=explicit_mislabel_rate,
     )

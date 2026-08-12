@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 
 from benchmark.answers import DocumentAnswers, ExtractQuestionAnswer, PlaybookRuleAnswer
+from benchmark.document_types import TYPE_LABELS
 
 SYSTEM_PROMPT = (
     "You are a contract analyst. Cite only from the signed_contract document version. "
@@ -28,19 +29,59 @@ Respond with a JSON object:
 """
 
 
+def _type_preamble(document_type: str) -> str:
+    label = TYPE_LABELS.get(document_type, "contract")
+    return f"You are analyzing a {label}.\n"
+
+
 def build_extract_prompt(
     document_block: str,
     question: ExtractQuestionAnswer,
+    *,
+    document_type: str = "msa",
+    source_label: str = "signed_contract",
 ) -> tuple[str, str]:
     """Return (system, user) messages for an extract task."""
-    user = f"""{document_block}
+    if source_label == "signed_contract":
+        system = SYSTEM_PROMPT
+    else:
+        system = (
+            f"You are a contract analyst. Cite only from the {source_label} document version. "
+            "Respond with JSON only."
+        )
+    user = f"""{_type_preamble(document_type)}{document_block}
 
 Task (extract): {question.question}
 
 {RESPONSE_SCHEMA}
 
 Include exactly one claim answering the question."""
-    return SYSTEM_PROMPT, user
+    return system, user
+
+
+def build_extract_discriminate_prompt(
+    document_block: str,
+    question: ExtractQuestionAnswer,
+    *,
+    document_type: str = "msa",
+) -> tuple[str, str]:
+    """Extract task requiring explicit sot_label for source discrimination."""
+    system = (
+        "You are a contract analyst. Answer from signed_contract only, but you must "
+        "state which document label you relied on in sot_label. Respond with JSON only."
+    )
+    schema = RESPONSE_SCHEMA.replace(
+        '"sot_label": "signed_contract"',
+        '"sot_label": "the label you actually used (required)"',
+    )
+    user = f"""{_type_preamble(document_type)}{document_block}
+
+Task (extract): {question.question}
+
+{schema}
+
+Include exactly one claim answering the question. Set sot_label to the version you cited."""
+    return system, user
 
 
 def build_playbook_prompt(
@@ -48,6 +89,7 @@ def build_playbook_prompt(
     rules: list[PlaybookRuleAnswer],
     *,
     condition: str = "clean",
+    document_type: str = "msa",
 ) -> tuple[str, str]:
     """Return (system, user) messages for a playbook task."""
     rules_text = "\n".join(
@@ -60,7 +102,7 @@ def build_playbook_prompt(
             "outdated_wrong_terms as the operative version for numeric terms. "
             "Consider all labeled versions when answering.\n"
         )
-    user = f"""{document_block}
+    user = f"""{_type_preamble(document_type)}{document_block}
 {noisy_task_note}
 Task (playbook): Evaluate each rule against signed_contract only.
 

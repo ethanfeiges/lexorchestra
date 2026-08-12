@@ -27,14 +27,23 @@ def build_bundle_from_file(
     path: Path,
     seed: int = 42,
     corruptions: list[str] | None = None,
+    document_type: str | None = None,
 ) -> SoTBundle:
     """Parse a contract file and build an SoT bundle. Primary entry point."""
     clauses = parse_document(path)
     document_id = path.stem
+    if document_type is None:
+        try:
+            from benchmark.document_types import document_type_for_id
+
+            document_type = document_type_for_id(document_id)
+        except ImportError:
+            document_type = "msa"
     return build_bundle(
         clauses=clauses,
         document_id=document_id,
         source_path=str(path),
         seed=seed,
         corruptions=corruptions,
+        document_type=document_type,
     )

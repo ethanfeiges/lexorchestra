@@ -1,8 +1,8 @@
 # LexOrchestra
 
-LexOrchestra is a research benchmark for legal document orchestration. It runs parallel Gemini subtasks on real SEC EDGAR master service agreements, keeps a parsed canonical source of truth, and verifies that every model claim is grounded in that document rather than in plausible decoy versions that appear in the prompt.
+LexOrchestra is a research benchmark for legal document orchestration. It runs parallel Gemini subtasks on real SEC EDGAR contracts across **five document types**, keeps a parsed canonical source of truth, and verifies that every model claim is grounded in that document rather than in plausible decoy versions that appear in the prompt.
 
-**Research question:** When plausible wrong document versions sit next to the real contract, does orchestration plus canonical verification still produce grounded answers?
+**Research question:** When plausible wrong document versions sit next to the real contract, does orchestration plus canonical verification still produce grounded answers — across MSAs, software licenses, NDAs, employment agreements, and credit agreements?
 
 ---
 
@@ -15,7 +15,7 @@ LexOrchestra separates three concerns that are often conflated in LLM pipelines:
 Each benchmark run follows the same four-stage flow:
 
 ```
-Real MSA (SEC EDGAR EX-10)
+Real contract (SEC EDGAR EX-10)
     → Parse into clause store (canonical SoT)
     → Build prompt bundle (signed contract + decoys)
     → Orchestrate parallel subtasks via Gemini (extract + playbook)
@@ -34,7 +34,7 @@ Real MSA (SEC EDGAR EX-10)
 - **Extract** — Answer factual questions with structured claims (statement, `clause_id`, quote, `sot_label`).
 - **Playbook** — Evaluate pass/fail rules from a legal checklist (for example, "Does the contract require ICC arbitration?").
 
-Tasks can run **sequentially** with one model (`single`) or **in parallel** (`parallel_grounded`). In every case, output is structured JSON claims, not free-form prose.
+Tasks can run **sequentially** with one model (`single`), **in parallel** (`parallel_grounded`), or with **source probes** (`parallel_source_probe`) that test whether agents cite the correct or incorrect labeled version. In every case, output is structured JSON claims, not free-form prose.
 
 **4. Verify and score.** The grounding verifier checks every claim against the canonical clause store. A claim is grounded only if its `clause_id` exists in the canonical parse and its quote is an exact substring of that clause's text. Claims that match decoy text or cite the wrong `sot_label` are flagged even when they look plausible. Task accuracy is scored separately against pre-authored answer keys in `benchmark/answers/{document_id}.yaml`.
 
@@ -45,7 +45,7 @@ The model does not choose which document version is authoritative. The pipeline 
 
 | Layer                       | What it is                                     | Who sees it                       |
 | --------------------------- | ---------------------------------------------- | --------------------------------- |
-| Raw file                    | Executed MSA text from SEC EDGAR               | Parser only                       |
+| Raw file                    | Executed contract text from SEC EDGAR          | Parser only                       |
 | Canonical clauses           | Parsed, ID'd chunks from that file             | Verifier and answer-key authoring |
 | `signed_contract` candidate | Exact copy of canonical, labeled in the prompt | Gemini                            |
 | Decoy candidates            | Corruptions of the same canonical parse        | Gemini (as distractions)          |
@@ -58,13 +58,13 @@ Answer keys are authored once per document from the canonical parse. They do not
 The benchmark varies conditions and strategies while keeping the verifier and answer keys fixed:
 
 
-| Axis          | Values                        | What it tests                                                  |
-| ------------- | ----------------------------- | -------------------------------------------------------------- |
-| **Condition** | `clean`, `noisy_prompt`       | Whether Gemini stays grounded when decoys appear in the prompt |
-| **Strategy**  | `single`, `parallel_grounded` | Whether parallel scheduling changes grounding behavior         |
+| Axis          | Values                                                  | What it tests                                                  |
+| ------------- | ------------------------------------------------------- | -------------------------------------------------------------- |
+| **Condition** | `clean`, `noisy_prompt`                                 | Whether Gemini stays grounded when decoys appear in the prompt |
+| **Strategy**  | `single`, `parallel_grounded`, `parallel_source_probe` | Whether parallel scheduling and source probes change grounding |
 
 
-The default matrix runs 8 configurations (4 documents × 2 conditions) using `gemini-2.0-flash`.
+The default matrix runs 10 configurations (5 document types × 2 conditions) using `gemini-flash-latest`.
 
 ### Metrics
 
@@ -74,6 +74,8 @@ The default matrix runs 8 configurations (4 documents × 2 conditions) using `ge
 | **Grounding rate**      | Share of claims with a valid `clause_id` and quote in the signed canonical contract |
 | **Decoy citation rate** | Share of claims that match decoy text or cite a wrong `sot_label`                   |
 | **Task accuracy**       | Share of playbook and extract answers that match the gold answer key                |
+| **Source fidelity**     | Grounding rate on canonical-scoped tasks (`parallel_source_probe` only)           |
+| **Decoy probe match**   | Share of decoy-instructed probe claims matching decoy text                          |
 
 
 ---
@@ -154,7 +156,7 @@ All tests should pass. Unit tests exercise parsing, bundle construction, orchest
 
 ### 6. Run the experiment
 
-Run the default Gemini matrix (4 MSAs × 2 conditions):
+Run the default Gemini matrix (5 document types × 2 conditions):
 
 ```powershell
 python -m benchmark.run_experiment --provider gemini
@@ -166,7 +168,7 @@ This writes results to `experiments/live_gemini/`:
 - `REPORT.md` — aggregated summary tables
 - `manifest.json` — configuration snapshot for reproducibility
 
-Open `experiments/live_gemini/REPORT.md` to inspect grounding rates, decoy citation rates, and task accuracy.
+Open `experiments/live_gemini/REPORT.md` to inspect grounding rates, decoy citation rates, and task accuracy by document type.
 
 For a smaller smoke test on one document:
 
@@ -195,22 +197,32 @@ More flags and customization options are documented in `[experimentDocs/EXPERIME
 ## Default matrix
 
 
-| Axis       | Values                                    |
-| ---------- | ----------------------------------------- |
-| Model      | `gemini-2.0-flash`                        |
-| Documents  | Edgemode, NuScale, Aspira, Pulmatrix MSAs |
-| Conditions | `clean`, `noisy_prompt`                   |
-| Strategy   | `parallel_grounded` (default)             |
+| Axis       | Values                                                                 |
+| ---------- | ---------------------------------------------------------------------- |
+| Model      | `gemini-flash-latest`                                                     |
+| Documents  | One primary per type (see table below)                                 |
+| Conditions | `clean`, `noisy_prompt`                                                |
+| Strategy   | `parallel_grounded` (default)                                          |
+| Runs       | **10** (5 types × 2 conditions)                                      |
 
 
-8 runs (4 × 2). Override document or condition selection:
+| Document type      | Primary fixture                         | Example tasks                                      |
+| ------------------ | --------------------------------------- | -------------------------------------------------- |
+| MSA                | `edgar_edgemode_inc_ex10.1`             | ICC arbitration, mutual indemnity, fee indexation  |
+| Software license   | `edgar_amd_ex10.79`                     | Perpetual license, license fees, governing law     |
+| NDA                | `edgar_hg_holdings_inc_ex10.2`          | Mutual confidentiality, return of materials, term |
+| Employment         | `edgar_emerald_holding_inc_ex10.43`     | Confidentiality duty, governing law                |
+| Credit             | `edgar_enviri_corp_ex10.1`              | NY governing law, amendment number                 |
+
+
+Override document or condition selection:
 
 ```powershell
 python -m benchmark.run_experiment `
   --provider gemini `
   --documents edgar_edgemode_inc_ex10.1 `
   --conditions clean noisy_prompt `
-  --strategy single
+  --strategy parallel_source_probe
 ```
 
 ### Tasks
@@ -226,7 +238,7 @@ Task accuracy requires grounded claims that match the key. Decoy text that happe
 
 ## Contract data
 
-Real MSAs come from SEC EDGAR EX-10 filings in `[legalDocs/contracts/public/](legalDocs/contracts/public/)`. Decoys are corruptions of each parse, not separate synthetic documents.
+Real contracts come from SEC EDGAR EX-10 filings in `[legalDocs/contracts/public/](legalDocs/contracts/public/)`. Decoys are corruptions of each parse, not separate synthetic documents. See `[context/phases/MULTI_TYPE.md](context/phases/MULTI_TYPE.md)` for the multi-type design.
 
 To fetch additional contracts from EDGAR:
 
@@ -244,7 +256,7 @@ orchestrator/     Task definitions and parallel runner
 grounding/        Verifier and decoy detection
 models/           Gemini client and test stubs
 benchmark/        Answer keys, experiment runner, metrics
-legalDocs/        SEC EDGAR contract fixtures
+legalDocs/        SEC EDGAR contract fixtures (5 types)
 experiments/      Committed Gemini baseline results
 experimentDocs/   Run write-ups and findings
 context/          Design docs and architecture decisions
@@ -256,6 +268,7 @@ scripts/          Doc sync utilities
 
 ## Documentation
 
+- `[context/phases/MULTI_TYPE.md](context/phases/MULTI_TYPE.md)` — Five document types and source-probe design
 - `[experimentDocs/EXPERIMENTS.md](experimentDocs/EXPERIMENTS.md)` — Gemini runs and real-world task outcomes
 - `[experimentDocs/FINDINGS.md](experimentDocs/FINDINGS.md)` — Interpretation of results
 - `[experimentDocs/HYPOTHESIS.md](experimentDocs/HYPOTHESIS.md)` — Research question and predictions

@@ -84,6 +84,22 @@ def render_markdown(
                 f"{stats['decoy_citation_rate']:.0%} | {stats['task_accuracy']:.0%} |"
             )
 
+    if any("document_type" in r for r in results):
+        lines.extend(
+            [
+                "",
+                "## Summary by document type",
+                "",
+                "| Document type | Runs | Grounding | Decoy rate | Task accuracy |",
+                "|---------------|------|-----------|------------|---------------|",
+            ]
+        )
+        for dtype, stats in summarize_by_key(results, "document_type").items():
+            lines.append(
+                f"| {dtype} | {int(stats['runs'])} | {stats['grounding_rate']:.0%} | "
+                f"{stats['decoy_citation_rate']:.0%} | {stats['task_accuracy']:.0%} |"
+            )
+
     lines.extend(
         [
             "",
@@ -101,17 +117,18 @@ def render_markdown(
 
     lines.extend(["", "## Per-run detail", ""])
     lines.append(
-        "| Document | Condition | Strategy | Model | Seed | Decoys | Ground | Decoy | Acc |"
+        "| Document | Type | Condition | Strategy | Model | Seed | Decoys | Ground | Decoy | Acc |"
     )
     lines.append(
-        "|----------|-----------|----------|-------|------|--------|--------|-------|-----|"
+        "|----------|------|-----------|----------|-------|------|--------|--------|-------|-----|"
     )
     for row in results:
         m = row["metrics"]
         decoys = ", ".join(row.get("decoys_in_prompt") or []) or "—"
         model = row.get("model", "—")
+        dtype = row.get("document_type", "—")
         lines.append(
-            f"| {row['document_id']} | {row['condition']} | {row['strategy']} | "
+            f"| {row['document_id']} | {dtype} | {row['condition']} | {row['strategy']} | "
             f"{model} | {row['seed']} | {decoys} | {m['grounding_rate']:.0%} | "
             f"{m['decoy_citation_rate']:.0%} | {m['task_accuracy']:.0%} |"
         )

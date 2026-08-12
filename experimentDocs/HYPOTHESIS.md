@@ -28,6 +28,7 @@ We test whether a canonical Source-of-Truth (SoT) store plus quote-level verific
 |----------|-------------|
 | `single` | One Gemini call runs extract, then playbook sequentially |
 | `parallel_grounded` | Extract and playbook run in parallel, then merge at the verifier |
+| `parallel_source_probe` | Canonical extract ∥ playbook ∥ decoy extract ∥ discrimination extract |
 
 ## Confounds
 

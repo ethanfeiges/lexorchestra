@@ -9,7 +9,7 @@ def test_render_markdown_includes_model_summary():
             "document_id": "doc",
             "condition": "noisy_prompt",
             "strategy": "parallel_grounded",
-            "model": "gemini-2.0-flash",
+            "model": "gemini-flash-latest",
             "seed": 1,
             "decoys_in_prompt": ["outdated_wrong_terms"],
             "metrics": {
@@ -20,7 +20,7 @@ def test_render_markdown_includes_model_summary():
         }
     ]
     md = render_markdown(results)
-    assert "gemini-2.0-flash" in md
+    assert "gemini-flash-latest" in md
     assert "noisy_prompt" in md
     assert "Summary by model" in md
 
@@ -31,7 +31,7 @@ def test_render_markdown_includes_strategy_summary():
             "document_id": "doc",
             "condition": "clean",
             "strategy": "single",
-            "model": "gemini-2.0-flash",
+            "model": "gemini-flash-latest",
             "seed": 1,
             "decoys_in_prompt": [],
             "metrics": {

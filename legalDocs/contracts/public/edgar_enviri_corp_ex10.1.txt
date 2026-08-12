@@ -1,0 +1,559 @@
+Document
+
+Exhibit 10.1
+
+EXECUTION VERSION
+
+AMENDMENT NO. 14 TO THIRD AMENDED AND RESTATED CREDIT AGREEMENT, dated as of September 5, 2024 (this “Amendment Agreement”), among ENVIRI CORPORATION (f/k/a HARSCO CORPORATION), a Delaware corporation (the “Company”), the parties hereto that execute this Amendment Agreement as a “2024 Extending Revolving Credit Lender” (the “2024 Extending Revolving Credit Lenders”), the parties hereto that execute this Amendment Agreement as a “2024 Incremental Extending Revolving Credit Lender” (the “2024 Incremental Extending Revolving Credit Lenders”), the Issuing Lenders party hereto, ING Capital LLC, solely in its capacity as sustainability structuring agent (the “Sustainability Structuring Agent”), and BANK OF AMERICA, N.A., as administrative agent (the “Administrative Agent”).
+
+Reference is made to the Third Amended and Restated Credit Agreement, dated as of November 2, 2016 (as amended by Amendment No. 1 to Third Amended and Restated Credit Agreement, dated as of December 8, 2017, Amendment No. 2 to Third Amended and Restated Credit Agreement, dated as of June 18, 2018, Amendment No. 3 to Third Amended and Restated Credit Agreement, dated as of June 18, 2018, Amendment No. 4 to Third Amended and Restated Credit Agreement, dated as of June 28, 2019, Amendment No. 5 to Third Amended and Restated Credit Agreement, dated as of March 31, 2020, Amendment No. 6 to Third Amended and Restated Credit Agreement, dated as of June 26, 2020, Amendment No. 7 to Third Amended and Restated Credit Agreement, dated as of March 10, 2021, Amendment No. 8 to Third Amended and Restated Credit Agreement, dated as of October 27, 2021, Amendment No. 9 to Third Amended and Restated Credit Agreement, dated as of February 22, 2022, Amendment No. 10 to Third Amended and Restated Credit Agreement, dated as of June 24, 2022, Amendment No. 11 to Third Amended and Restated Credit Agreement, dated as of August 19, 2022, Amendment No. 12 to Third Amended and Restated Credit Agreement, dated as of August 29, 2022, and Amendment No. 13 to Third Amended and Restated Credit Agreement, dated as of December 21, 2022, the “Existing Credit Agreement”; the Existing Credit Agreement as amended by this Amendment Agreement, the “Amended Credit Agreement”), among, inter alios, the Company, the Approved Borrowers (as defined therein) from time to time party thereto, the lenders from time to time party thereto and Bank of America, N.A., as Administrative Agent and Collateral Agent;
+
+WHEREAS, on the date hereof, immediately prior to giving effect to the incurrence of the 2024 Extended Revolving Credit Commitments (as defined below), the aggregate principal amount of the Revolving Credit Commitments shall have been reduced to $233,333,333.33, after giving effect to a voluntary prepayment of an aggregate principal amount of $441,666,666.67 (the “Repaid Amount”) pursuant to Section 2.11 of the Existing Credit Agreement and a concurrent permanent reduction of the Revolving Credit Commitment of an aggregate principal amount of $466,666,666.67 (the “Reduced Amount”) pursuant to Section 2.10 of the Existing Credit Agreement (the repayment of the Repaid Amount and reduction of the Reduced Amount, as applicable, the “Reduction”);
+
+1
+
+AMERICAS/2024298233.16
+
+    
+
+WHEREAS, the Company desires to obtain, and the Administrative Agent and the 2024 Incremental Extending Revolving Credit Lenders have agreed to provide, in accordance with the provisions of Section 2.24 of the Existing Credit Agreement, a new tranche of Incremental Revolving Credit Commitments in an aggregate principal amount equal to the Repaid Amount in the form of 2024 Extended Revolving Credit Commitments (as defined in the Amended Credit Agreement) (the “2024 Incremental Extended Revolving Credit Commitments” and the loans thereunder in the form of 2024 Extended Revolving Credit Loans (as defined in the Amended Credit Agreement), the “2024 Incremental Extended Revolving Credit Loans”) on the terms, and subject to the conditions, set forth herein, such that, immediately after giving effect to the incurrence of the 2024 Incremental Extended Revolving Credit Commitments, the aggregate principal amount of the Revolving Credit Commitments then outstanding is $675,000,000, of which (i) $441,666,666.67 consists of 2024 Incremental Extended Revolving Credit Commitments, and (ii) $233,333,333.33 consists of Initial Revolving Credit Commitments (as defined in the Amended Credit Agreement);
+
+WHEREAS, pursuant to Section 2.24(e) and (f) of the Existing Credit Agreement, the Company, the Administrative Agent, the 2024 Extending Revolving Credit Lenders and the Issuing Lenders may enter into an Incremental Amendment to the Existing Credit Agreement without the consent of any other Lenders, effecting such amendments to the Existing Credit Agreement as may be necessary or appropriate, in the reasonable opinion of the Administrative Agent and the Company, to effect the provisions of Section 2.24;
+
+WHEREAS, the Company desires, and the Administrative Agent and the 2024 Extending Revolving Credit Lenders as set forth on their signature page hereto, have agreed, to, immediately after giving effect to the incurrence by the Company of the 2024 Incremental Extended Revolving Credit Commitments, on the Amendment No. 14 Effective Date (as defined below), amend the Existing Credit Agreement to, among other things, in accordance with the provisions of Section 2.29 of the Existing Credit Agreement, extend the Revolving Credit Termination Date applicable to their Initial Revolving Credit Commitments (such extended Initial Revolving Credit Commitments, together with the 2024 Incremental Extended Revolving Credit Commitments, referred to as the “2024 Extended Revolving Credit Commitments” and the loans thereunder, together with the 2024 Incremental Extended Revolving Credit Loans referred to as the “2024 Extended Revolving Credit Loans”) outstanding as of immediately prior to the Amendment No. 14 Effective Date (as defined below) (it being acknowledged that the aggregate outstanding principal amount of the Initial Revolving Credit Commitments held by the Revolving Credit Lenders which are also 2024 Extending Revolving Credit Lenders is at such time $183,333,333.33), on the terms, and subject to the conditions, set forth herein;
+
+WHEREAS, pursuant to Section 2.29(b) of the Existing Credit Agreement, the Company, the Administrative Agent and the 2024 Extending Revolving Credit Lenders and the Issuing Lenders, may enter into a Loan Extension Amendment to the Existing Credit Agreement without the consent of any other Lenders and effect amendments to the Existing Credit Agreement as hereinafter provided in Section 5 as may be necessary or appropriate, in the
+
+2
+
+AMERICAS/2024298233.16
+
+    
+
+opinion of the Administrative Agent and the Company, to effect the provisions of Section 2.29 of the Existing Credit Agreement, subject to the satisfaction of the conditions precedent to effectiveness set forth in Section 8 hereof;
+
+WHEREAS, pursuant to Section 10.01 of the Existing Credit Agreement, the 2024 Incremental Extended Revolving Credit Lenders and the 2024 Extending Revolving Credit Lenders, which constitute the Majority Revolving Credit Facility Lenders and the Required Lenders immediately after giving effect to the incurrence of the 2024 Incremental Extended Revolving Credit Commitments, have agreed to amend the Existing Credit Agreement by effectuating certain other amendments to the Existing Credit Agreement as hereinafter provided in Section 5, subject to the satisfaction of the conditions precedent to effectiveness set forth in Section 8 hereof;
+
+WHEREAS, the Company desires to appoint ING Capital LLC as Sustainability Structuring Agent under, and pursuant to the terms set forth in, the Amended Credit Agreement, and the Sustainability Structuring Agent has agreed to act as Sustainability Structuring Agent on such terms; and
+
+WHEREAS, (a) BofA Securities, Inc., BMO Capital Markets Corp., Fifth Third Bank, National Association, Goldman Sachs Bank USA and PNC Bank, National Association have agreed to act as joint bookrunners and joint lead arrangers, and JPMorgan Chase Bank, N.A., U.S. Bank National Association and HSBC Securities (USA) Inc. have agreed to act as joint lead arrangers (collectively, each of the foregoing Persons in such capacities, the “Lead Arrangers”), (b) JPMorgan Chase Bank, N.A., HSBC Securities (USA) Inc. and U.S. Bank National Association have agreed to act as syndication agents (collectively, each of the foregoing Persons in such capacities, the “Syndication Agents”), (c) Huntington Securities, Inc., ING Bank N.V., Dublin Branch and Deutsche Bank Securities Inc. have agreed to act as documentation agents (collectively, each of the foregoing Persons in such capacities, the “Documentation Agents”), (d) Huntington Securities, Inc., ING Bank N.V., Dublin Branch and Deutsche Bank Securities Inc. have agreed to act as senior co-managers (collectively, each of the foregoing Persons in such capacities, the “Senior Co-Managers”), and (e) Northwest Bank and Arab Banking Corporation (B.S.C.) have agreed to act as co-managers (collectively, each of the foregoing Persons in such capacities, the “Co-Managers”), in each case for the 2024 Extended Revolving Credit Commitments;
+
+NOW, THEREFORE, in consideration of the foregoing and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the parties hereto hereby agree as follows:
+
+Section 1.Defined Terms.  Capitalized terms used herein but not otherwise defined herein (including on any Appendix attached hereto) shall have the meanings provided to such terms in the Amended Credit Agreement.
+
+3
+
+AMERICAS/2024298233.16
+
+    
+
+Section 2.Establishment of Incremental Revolving Credit Commitments Consisting of the 2024 Incremental Extended Revolving Credit Commitments.
+
+(a)Subject solely to the satisfaction of the conditions set forth in Section 8 hereof, on the Amendment No. 14 Effective Date, there shall be established pursuant to Section 2.24 of the Existing Credit Agreement a new Revolving Credit Facility and a new separate Class of Revolving Credit Commitments comprised of “2024 Extended Revolving Credit Commitments” under the Amended Credit Agreement, which shall be subject to the relevant terms set forth in the Amended Credit Agreement.  Each Person that executes and delivers a signature page to this Amendment Agreement as a 2024 Incremental Extending Revolving Credit Lender hereby agrees (i) to provide, as contemplated by the Amended Credit Agreement, a 2024 Incremental Extended Revolving Credit Commitment to the Borrowers in a principal amount equal to the commitment amount opposite such 2024 Incremental Extending Revolving Credit Lender’s name under the caption “2024 Incremental Extended Revolving Credit Commitment” on Schedule I attached hereto on the Amendment No. 14 Effective Date, immediately prior to giving effect to the extension of the Revolving Credit Termination Date set forth in Section 3, on the terms provided herein and in the Amended Credit Agreement, (ii) to make 2024 Extended Revolving Credit Loans under the Amended Credit Agreement to the Borrowers pursuant to its 2024 Extended Revolving Credit Commitment under the Amended Credit Agreement and in accordance with Section 2.04 of the Amended Credit Agreement and the other applicable terms and conditions of the Amended Credit Agreement and (iii) that (A) it shall constitute and have all of the rights and obligations of a “Revolving Credit Lender” and a “Lender”, (B) its 2024 Extended Revolving Credit Commitment shall constitute an “Incremental Revolving Credit Commitment”, a “Revolving Credit Commitment” and a “Commitment” and (C) its 2024 Extended Revolving Credit Loans shall constitute “Incremental Revolving Credit Loans”, “Revolving Credit Loans” and “Loans”, in each case, for all purposes of the Amended Credit Agreement and the other Loan Documents (as modified hereby).
+
+(b)Each of the Issuing Lenders party hereto hereby consents to the establishment of the 2024 Extended Credit Commitments.
+
+Section 3.Extension of the Revolving Credit Termination Date.
+
+(a)Pursuant to Section 2.29 of the Existing Credit Agreement, and subject to the satisfaction of the conditions set forth in Section 8 hereof, on and as of the Amendment No. 14 Effective Date:
+
+(i)2024 Extending Revolving Credit Lenders.
+
+(A)     Immediately after the establishment of the 2024 Extended Revolving Credit Commitments pursuant to Section 2 above, the
+
+4
+
+AMERICAS/2024298233.16
+
+    
+
+aggregate outstanding principal amount of the Initial Revolving Credit Loans of each Initial Revolving Credit Lender which is also a 2024 Extending Revolving Credit Lender are hereby reclassified as 2024 Extended Revolving Credit Loans with the same aggregate outstanding principal amount as such Initial Revolving Credit Loans of such 2024 Extending Revolving Credit Lender and designated hereunder and under the Amended Credit Agreement as 2024 Extended Revolving Credit Loans.  For all purposes of the Amended Credit Agreement and the other Loan Documents, such 2024 Extended Revolving Credit Loans shall, after giving effect to such reclassification, be “2024 Extended Revolving Credit Loans” and all 2024 Extended Revolving Credit Loans shall thereafter for all purposes of the Amended Credit Agreement constitute one and the same Class of Revolving Credit Loans.
+
+(B)     Immediately after the establishment of the 2024 Extended Revolving Credit Commitments pursuant to Section 2 above, the aggregate principal amount of the Initial Revolving Credit Commitments of each Initial Revolving Credit Lender which is also a 2024 Extending Revolving Credit Lender are hereby reclassified as 2024 Extended Revolving Credit Commitments with the same aggregate principal amount as such Initial Revolving Credit Commitments of such 2024 Extending Revolving Credit Lender and designated hereunder and under the Amended Credit Agreement as the 2024 Extended Revolving Credit Commitments.  For all purposes of the Amended Credit Agreement and the other Loan Documents, such 2024 Extended Revolving Credit Commitments shall, after giving effect to such reclassification, be “Extended Revolving Credit Commitments” and all 2024 Extended Revolving Credit Commitments shall thereafter for all purposes of the Amended Credit Agreement constitute one and the same Class of Revolving Credit Commitments.
+
+(ii)2024 Non-Extending Revolving Credit Lenders.
+
+For the avoidance of doubt, (i) the aggregate outstanding principal amount of the Initial Revolving Credit Loans of each Revolving Credit Lender that does not deliver an executed signature page to this Amendment Agreement in its capacity as a Revolving Credit Lender (each such Lender, a “2024 Non-Extending Revolving Credit Lender” and such Loans, the “2024 Non-Extended Revolving Credit Loan”) and (ii) the aggregate principal amount of the Initial Revolving Credit Commitments (the “2024 Non-Extended Revolving Credit Commitments”) of each
+
+5
+
+AMERICAS/2024298233.16
+
+    
+
+2024 Non-Extending Revolving Credit Lender, shall each continue to be deemed, respectively, Revolving Credit Loans or Revolving Credit Commitments, as applicable, with the same aggregate principal amount as such Initial Revolving Credit Loans or Initial Revolving Credit Commitments of such 2024 Non-Extending Revolving Credit Lender, as reduced pro rata by the Reduction.
+
+(b)On the Amendment No. 14 Effective Date, after giving effect to this Amendment Agreement, including this Section 3, the aggregate principal amount of the 2024 Extended Revolving Credit Commitments and the aggregate principal amount of the 2024 Non-Extended Revolving Credit Commitments shall be as set forth on Schedule II hereto.  For purposes of the Amended Credit Agreement and the other Loan Documents, each of the 2024 Extended Revolving Credit Commitments and the 2024 Non-Extended Revolving Credit Commitments will form separate Classes of “Revolving Credit Commitments”.
+
+(c)The 2024 Extended Revolving Credit Loans shall be a single and separate Class from the 2024 Non-Extended Revolving Credit Loans for all purposes under the Amended Credit Agreement and the other Loan Documents, and except as expressly set forth herein and in the Amended Credit Agreement, shall have terms that are identical to those of the Initial Revolving Credit Loans and shall be entitled to all the benefits afforded by the Loan Documents in respect of Loans, including, without limitation, the following: (i) the 2024 Extended Revolving Credit Loans shall rank pari passu in right of payment with respect to all the 2024 Non-Extended Revolving Credit Loans under the Loan Documents, (ii) the 2024 Extended Revolving Credit Loans shall benefit, on a pari passu basis with all 2024 Non-Extended Revolving Credit Loans, from any mandatory prepayments in respect of 2024 Non-Extended Revolving Credit Loans (provided, that, notwithstanding anything to the contrary herein or in any other Loan Document, the 2024 Non-Extended Revolving Credit Loans may be permanently repaid on a pro rata or greater than pro rata basis in connection with any refinancing of the 2024 Non-Extended Revolving Credit Loans and 2024 Non-Extended Revolving Credit Commitments and may be paid upon their Revolving Credit Termination Date without any concurrent payment of 2024 Extended Revolving Credit Loans) and (iii) the 2024 Extended Revolving Credit Loans shall benefit equally and ratably from the guarantees and the security interests created by the Collateral Documents on a pari passu basis with all 2024 Non-Extended Revolving Credit Loans under the Loan Documents.  Notwithstanding the foregoing, it is understood and agreed that the 2024 Extended Revolving Credit Loans and the 2024 Non-Extended Revolving Credit Loans shall have different Revolving Credit Termination Dates, different Applicable Margins and different Commitment Fee Percentages in accordance with the terms of the Amended Credit Agreement.
+
+(d)Each party hereto hereby agrees that this Amendment Agreement shall constitute an Loan Extension Amendment pursuant to and in accordance with the
+
+6
+
+AMERICAS/2024298233.16
+
+    
+
+requirements of Section 2.29 of the Existing Credit Agreement and an Incremental Amendment pursuant to and in accordance with the requirements of Section 2.24 of the Existing Credit Agreement.  The Company hereby notifies the Administrative Agent of the Loan Extension Offer set forth in this Amendment Agreement, and the Administrative Agent hereby waives any notice period required pursuant to Section 2.29 of the Existing Credit Agreement and confirms that such notice shall be deemed to have been timely provided by the Company to the Administrative Agent.
+
+(e)For purposes of the Amended Credit Agreement and the other Loan Documents, all existing L/C Commitments of each 2024 Extending Revolving Credit Lender (prior to the Amendment No. 14 Effective Date) shall continue to be the L/C Commitments of such Revolving Credit Lender on and after the Amendment No. 14 Effective Date until the Revolving Credit Termination Date for the 2024 Extended Revolving Credit Commitments set forth in the Amended Credit Agreement.  Any Letters of Credit outstanding on the Amendment No. 14 Effective Date set forth on Schedule III hereto (such Letters of Credit, the “Existing Letters of Credit”) shall remain outstanding, with each Revolving Credit Lender to be bound by the applicable provisions of Article 3 of the Amended Credit Agreement in respect thereof.
+
+Section 4.Swing Line.  Subject solely to the satisfaction of the conditions set forth in Section 8 hereof, each Person that executes and delivers a signature page to this Amendment Agreement as (i) a “Swing Line Lender” agrees that it shall constitute and have all of the rights and obligations of a “Swing Line Lender” under the Amended Credit Agreement and the other Loan Documents, with a Swing Line Commitment as set forth on Schedule II hereto, and (ii) an “Issuing Lender” agrees that it shall constitute and have all of the rights and obligations of an “Issuing Lender” under the Amended Credit Agreement and the other Loan Documents.
+
+Section 5.Amendments to Credit Agreement.  Each of the parties hereto agrees that, effective as of the Amendment No. 14 Effective Date (including after giving effect to the incurrence of the 2024 Incremental Extended Revolving Credit Commitments):
+
+(a)the Existing Credit Agreement shall be amended in accordance with Sections 2.24, 2.29 and 10.01 thereof to delete the stricken text (indicated textually in the same manner as the following example: stricken text) and to add the double-underlined text (indicated textually in the same manner as the following example: double-underlined text) as set forth in the Amended Credit Agreement attached as Exhibit A hereto, except that any Schedule, Exhibit or other attachment to the Existing Credit Agreement not amended pursuant to the terms of this Amendment Agreement or otherwise included as part of said Exhibit A shall remain in effect without any amendment or other modification thereto;
+
+(b)Annex B (Revolving Credit Commitments) to the Existing Credit Agreement is hereby amended and replaced in its entirety by Schedule II hereto; and
+
+7
+
+AMERICAS/2024298233.16
+
+    
+
+(c)A new Schedule 1.01(B) (Existing Letters of Credit) is hereby added to the Existing Credit Agreement, which Schedule 1.01(B) shall read as Schedule III hereto.
+
+(d)Schedule 1.01 (Existing Designated Bilateral Letters of Credit) to the Existing Credit Agreement is hereby renamed as “Schedule 1.01(A)”, and is hereby amended and replaced in its entirety to read as Schedule IV hereto.
+
+(e)A new Exhibit A-8 (Form of Swing Line Borrowing Request) is hereby added to the Existing Credit Agreement, which Exhibit A-8 shall read as Schedule V hereto.
+
+(f)A new Exhibit F-3 (Form of Swing Line Note) is hereby added to the Existing Credit Agreement, which Exhibit F-3 shall read as Schedule VI hereto.
+
+(g)A new Exhibit N (Form of Notice of Loan Prepayment) is hereby added to the Existing Credit Agreement, which Exhibit N shall read as Schedule VII hereto.
+
+Section 6.Assignments and Assumptions.
+
+(a)Notwithstanding anything to the contrary in Section 2.24 or 2.29 of the Existing Credit Agreement, each of the parties hereto acknowledges and agrees that (a) certain Initial Revolving Credit Lenders and certain 2024 Extending Revolving Credit Lenders (such Revolving Credit Lenders, the “Reducing Lenders”) desire to sell and assign a portion of their Revolving Credit Commitments (such Revolving Credit Commitments, “Rebalancing Revolving Credit Commitments”) and Revolving Credit Loans (such Revolving Credit Loans, “Rebalancing Revolving Credit Loans”), if any, to certain other Revolving Credit Lenders (such Lenders, the “Increasing 2024 Extending Revolving Credit Lenders”) and certain other financial institutions identified on the signature pages hereto as a “New 2024 Extending Revolving Credit Lender” (such Lenders, the “New 2024 Extending Revolving Credit Lenders” and together with the Increasing 2024 Extending Revolving Credit Lenders, the “Purchasing 2024 Extending Revolving Credit Lenders”) and to be relieved of their obligations under the Amended Credit Agreement to the extent of their sale and assignment of their Rebalancing Revolving Credit Commitments and Rebalancing Revolving Credit Loans, if any; (b) the Increasing 2024 Extending Revolving Credit Lenders desire to purchase and assume certain portions of the Rebalancing Revolving Credit Commitments and Rebalancing Revolving Credit Loans, if any, of the Reducing Lenders and thereby increase their existing Revolving Credit Commitments; and (c) the New 2024 Extending Revolving Credit Lenders desire to purchase and assume certain portions of the Rebalancing Revolving Credit Commitments and Rebalancing Revolving Credit Loans, if any, of the Reducing Lenders and to become parties to the Amended Credit Agreement.  As an administrative convenience and to avoid the necessity that each Reducing Lender, Increasing 2024 Extending Revolving Credit Lender and Purchasing 2024 Extending
+
+8
+
+AMERICAS/2024298233.16
+
+    
+
+Revolving Credit Lender enter into separate Assignment and Acceptances, the parties hereto acknowledge and agree that effective as of the Amendment No. 14 Effective Date, each Reducing Lender hereby irrevocably sells and assigns to the Purchasing 2024 Extending Revolving Credit Lenders and each Purchasing 2024 Extending Revolving Credit Lender hereby irrevocably purchases and assumes from each such Reducing Lender, (x) all of such Reducing Lender’s rights and obligations in its capacity as a Revolving Credit Lender under the Amended Credit Agreement and any other documents or instruments delivered pursuant thereto to the extent related to the Revolving Credit Commitments and Revolving Credit Loans, if any, being sold and assigned by such Reducing Lender, including any guarantees included in such facilities (the portion of the Revolving Credit Commitments and Revolving Credit Loans, if any, being so sold and assigned by such Reducing Lender, the “Sold Portion”), in each case in amounts such that the Revolving Credit Commitments of all of the 2024 Extending Revolving Credit Lenders and 2024 Non-Extending Revolving Credit Lenders, after giving effect thereto, shall be as reflected on Schedule II attached hereto and (y) to the extent permitted to be assigned under applicable law, all claims, suits, causes of action and any other right of such Reducing Lender (in its capacity as a Lender) against any Person with respect to its Sold Portion, whether known or unknown, arising under or in connection with the Existing Credit Agreement, any other documents or instruments delivered pursuant thereto or the loan transactions governed thereby or in any way based on or related to any of the foregoing, including contract claims, tort claims, malpractice claims, statutory claims and all other claims at law or in equity related to the rights and obligations sold and assigned pursuant to clause (x) above (the rights and obligations sold and assigned pursuant to clauses (x) and (y) above being referred to herein collectively as the “Assigned Interests”).  Such sale and assignment of the Assigned Interests is without recourse to such Reducing Lender and, except as expressly provided herein, without representation or warranty by such Reducing Lender.
+
+(b)In addition to the foregoing assignment and acceptances, each of the parties hereto acknowledges and agrees that certain of the financial institutions identified on the signature pages hereto as a “New 2024 Extending Revolving Credit Lender” shall be added as 2024 Extending Revolving Credit Lenders under the Amended Credit Agreement and the 2024 Extended Revolving Credit Commitments of such New 2024 Extending Revolving Credit Lenders are as reflected on Schedule II hereto.
+
+(c)Immediately prior to the Amendment No. 14 Effective Date, each New 2024 Extending Revolving Credit Lender shall become a party to and a “2024 Extending Revolving Credit Lender” under the Amended Credit Agreement as if originally named therein as a party and shall be bound by all of terms and provisions applicable to 2024 Extending Revolving Credit Lenders under the Amended Credit Agreement.
+
+(d)Each Reducing Lender (a) represents and warrants that (i) it is the legal and beneficial owner of its Assigned Interest, (ii) its Assigned Interest is free and clear of
+
+9
+
+AMERICAS/2024298233.16
+
+    
+
+any lien, encumbrance or other adverse claim and (iii) it has full power and authority, and has taken all action necessary, to execute and deliver this Amendment Agreement and to consummate the transactions contemplated hereby, and (b) assumes no responsibility with respect to (i) any statements, warranties or representations made in or in connection with the Existing Credit Agreement, the Amended Credit Agreement or any other Loan Document, (ii) the execution, legality, validity, enforceability, genuineness, sufficiency or value of the Loan Documents or any collateral thereunder, (iii) the financial condition of the Company, any of its Subsidiaries or Affiliates or any other Person obligated in respect of any Loan Document or (iv) the performance or observance by the Company, any of its Subsidiaries or Affiliates or any other Person of any of their respective obligations under any Loan Document.
+
+(e)Each Purchasing 2024 Extending Revolving Credit Lender (a) represents and warrants that (i) it has full power and authority, and has taken all action necessary, to execute and deliver this Amendment Agreement and to consummate the transactions contemplated hereby and to become a Lender under the Amended Credit Agreement, (ii) it meets all requirements of an assignee of the Assigned Interest under the Amended Credit Agreement, (iii) to the extent it not a Lender prior to the Amendment No. 14 Effective Date, from and after the Amendment No. 14 Effective Date, it shall be bound by the provisions of the Amended Credit Agreement as a 2024 Extending Revolving Credit Lender thereunder and shall have the obligations of a 2024 Extending Revolving Credit Lender thereunder, (iv) it has received a copy of the Amended Credit Agreement, together with copies of the most recent financial statements referred to in Section 4.01 thereof or delivered pursuant to Section 6.01 thereof, as applicable, and such other documents and information as it has deemed appropriate to make its own credit analysis and decision to enter into this Amendment Agreement and to purchase the Assigned Interest on the basis of which it has made such analysis and decision independently and without reliance on the Administrative Agent, any Reducing Lender or any other Lender, and (v) if it is a Non-U.S. Lender, it has delivered to the Administrative Agent any documentation required to be delivered by it pursuant to the terms of the Existing Credit Agreement, duly completed and executed by it; and (b) agrees that (i) it will, independently and without reliance on the Administrative Agent, any Reducing Lender or any other Lender, and based on such documents and information as it shall deem appropriate at the time, continue to make its own credit decisions in taking or not taking action under the Loan Documents, and (ii) it will perform in accordance with their terms all of the obligations that by the terms of the Loan Documents are required to be performed by it as a 2024 Extending Revolving Credit Lender.
+
+(f)Notwithstanding anything to the contrary contained in the Amended Credit Agreement, the parties acknowledge and agree that this Section 6 shall be deemed to satisfy all requirements set forth in Section 10.06 of the Amended Credit Agreement for the assignment and acceptance of each Reducing Lender’s Assigned Interest.
+
+10
+
+AMERICAS/2024298233.16
+
+    
+
+(g)Effective on the Amendment No. 14. Effective Date, the participations in the Letters of Credit under the Amended Credit Agreement shall be adjusted to give effect to any change in the Revolving Credit Commitments and Committed Credit Exposure of any Revolving Credit Lender as a result of this Amendment Agreement.
+
+Section 7.Representations and Warranties. The Company hereby represents and warrants to the Administrative Agent and each Lender that (x) no Default or Event of Default has occurred and is continuing on and as of the Amendment No. 14 Effective Date after giving effect hereto and to any extension of credit requested to be made hereunder and under the Amended Credit Agreement on the Amendment No. 14 Effective Date, and (y) each of the representations and warranties in each of the Loan Documents is true and correct in all material respects (except that any representation and warranty that is qualified by materiality shall be true and correct in all respects) on and as of the Amendment No. 14 Effective Date after giving effect hereto and to any extension of credit requested to be made hereunder and under the Amended Credit Agreement on the Amendment No. 14 Effective Date (except to the extent such representations and warranties are specifically made as of an earlier date, in which case such representations and warranties were true and correct in all material respects as of such date).
+
+Section 8.Effectiveness of this Amendment Agreement.  This Amendment Agreement shall become effective as of the date hereof, subject to the satisfaction or waiver in writing of the following conditions precedent on such date (the date on which all of such conditions shall first be satisfied or waived in writing, the “Amendment No. 14 Effective Date”):
+
+(a)the Administrative Agent shall have received in .pdf or electronic format and, unless otherwise specified, properly executed by a Responsible Officer or authorized signatory of the signing Loan Party and by each other party thereto, each in form and substance reasonably satisfactory to the Administrative Agent and its legal counsel:
+
+(i)counterparts of (x) this Amendment Agreement that, when taken together, bear the signatures of the Company, each 2024 Extending Revolving Credit Lender, each Issuing Lender and the Swingline Lender (collectively constituting all of the requisite lenders under Section 10.01 of the Existing Credit Agreement, as applicable) and (y) a Consent and Reaffirmation that, when taken together, bear the signatures of the Company and each other Loan Party;
+
+(ii)a Standby Borrowing Request with respect to the 2024 Extended Revolving Credit Loans prior to 11:00 a.m., New York City time, three Business Days prior to the anticipated Amendment No. 14 Effective Date (which shall be a Business Day);
+
+(iii)a certificate of the Company, dated as of the Amendment No. 14 Effective Date, demonstrating in reasonable detail that after giving effect to the incurrence of the 2024 Incremental Extended Revolving Credit Commitments
+
+11
+
+AMERICAS/2024298233.16
+
+    
+
+(assuming a full drawing thereof) and the use of proceeds thereof on a Pro Forma Basis the Company would be in compliance with the Financial Covenants (as defined in the Existing Credit Agreement) recomputed as of the end of the most recently ended Test Period;
+
+(iv)a notice of partial prepayment and permanent reduction in accordance with, and within the time period set forth in, Section 2.11(a) and 2.10(b) of the Existing Credit Agreement with respect to the Initial Revolving Credit Loans to be repaid and reduced on the Amendment No. 14 Effective Date substantially concurrently with the funding of the 2024 Incremental Extended Revolving Credit Loans;
+
+(v)certificates of good standing from the secretary of state of the state of organization of each Loan Party, customary certificates of resolutions or other action, incumbency certificates and/or other certificates of Responsible Officers in respect of each Loan Party certifying true and complete copies of its organizational documents (or as to the absence of any amendments or modifications thereto since a prior certification date) and evidencing the identity, authority and capacity of each Responsible Officer in respect thereof authorized to act as a Responsible Officer in connection with this Amendment Agreement and the other Loan Documents to which such Loan Party is a party or is to be a party on the Amendment No. 14 Effective Date;
+
+(vi)customary legal opinions from (x) Fried, Frank, Harris, Shriver & Jacobson LLP, New York counsel to the Loan Parties and (y) the general counsel of the Company, in each case, in form and substance reasonably satisfactory to the Administrative Agent;
+
+(vii)a certificate of the Company, dated as of the Amendment No. 14 Effective Date, signed by a Responsible Officer, certifying as to the matters set forth in Sections 8(c) and (d) hereof;
+
+(b)(i) all of the fees (A) set forth in that certain engagement agreement, dated as of July 15, 2024, between the Company and BofA Securities, Inc., and (B) as may have been agreed between the Company and any 2024 Extending Revolving Credit Lender in writing, shall have been paid in accordance with the terms thereof, (ii) (x) all accrued but unpaid interest on, and fees payable in respect of, the Initial Revolving Credit Loans and all fees payable in respect of Revolving Credit Commitments in effect prior to the Amendment No. 14 Effective Date that are subject to the Reduction, in each case, shall have been paid by the Company and (y) the outstanding principal amount of Initial Revolving Credit Loans of the Initial Revolving Credit Lenders that are subject to the Reduction shall have been paid by the Company, and (iii) to the extent invoiced at least three Business Days prior to the Amendment No. 14 Effective Date, all other accrued fees
+
+12
+
+AMERICAS/2024298233.16
+
+    
+
+and reasonable and documented fees and out-of-pocket expenses payable to the Lead Arranger and the Agents on the Amendment No. 14 Effective Date shall have been paid in accordance with the separate arrangements among the Lead Arranger, the Agents and the Company;
+
+(c)each of the representations and warranties in each of the Loan Documents is true and correct in all material respects (except that any representation and warranty that is qualified by materiality shall be true and correct in all respects) on and as of the Amendment No. 14 Effective Date after giving effect hereto and to any extension of credit requested to be made hereunder and under the Amended Credit Agreement on the Amendment No. 14 Effective Date (except to the extent such representations and warranties are specifically made as of an earlier date, in which case such representations and warranties were true and correct in all material respects as of such date);
+
+(d)no Default or Event of Default has occurred and is continuing on and as of the Amendment No. 14 Effective Date after giving effect hereto and to any extension of credit requested to be made hereunder and under the Amended Credit Agreement on the Amendment No. 14 Effective Date; and
+
+(e)the Administrative Agent and the Lead Arranger shall have received at least three (3) Business Days prior to the Amendment No. 14 Effective Date all documentation and other information in respect of the Borrowers and the other Loan Parties required under applicable “know your customer” and anti-money laundering rules and regulations, including the USA PATRIOT Act, that has been reasonably requested in writing by it at least ten (10) Business Days prior to the Amendment No. 14 Effective Date).
+
+Section 9.Reference to and Effect on the Loan Documents.
+
+(a)Except as expressly set forth herein or in the Amended Credit Agreement, this Amendment Agreement shall not by implication or otherwise limit, impair, constitute a waiver of or otherwise affect the rights and remedies of the Lenders or the Agents under the Existing Credit Agreement or any other Loan Document and shall not alter, modify, amend or in any way affect any of the terms, conditions, obligations, covenants or agreements contained in the Existing Credit Agreement or any other provision of the Existing Credit Agreement or of any other Loan Document, all of which are ratified and affirmed in all respects and shall continue in full force and effect.
+
+(b)Nothing herein shall be deemed to entitle the Company to a consent to, or a waiver, amendment, modification or other change of, any of the terms, conditions, obligations, covenants or agreements contained in the Existing Credit Agreement or any other Loan Document in similar or different circumstances.
+
+13
+
+AMERICAS/2024298233.16
+
+    
+
+(c)On and after the Amendment No. 14 Effective Date, each reference in the Existing Credit Agreement to “this Agreement”, “hereunder”, “hereof”, “herein”, or words of like import, and each reference to the “Credit Agreement”, in any other Loan Document shall be deemed a reference to the Amended Credit Agreement.  This Amendment Agreement shall constitute a “Loan Document” for all purposes of the Amended Credit Agreement and the other Loan Documents.
+
+(d)Nothing contained in this Amendment Agreement, the Amended Credit Agreement or any other Loan Document shall constitute or be construed as a novation of any of the Obligations.
+
+Section 10.Governing Law. THIS AMENDMENT AGREEMENT AND THE RIGHTS AND OBLIGATIONS OF THE PARTIES UNDER THIS AMENDMENT AGREEMENT SHALL BE GOVERNED BY, AND CONSTRUED AND INTERPRETED IN ACCORDANCE WITH, THE LAW OF THE STATE OF NEW YORK, WITHOUT REGARD TO CONFLICT OF LAWS PRINCIPLES.
+
+Section 11.Costs and Expenses.  In accordance with, and subject to the limitations of, Section 10.05 of the Amended Credit Agreement, the Company agrees to reimburse the Administrative Agent for its reasonable and documented out-of-pocket expenses in connection with this Amendment Agreement, including the reasonable and documented fees, charges and disbursements of Allen Overy Shearman Sterling US LLP, counsel for the Administrative Agent and Lead Arranger.
+
+Section 12.Electronic Execution; Electronic Records; Counterparts.  This Amendment Agreement and any document, amendment, approval, consent, information, notice, certificate, request, statement, disclosure or authorization related to this Amendment Agreement (each a “Communication”), including Communications required to be in writing, may, if agreed by the Administrative Agent, be in the form of an Electronic Record and may be executed using Electronic Signatures, including, without limitation, facsimile and/or .pdf and shall be considered an original, and shall have the same legal effect, validity and enforceability as a paper record.  This Amendment Agreement may be executed in as many counterparts as necessary or convenient, including both paper and electronic counterparts, but all such counterparts are one and the same Amendment Agreement.  For the avoidance of doubt, the authorization under this paragraph may include, without limitation, use or acceptance by the Administrative Agent of a manually signed paper Communication which has been converted into electronic form (such as scanned into PDF format), or an electronically signed Communication converted into another format, for transmission, delivery and/or retention.  Notwithstanding anything contained herein to the contrary, the Administrative Agent is under no obligation to accept an Electronic Signature in any form or in any format unless expressly agreed to by the Administrative Agent pursuant to procedures approved by it; provided, further, without limiting the foregoing, (a) to the extent the Administrative Agent has agreed to accept such Electronic Signature, the Administrative Agent shall be entitled to rely on any such Electronic Signature without further verification and
+
+14
+
+AMERICAS/2024298233.16
+
+    
+
+(b) upon the request of the Administrative Agent any Electronic Signature shall be promptly followed by a manually executed, original counterpart.  For purposes hereof, “Electronic Record” and “Electronic Signature” shall have the meanings assigned to them, respectively, by 15 USC §7006, as it may be amended from time to time.
+
+Section 13.Titles.  In connection with the 2024 Extended Revolving Credit Commitments, (a) BofA Securities, Inc., BMO Capital Markets Corp., Goldman Sachs Bank USA, PNC Bank, National Association, Fifth Third Bank, National Association, JPMorgan Chase Bank, N.A., HSBC Securities (USA) Inc. and U.S. Bank National Association have acted as the Lead Arrangers, (b) JPMorgan Chase Bank, N.A., HSBC Securities (USA) Inc. and U.S. Bank National Association have acted as the Syndication Agents, (c) Huntington Securities, Inc., ING Bank N.V., Dublin Branch and Deutsche Bank Securities Inc. have acted as Documentation Agents, (d) Huntington Securities, Inc., ING Bank N.V., Dublin Branch and Deutsche Bank Securities Inc. have acted as Senior Co-Managers, and (e) Northwest Bank and Arab Banking Corporation (B.S.C.) have acted as Co-Managers, and for the avoidance of doubt, each Person listed in the foregoing clauses (a) through (e) shall be entitled to the benefits of Section 9.05 of the Amended Credit Agreement.
+
+Section 14.Headings.  The headings of this Amendment Agreement are for purposes of reference only and shall not limit or otherwise affect the meaning hereof.
+
+Section 15.Miscellaneous.
+
+(a)Any provision of this Amendment Agreement held to be illegal, invalid or unenforceable in any jurisdiction, shall, as to such jurisdiction, be ineffective to the extent of such illegality, invalidity or unenforceability without affecting the legality, validity or enforceability of the remaining provisions hereof and the illegality, invalidity or unenforceability of a particular provision in a particular jurisdiction shall not invalidate or render unenforceable such provision in any other jurisdiction.
+
+(b)The terms of the Amended Credit Agreement with respect to submission to jurisdiction, waiver of venue and waiver of jury trial are incorporated herein by reference, mutatis mutandis, and the parties hereto agree to such terms.
+
+Section 16.Removal of Issuing Lender. This Amendment Agreement shall be deemed to be a notice of removal of Royal Bank of Canada as Issuing Lender pursuant to Section 3.09 of the Existing Credit Agreement.  From and after the Amendment No. 14 Effective Date, Royal Bank of Canada shall no longer be deemed an Issuing Lender provided that it shall continue to have all the rights and obligations of an Issuing Lender under the Amended Credit Agreement and the other Loan Documents with respect to Letters of Credit issued by it prior to the Amendment No. 14 Effective Date, in accordance with the terms of this Amendment Agreement
+
+15
+
+AMERICAS/2024298233.16
+
+    
+
+and the Amended Credit Agreement, but shall not be required to issue additional Letters of Credit.
+
+[Remainder of page intentionally blank]
+
+16
+
+AMERICAS/2024298233.16
+
+    
+
+IN WITNESS WHEREOF, the parties hereto have caused this Amendment Agreement to be duly executed and delivered by their respective duly authorized officers or representatives as of the day and year first above written.
+
+ENVIRI CORPORATION,
+
+as Borrower
+
+By:
+
+Name:    Michael Kolinsky
+
+Title:    Vice President – Treasurer, Tax and Real Estate
+
+[Signature Page to Amendment No. 14 to Third Amended and Restated Credit Agreement]
+
+    
+
+BANK OF AMERICA, N.A.,
+
+as a 2024 Incremental Extending Revolving Credit Lender, a 2024 Extending Revolving Credit Lender, Issuing Lender, Swingline Lender and Administrative Agent
+
+By:
+
+Name:    
+
+Title:    
+
+[Signature Page to Amendment No. 14 to Third Amended and Restated Credit Agreement]
+
+    
+
+[______],
+
+as a 2024 Incremental Extending Revolving Credit Lender[,][and] a [New] 2024 Extending Revolving Credit Lender [and an Issuing Lender]
+
+By:
+
+Name:    
+
+Title:    
+
+[By:
+
+Name:    
+
+Title:]    1
+
+1 To be used by Lenders which require two signatories.
+
+[Signature Page to Amendment No. 14 to Third Amended and Restated Credit Agreement]
+
+    
+
+ING CAPITAL LLC
+
+as Sustainability Structuring Agent
+
+By:
+
+Name:    
+
+Title:    
+
+[Signature Page to Amendment No. 14 to Third Amended and Restated Credit Agreement]
+
+    
+
+CONSENT AND REAFFIRMATION
+
+Each of the undersigned hereby acknowledges receipt of a copy of the foregoing Amendment No. 14 to Third Amended and Restated Credit Agreement (the “Amendment Agreement”), dated as of September 5, 2024, which amends the Third Amended and Restated Credit Agreement dated as of November 2, 2016 (as amended by Amendment No. 1 to Third Amended and Restated Credit Agreement, dated as of December 8, 2017, Amendment No. 2 to Third Amended and Restated Credit Agreement, dated as of June 18, 2018, Amendment No. 3 to Third Amended and Restated Credit Agreement, dated as of June 18, 2018, Amendment No. 4 to Third Amended and Restated Credit Agreement, dated as of June 28, 2019, Amendment No. 5 to Third Amended and Restated Credit Agreement, dated as of March 31, 2020, Amendment No. 6 to Third Amended and Restated Credit Agreement, dated as of June 26, 2020, Amendment No. 7 to Third Amended and Restated Credit Agreement, dated as of March 10, 2021, Amendment No. 8 to Third Amended and Restated Credit Agreement, dated as of October 27, 2021, Amendment No. 9 to Third Amended and Restated Credit Agreement, dated as of February 22, 2022, Amendment No. 10 to Third Amended and Restated Credit Agreement, dated as of June 24, 2022, Amendment No. 11 to Third Amended and Restated Credit Agreement, dated as of August 19, 2022, Amendment No. 12 to Third Amended and Restated Credit Agreement, dated as of August 29, 2022, and Amendment No. 13 to Third Amended and Restated Credit Agreement, dated as of December 21, 2022, the “Existing Credit Agreement”), among, inter alios, Enviri Corporation (f/k/a Harsco Corporation), a Delaware corporation, Bank of America, N.A., as Administrative Agent, and the several lenders from time to time party thereto.  Capitalized terms used in this Consent and Reaffirmation and not defined herein shall have the meanings given to them in the Amended Credit Agreement (as defined in the Amendment Agreement). In connection with the execution and delivery of the Amendment Agreement, each of the undersigned (i) ratifies and affirms all the provisions in the Amended Credit Agreement, the Guarantee and Collateral Agreement and the other Loan Documents, (ii) agrees that the terms and conditions of the Loan Documents, including the security provisions set forth therein, shall continue in full force and effect as amended thereby, and shall not be impaired or limited by the execution or effectiveness of the Amendment Agreement and (iii) acknowledges and agrees that the Collateral continues to secure, to the fullest extent possible in accordance with the Amended Credit Agreement and the Guarantee and Collateral Agreement, the payment and performance of all Obligations. All references in the Loan Documents to (i) the “Credit Agreement” shall hereafter mean and refer to the Existing Credit Agreement as amended pursuant to the Amendment Agreement and (ii) the term “Obligations” shall hereafter mean and refer to the Obligations as redefined in the Amended Credit Agreement and shall include all additional Obligations resulting from or incurred pursuant to the Amended Credit Agreement.
+
+The terms and conditions of the Guarantee and Collateral Agreement and the other Security Documents are hereby reaffirmed by the Subsidiary Guarantors.
+
+Dated: September 5, 2024
+
+[Remainder of page intentionally blank]
+
+AMERICAS/2024298233.16
+
+64458428
+
+    
+
+ENVIRI CORPORATION,
+
+as Borrower
+
+By:
+
+Name:    Michael Kolinsky
+
+Title:    Vice President - Treasurer, Tax and Real Estate
+
+[Signature Page to Consent and Reaffirmation]
+
+AMERICAS/2024298233.16
+
+    
+
+HARSCO DEFENSE HOLDING LLC
+
+HARSCO MINNESOTA FINANCE, INC.
+
+PROTRAN TECHNOLOGY LIMITED LIABILITY COMPANY
+
+HARSCO MINERALS TECHNOLOGIES LLC
+
+HARSCO FINANCIAL HOLDINGS, LLC
+
+HARSCO MINNESOTA LLC
+
+HARSCO METRO RAIL HOLDINGS, LLC
+
+By:
+
+Name:    Michael H. Kolinsky
+
+Title:    President
+
+[Signature Page to Consent and Reaffirmation]
+
+AMERICAS/2024298233.16
+
+    
+
+HARSCO TECHNOLOGIES LLC
+
+By:
+
+Name:    Kenneth Lau
+
+Title:    President
+
+[Signature Page to Consent and Reaffirmation]
+
+AMERICAS/2024298233.16
+
+    
+
+HARSCO METRO RAIL, LLC
+
+HARSCO RAIL, LLC
+
+By:
+
+Name:    Kimberly E. Taylor
+
+Title:    Secretary
+
+[Signature Page to Consent and Reaffirmation]
+
+AMERICAS/2024298233.16
+
+    
+
+ALTEK, L.L.C.
+
+HARSCO CLEAN EARTH HOLDINGS, LLC
+
+CEHI ACQUISITION, LLC
+
+By:
+
+Name:    Joshua Zalasky
+
+Title:    Secretary
+
+[Signature Page to Consent and Reaffirmation]
+
+AMERICAS/2024298233.16
+
+    
+
+21ST CENTURY ENVIRONMENTAL MANAGEMENT OF NEVADA, LLC
+
+21ST CENTURY ENVIRONMENTAL MANAGEMENT, LLC OF RHODE ISLAND
+
+ADVANCED REMEDIATION & DISPOSAL TECHNOLOGIES OF DELAWARE, LLC
+
+AERC ACQUISITION CORPORATION
+
+ALLIED ENVIRONMENTAL GROUP, LLC
+
+ALLWORTH, LLC
+
+BURLINGTON ENVIRONMENTAL, LLC
+
+CEI HOLDING, LLC
+
+CHEMICAL POLLUTION CONTROL OF FLORIDA, LLC
+
+CHEMICAL RECLAMATION SERVICES, LLC
+
+CHEMICAL POLLUTION CONTROL, LLC OF NEW YORK
+
+CLEAN EARTH ENVIRONMENTAL SERVICES, INC.
+
+AES ASSET ACQUISITION CORPORATION
+
+CLEAN EARTH, LLC
+
+CLEAN EARTH ENVIRONMENTAL SOLUTIONS, INC.
+
+CLEAN EARTH HOLDINGS, INC.
+
+CLEAN EARTH SPECIALTY WASTE SOLUTIONS, INC.
+
+CLEAN EARTH OF ALABAMA, INC.
+
+CLEAN EARTH OF CARTERET, LLC
+
+CLEAN EARTH DREDGING TECHNOLOGIES, LLC
+
+CLEAN EARTH OF GEORGIA, LLC
+
+CLEAN EARTH OF GREATER WASHINGTON, LLC
+
+CLEAN EARTH OF MARYLAND, LLC
+
+CLEAN EARTH OF NEW CASTLE, LLC
+
+CLEAN EARTH OF NORTH JERSEY, INC.
+
+CLEAN EARTH OF PHILADELPHIA, LLC
+
+CLEAN EARTH OF SOUTHEAST PENNSYLVANIA, LLC
+
+CLEAN EARTH OF SOUTHERN FLORIDA, LLC
+
+CLEAN EARTH OF WILLIAMSPORT, LLC
+
+CLEAN EARTH OF MICHIGAN, LLC
+
+CLEAN ROCK PROPERTIES LTD.
+
+ESOL TOPCO, LLC
+
+[Signature Page to Consent and Reaffirmation]
+
+AMERICAS/2024298233.16
+
+    
+
+GENERAL ENVIRONMENTAL MANAGEMENT OF RANCHO CORDOVA LLC
+
+LUNTZ ACQUISITION (DELAWARE), LLC
+
+NORTHLAND ENVIRONMENTAL, LLC
+
+NORTRU, LLC
+
+PHILIP RECLAMATION SERVICES, HOUSTON, LLC
+
+PSC ENVIRONMENTAL SERVICES LLC
+
+PSC RECOVERY SYSTEMS, LLC
+
+REAL PROPERTY ACQUISITION LLC
+
+REPUBLIC ENVIRONMENTAL RECYCLING (NEW JERSEY), INC.
+
+REPUBLIC ENVIRONMENTAL SYSTEMS (PENNSYLVANIA), LLC
+
+REPUBLIC ENVIRONMENTAL SYSTEMS (TRANSPORTATION GROUP), LLC
+
+RHO-CHEM, LLC
+
+SOLVENT RECOVERY, LLC
+
+GARDNER ROAD OIL, LLC
+
+CLEAN EARTH MOBILE SERVICES, LLC
+
+CLEAN EARTH OF PUERTO RICO, LLC
+
+ENVIRONMENTAL SOIL MANAGEMENT INC
+
+ENVIRONMENTAL SOIL MANAGEMENT OF NEW YORK, LIMITED LIABILITY COMPANY
+
+MKC ACQUISITION CORPORATION
+
+CLEAN EARTH CORPORATE SERVICES, LLC
+
+CLEAN EARTH GOVERNMENT SERVICES, LLC
+
+By:
+
+Name:  Sarah Kowalczyk
+
+Title:   Secretary
+
+[Signature Page to Consent and Reaffirmation]
+
+AMERICAS/2024298233.16

@@ -27,10 +27,10 @@ EXPECTED = {
         "runs": LIVE_EXPECTED_RUNS,
         "doc": LIVE_CATALOG,
         "keywords": [
-            "gemini-2.0-flash",
+            "gemini-flash-latest",
             "parallel_grounded",
-            "edgar_aspira_women_s_health_inc_ex10.1",
-            "edgar_pulmatrix_inc_ex10.6",
+            "edgar_amd_ex10.79",
+            "five document types",
             "subtasks",
         ],
     },
@@ -90,8 +90,13 @@ def check_docs(state: dict[str, dict]) -> list[str]:
         expected = info["expected_runs"]
         actual = info["result_count"]
         if actual != expected:
-            if suite == "live_gemini" and actual >= 4 and actual < expected:
+            manifest_status = state[suite]["manifest"].get("status")
+            if suite == "live_gemini" and manifest_status == "partial":
+                pass
+            elif suite == "live_gemini" and actual >= 8 and actual < expected:
                 pass  # partial live run until quota allows full matrix
+            elif suite == "live_gemini" and actual >= 4 and actual < expected:
+                pass  # legacy partial baseline
             else:
                 errors.append(
                     f"{suite}: results.json has {actual} rows, expected {expected}"

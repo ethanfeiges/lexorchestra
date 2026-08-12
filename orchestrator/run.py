@@ -12,7 +12,7 @@ from benchmark.metrics import build_task_scores, compute_metrics
 from grounding.verifier import verify_claims
 from models.base import ModelClient
 from orchestrator.models import Claim, RunManifest, RunResult, VerifiedClaim
-from orchestrator.runner import run_parallel, run_single
+from orchestrator.runner import run_parallel, run_parallel_source_probe, run_single
 from docProcessing.io import build_bundle_from_file
 from docProcessing.store import SoTStore
 
@@ -98,6 +98,17 @@ async def run_benchmark_case_async(
             answers=answers,
             condition=condition,
         )
+    elif strategy == "parallel_source_probe":
+        probe_decoy = decoys[0] if decoys else "outdated_wrong_terms"
+        task_responses = await run_parallel_source_probe(
+            client_factory=client_factory,
+            document_block=document_block,
+            answers=answers,
+            extract_models=ext_models,
+            playbook_models=pb_models,
+            condition=condition,
+            decoy_label=probe_decoy,
+        )
     else:
         task_responses = await run_parallel(
             client_factory=client_factory,
@@ -140,6 +151,7 @@ async def run_benchmark_case_async(
     return RunResult(
         run_id=manifest.run_id,
         document_id=bundle.document_id,
+        document_type=answers.document_type,
         condition=condition,
         strategy=strategy,
         seed=run_seed,

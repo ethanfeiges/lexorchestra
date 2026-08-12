@@ -1,0 +1,20 @@
+document_id: edgar_amd_ex10.79
+document_type: software_license
+rules:
+  - id: perpetual_license
+    question: "Does Broadcom receive a perpetual, irrevocable license to the AMD Technology?"
+    expected: pass
+    canonical_clause_ids: ["c-006"]
+    required_substrings: ["perpetual, irrevocable"]
+
+  - id: license_fees
+    question: "Are license fees due under this agreement?"
+    expected: fail
+    canonical_clause_ids: ["c-012"]
+    required_substrings: ["no fees due"]
+
+extract_questions:
+  - id: governing_law
+    question: "Which state's law governs this agreement?"
+    acceptable_clause_ids: ["c-026"]
+    required_substrings: ["State of California"]

@@ -41,6 +41,9 @@ class RunMetrics(BaseModel):
     decoy_citations: int
     correct_tasks: int
     total_tasks: int
+    source_fidelity: float | None = None
+    decoy_probe_match_rate: float | None = None
+    explicit_mislabel_rate: float | None = None
 
 
 class RunManifest(BaseModel):
@@ -63,6 +66,7 @@ class RunResult(BaseModel):
 
     run_id: str
     document_id: str
+    document_type: str = "msa"
     condition: str
     strategy: str
     seed: int

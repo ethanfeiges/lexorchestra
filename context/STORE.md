@@ -673,7 +673,10 @@ Future phase prompts should include: *"Run pytest yourself before finishing; do 
 | 2026-08-12 | Gemini-only experiments           | All benchmark runs via Gemini API; mock profiles removed |
 | 2026-08-12 | MAX_CLAUSE_LENGTH 12000           | Live prompts must include deep clause text (ICC at ~7k) |
 | 2026-08-12 | experimentDocs/EXPERIMENTS.md + sync rule   | Single catalog; agent updates docs when baselines change |
-| 2026-08-12 | Default model gemini-2.0-flash    | NuScale decoy citation under noise in prior runs |
+| 2026-08-12 | Default model gemini-flash-latest | gemini-2.0-flash retired from API; alias tracks current Flash |
+| 2026-08-12 | Five document types               | MSA, software license, NDA, employment, credit — one primary fixture each from SEC EDGAR |
+| 2026-08-12 | parallel_source_probe strategy    | Parallel canonical + decoy + discrimination agents; source_fidelity metrics |
+| 2026-08-12 | Type-tuned bundle corruption      | CORRUPTION_TARGETS by document_type in bundle.py |
 
 
 ---

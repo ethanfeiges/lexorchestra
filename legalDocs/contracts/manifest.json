@@ -1,6 +1,6 @@
 {
   "source": "sec_edgar",
-  "description": "Real public material contracts fetched from SEC EDGAR EX-10 exhibits.",
+  "description": "Real public material contracts from SEC EDGAR EX-10 exhibits across five document types.",
   "contracts": [
     {
       "id": "edgar_edgemode_inc_ex10.1",
@@ -15,7 +15,9 @@
       "filename": "edgemode_ex1001.htm",
       "url": "https://www.sec.gov/Archives/edgar/data/1652958/000168316825001184/edgemode_ex1001.htm",
       "local_path": "legalDocs/contracts/public/edgar_edgemode_inc_ex10.1.txt",
-      "char_count": 99250
+      "char_count": 99250,
+      "document_type": "msa",
+      "primary_fixture": true
     },
     {
       "id": "edgar_nuscale_power_corp_ex10.15",
@@ -30,7 +32,9 @@
       "filename": "ex1015amendedmsawithfluo.htm",
       "url": "https://www.sec.gov/Archives/edgar/data/1822966/000182296624000039/ex1015amendedmsawithfluo.htm",
       "local_path": "legalDocs/contracts/public/edgar_nuscale_power_corp_ex10.15.txt",
-      "char_count": 57991
+      "char_count": 57991,
+      "document_type": "msa",
+      "primary_fixture": false
     },
     {
       "id": "edgar_chime_financial_inc_ex10.1",
@@ -45,7 +49,9 @@
       "filename": "exhibit101-10xq.htm",
       "url": "https://www.sec.gov/Archives/edgar/data/1795586/000179558625000019/exhibit101-10xq.htm",
       "local_path": "legalDocs/contracts/public/edgar_chime_financial_inc_ex10.1.txt",
-      "char_count": 286740
+      "char_count": 286740,
+      "document_type": "msa",
+      "primary_fixture": false
     },
     {
       "id": "edgar_aspira_women_s_health_inc_ex10.1",
@@ -60,7 +66,9 @@
       "filename": "ex10-1.htm",
       "url": "https://www.sec.gov/Archives/edgar/data/926617/000164117225026441/ex10-1.htm",
       "local_path": "legalDocs/contracts/public/edgar_aspira_women_s_health_inc_ex10.1.txt",
-      "char_count": 41348
+      "char_count": 41348,
+      "document_type": "msa",
+      "primary_fixture": false
     },
     {
       "id": "edgar_pulmatrix_inc_ex10.6",
@@ -75,7 +83,77 @@
       "filename": "ex10-6.htm",
       "url": "https://www.sec.gov/Archives/edgar/data/1574235/000149315224031478/ex10-6.htm",
       "local_path": "legalDocs/contracts/public/edgar_pulmatrix_inc_ex10.6.txt",
-      "char_count": 40428
+      "char_count": 40428,
+      "document_type": "msa",
+      "primary_fixture": false
+    },
+    {
+      "id": "edgar_amd_ex10.79",
+      "source": "sec_edgar",
+      "document_type": "software_license",
+      "primary_fixture": true,
+      "company": "ADVANCED MICRO DEVICES INC (AMD)",
+      "cik": "0000002488",
+      "form": "10-K",
+      "file_type": "EX-10.79",
+      "file_description": "Software license agreement AMD/Broadcom",
+      "filing_date": "2024-01-31",
+      "accession": "000000248824000012",
+      "filename": "ex10_79amdxbroadcomcorelic.htm",
+      "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248824000012/ex10_79amdxbroadcomcorelic.htm",
+      "local_path": "legalDocs/contracts/public/edgar_amd_ex10.79.txt",
+      "char_count": 37645
+    },
+    {
+      "id": "edgar_hg_holdings_inc_ex10.2",
+      "source": "sec_edgar",
+      "document_type": "nda",
+      "primary_fixture": true,
+      "company": "HG Holdings, Inc. (STLY)",
+      "cik": "0000797465",
+      "form": "8-K",
+      "file_type": "EX-10.2",
+      "file_description": "Non-disclosure agreement",
+      "filing_date": "2024-06-14",
+      "accession": "000143774924019392",
+      "filename": "ex_684281.htm",
+      "url": "https://www.sec.gov/Archives/edgar/data/797465/000143774924019392/ex_684281.htm",
+      "local_path": "legalDocs/contracts/public/edgar_hg_holdings_inc_ex10.2.txt",
+      "char_count": 20839
+    },
+    {
+      "id": "edgar_emerald_holding_inc_ex10.43",
+      "source": "sec_edgar",
+      "document_type": "employment",
+      "primary_fixture": true,
+      "company": "Emerald Holding, Inc. (EEX)",
+      "cik": "0001579214",
+      "form": "8-K",
+      "file_type": "EX-10.43",
+      "file_description": "Employment agreement",
+      "filing_date": "2024-06-28",
+      "accession": "000095017024025067",
+      "filename": "eex-ex10_43.htm",
+      "url": "https://www.sec.gov/Archives/edgar/data/1579214/000095017024025067/eex-ex10_43.htm",
+      "local_path": "legalDocs/contracts/public/edgar_emerald_holding_inc_ex10.43.txt",
+      "char_count": 42427
+    },
+    {
+      "id": "edgar_enviri_corp_ex10.1",
+      "source": "sec_edgar",
+      "document_type": "credit",
+      "primary_fixture": true,
+      "company": "ENVIRI Corp (NVRI)",
+      "cik": "0000045876",
+      "form": "10-K",
+      "file_type": "EX-10.1",
+      "file_description": "Amendment No. 14 to Credit Agreement",
+      "filing_date": "2024-02-28",
+      "accession": "000004587624000052",
+      "filename": "exhibit101amendmentno14tot.htm",
+      "url": "https://www.sec.gov/Archives/edgar/data/45876/000004587624000052/exhibit101amendmentno14tot.htm",
+      "local_path": "legalDocs/contracts/public/edgar_enviri_corp_ex10.1.txt",
+      "char_count": 53930
     }
   ]
 }
