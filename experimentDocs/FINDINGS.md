@@ -1,13 +1,12 @@
 # LexOrchestra Findings
 
-> **Live Gemini results** below. Mock/CI findings: [`MOCK_EXPERIMENTS.md`](MOCK_EXPERIMENTS.md).  
 > Full test catalog: [`EXPERIMENTS.md`](EXPERIMENTS.md).
 
-Regenerate live: `python -m benchmark.run_live_experiment --provider gemini`
+Regenerate: `python -m benchmark.run_experiment --provider gemini`
 
 ---
 
-## Live Gemini (`gemini-2.5-flash`, 4 runs)
+## Live Gemini (`gemini-2.0-flash`, 4 runs committed)
 
 ### Headline
 
@@ -37,8 +36,4 @@ On **real SEC-filed MSAs**, Gemini stayed grounded on Edgemode even with decoys 
 
 1. **Noise is document-dependent.** Edgemode resisted decoys; NuScale did not — you cannot assume one MSA result generalizes.
 2. **Playbook errors happen without noise too.** Mutual indemnity failed on NuScale even in `clean` — live models need verification even without decoys.
-3. **Verification adds signal.** Decoy citation rate surfaced the NuScale noisy failure; task accuracy alone would not distinguish “wrong quote” from “wrong document version.”
-
-### Mock pipeline validation
-
-Before live runs, mock baselines confirmed verifier and metrics work as designed. See [`MOCK_EXPERIMENTS.md`](MOCK_EXPERIMENTS.md) — not evidence of LLM behavior.
+3. **Verification adds signal.** Decoy citation rate surfaced the NuScale noisy failure; task accuracy alone would not distinguish "wrong quote" from "wrong document version."

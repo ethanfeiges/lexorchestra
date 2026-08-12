@@ -25,11 +25,5 @@ jobs:
       - name: Validate benchmark answers
         run: python -c "from benchmark.answers_validate import assert_all_answers_valid; assert_all_answers_valid()"
 
-      - name: Regenerate mock baseline
-        run: python -m benchmark.run_experiment
-
-      - name: Assert baseline unchanged
-        run: git diff --exit-code experiments/mock_baseline/
-
       - name: Check experiment docs sync
         run: python scripts/sync_experiment_docs.py --check

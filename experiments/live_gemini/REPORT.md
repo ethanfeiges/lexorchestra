@@ -39,6 +39,6 @@ Generated: 2026-08-12 19:39 UTC
 
 ## Interpretation
 
-- **canonical** mock profile simulates agents that always cite `signed_contract` correctly.
-- **decoy_anchored** mock profile simulates agents that faithfully use decoy text — grounding and task accuracy should drop under `noisy_prompt`.
-- Comparing profiles on the same seeds shows what the verifier catches without live LLM cost.
+- **Grounding rate** measures whether Gemini cited valid clause IDs and exact quotes from the canonical signed contract.
+- **Decoy citation rate** rises when the model anchors on corrupted document versions shown in the prompt.
+- **Task accuracy** compares verified answers against pre-authored gold labels.

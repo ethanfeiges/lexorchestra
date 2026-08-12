@@ -1,7 +1,6 @@
-# LexOrchestra — Live Gemini Experiments
+# LexOrchestra — Gemini Experiments
 
-> **What we test with the Gemini API** — real MSAs, orchestrated subtasks, mechanical verification.
-> Mock/CI (no API): [`MOCK_EXPERIMENTS.md`](MOCK_EXPERIMENTS.md).
+> **All experiments run through the Gemini API** — real MSAs, orchestrated subtasks, mechanical verification.
 
 Last synced: **2026-08-12**
 
@@ -9,7 +8,7 @@ Last synced: **2026-08-12**
 
 ## Orchestrated subtasks
 
-Live runs use **`parallel_grounded`**: Gemini runs **extract** and **playbook** **in parallel** (two subtasks, same model), then the **grounding verifier** checks all claims against the canonical signed contract only.
+Runs use **`parallel_grounded`** by default: Gemini runs **extract** and **playbook** **in parallel** (two subtasks, same model), then the **grounding verifier** checks all claims against the canonical signed contract only.
 
 Use `--strategy single` for one model doing extract → playbook sequentially (fewer API calls).
 
@@ -27,16 +26,16 @@ Deal teams rarely have one clean file. LexOrchestra models:
 | Bad OCR / wrong clause IDs | `bad_parse_wrong_ids` |
 | Parser adding a fake clause | `bad_parse_extra_clause` |
 
-**Example:** Counsel asks “Is Fluor capped at $10M?” The model sees the **signed NuScale–Fluor MSA** and an **old draft** with different liability language. LexOrchestra measures whether answers stay grounded in the executed copy.
+**Example:** Counsel asks "Is Fluor capped at $10M?" The model sees the **signed NuScale–Fluor MSA** and an **old draft** with different liability language. LexOrchestra measures whether answers stay grounded in the executed copy.
 
 ---
 
-## Current live matrix (default)
+## Default experiment matrix
 
 | Setting | Value |
 |---------|--------|
 | Provider | Google Gemini (AI Studio) |
-| Model | `gemini-2.5-flash` |
+| Model | `gemini-2.0-flash` |
 | Strategy | `parallel_grounded` (extract ∥ playbook) |
 | Conditions | `clean`, `noisy_prompt` |
 | MSAs | **4** with answer keys (Chime excluded by default — 184 clauses, token quota) |
@@ -59,15 +58,15 @@ Answer keys: `benchmark/answers/{document_id}.yaml`
 
 ## Committed results status
 
-**Last full committed run:** 4 runs (Edgemode + NuScale only, `single` strategy) — see [`experiments/live_gemini/REPORT.md`](../experiments/live_gemini/REPORT.md).
+**Last committed run:** 4 runs (Edgemode + NuScale only, `single` strategy) — see [`experiments/live_gemini/REPORT.md`](../experiments/live_gemini/REPORT.md).
 
-**Expanded 8-run matrix** (4 MSAs, `parallel_grounded`) is configured in code; re-run when Gemini quota allows:
+**Full 8-run matrix** (4 MSAs, `parallel_grounded`) is configured in code; re-run when Gemini quota allows:
 
 ```powershell
-python -m benchmark.run_live_experiment --provider gemini --model gemini-2.5-flash
+python -m benchmark.run_experiment --provider gemini --model gemini-2.0-flash
 ```
 
-Free tier limits (~20 requests/day for Flash) may require splitting runs or waiting for quota reset.
+Free tier limits may require splitting runs or waiting for quota reset.
 
 ---
 
@@ -92,36 +91,22 @@ Free tier limits (~20 requests/day for Flash) may require splitting runs or wait
 
 ---
 
-## Partial expanded run (Aspira, parallel_grounded)
-
-During quota-limited testing, Aspira completed:
-
-| Condition | Ground | Decoy | Acc |
-|-----------|--------|-------|-----|
-| clean | 67% | 0% | 67% |
-| noisy | 67% | 0% | 67% |
-
-Aspira uses **mediation** (not ICC) and **one-sided** consultant indemnity — real consultant MSA pattern from SEC EX-10.1.
-
----
-
 ## Re-run commands
 
 ```powershell
-pip install -e ".[llm]"
 # GEMINI_API_KEY in .env
 
 # Default: 4 MSAs × 2 conditions, parallel subtasks
-python -m benchmark.run_live_experiment --provider gemini
+python -m benchmark.run_experiment --provider gemini
 
 # Fewer API calls (sequential subtasks)
-python -m benchmark.run_live_experiment --provider gemini --strategy single
+python -m benchmark.run_experiment --provider gemini --strategy single
 
 # Include Chime (large; may hit token limits)
-python -m benchmark.run_live_experiment --provider gemini --include-chime
+python -m benchmark.run_experiment --provider gemini --include-chime
 
 # One MSA smoke test
-python -m benchmark.run_live_experiment --provider gemini `
+python -m benchmark.run_experiment --provider gemini `
   --documents edgar_pulmatrix_inc_ex10.6 --conditions noisy_prompt
 ```
 
@@ -142,7 +127,7 @@ python -m benchmark.run_live_experiment --provider gemini `
 
 | File | Contents |
 |------|----------|
-| [`MOCK_EXPERIMENTS.md`](MOCK_EXPERIMENTS.md) | Simulated agents, CI, ablations |
 | [`FINDINGS.md`](FINDINGS.md) | Interpretation |
+| [`HYPOTHESIS.md`](HYPOTHESIS.md) | Research question |
 
 Check: `python scripts/sync_experiment_docs.py --check`

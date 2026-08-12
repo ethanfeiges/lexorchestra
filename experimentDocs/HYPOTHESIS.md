@@ -14,8 +14,6 @@ We test whether a canonical Source-of-Truth (SoT) store plus quote-level verific
 | **Decoy citation rate** | Fraction of claims matching decoy text or citing a non-canonical `sot_label` |
 | **Task accuracy** | Fraction of playbook/extract tasks scored correct against the answer key |
 
-Task scoring requires grounded claims with matching substrings and clause IDs unless the ablation disables verification (naive scoring trusts model verdicts only).
-
 ## Experimental conditions
 
 | Condition | Description |
@@ -24,46 +22,40 @@ Task scoring requires grounded claims with matching substrings and clause IDs un
 | `noisy_prompt` | 1–2 decoys with semantic labels (`signed_contract`, `outdated_wrong_terms`, …) |
 | `unlabeled_noisy` | Same decoys, but labels remapped to anonymous `version_1`, `version_2`, … |
 
-## Ablation baselines (mock-only)
+## Strategies
 
-| Ablation | Setup | Expected effect |
-|----------|-------|-----------------|
-| **full_pipeline** | `decoy_anchored` + `noisy_prompt` + verify=True | Low task accuracy when decoy quotes fail canonical check |
-| **no_verifier** | Same + verify=False | 100% grounding (naive trust), high task accuracy, 0% decoy detection |
-| **unlabeled** | `decoy_anchored` + `unlabeled_noisy` + verify=True | Verifier still catches wrong quotes; labels give no authority hint |
+| Strategy | Description |
+|----------|-------------|
+| `single` | One Gemini call runs extract, then playbook sequentially |
+| `parallel_grounded` | Extract and playbook run in parallel, then merge at the verifier |
 
 ## Confounds
 
-- **Mock profiles, not live LLMs.** Results isolate verifier behavior; live models may partially self-correct.
 - **Seed-dependent decoy sampling.** Different seeds pick different decoy subsets and shuffles.
 - **Decoy severity varies.** Some decoys (`outdated_wrong_terms`) alter key substrings; others share clause IDs but wrong text.
-- **Strategy interaction.** `parallel_grounded` runs two extract/playbook models; failures compound differently than `single`.
-- **Naive scoring in no_verifier.** Task accuracy under verify=False uses verdict-only scoring, not quote substring checks — this measures trust cost, not end-user quality.
+- **Strategy interaction.** `parallel_grounded` runs two subtasks; failures compound differently than `single`.
+- **API quota and token limits.** Large MSAs (Chime) may hit Gemini rate limits.
 
 ## Falsification criteria
 
 The hypothesis is **weakened** if:
 
-1. `canonical` profile under `noisy_prompt` drops below 95% task accuracy (verifier or prompt assembly is broken).
-2. `no_verifier` ablation shows **lower** task accuracy than `full_pipeline` on the same seeds (verification is not the binding constraint).
-3. `unlabeled_noisy` with verify=True matches `no_verifier` task accuracy (anonymous labels alone prevent decoy detection — verifier adds no value).
+1. Gemini under `noisy_prompt` matches `clean` task accuracy on all documents (decoys have no measurable effect).
+2. Decoy citation rate stays at 0% under `noisy_prompt` while task accuracy drops (errors are quote-level, not document-version-level).
+3. Grounding rate is high but task accuracy is low even in `clean` (verifier passes bad quotes).
 
 The hypothesis is **supported** if:
 
-1. `decoy_anchored` + `noisy_prompt` + verify=True shows materially lower task accuracy than `canonical` on the same document/seed.
-2. `no_verifier` shows ≥30 percentage-point task accuracy gain over `full_pipeline` on decoy-anchored runs.
-3. `unlabeled` still shows high decoy citation rate under verify=True (mechanical quote check works without label hints).
-
-## Reproduction
+1. `noisy_prompt` shows materially lower task accuracy than `clean` on the same document.
+2. Decoy citation rate rises under `noisy_prompt` when accuracy drops.
+3. Mechanical verification flags claims that cite decoy text even when the model's verdict sounds plausible.
 
 ## Reproduction
 
 ```powershell
-python -m benchmark.run_live_experiment --provider gemini   # 4-run live baseline
-python -m benchmark.run_experiment      # 24-run mock baseline (see MOCK_EXPERIMENTS.md)
-python -m benchmark.run_ablations       # 6-run ablation matrix
+python -m benchmark.run_experiment --provider gemini
 python scripts/sync_experiment_docs.py --check
 python -m pytest tests/ -q
 ```
 
-Live test catalog: [`EXPERIMENTS.md`](EXPERIMENTS.md). Mock/CI: [`MOCK_EXPERIMENTS.md`](MOCK_EXPERIMENTS.md).
+Test catalog: [`EXPERIMENTS.md`](EXPERIMENTS.md).

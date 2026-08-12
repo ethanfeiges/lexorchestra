@@ -1,4 +1,4 @@
-"""Reproducible experiment matrix runner (mock-first)."""
+"""Gemini experiment matrix runner."""
 
 from __future__ import annotations
 
@@ -7,25 +7,23 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from benchmark.conditions import build_prompt_context, fresh_seed
-from benchmark.mock_profiles import MOCK_PROFILES, build_mock_client
+from benchmark.answers import list_answer_documents
+from benchmark.live_providers import LiveProvider
 from orchestrator.run import run_benchmark_case
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 FIXTURES = REPO_ROOT / "legalDocs" / "contracts" / "public"
 
-DEFAULT_DOCUMENTS = [
-    "edgar_edgemode_inc_ex10.1",
-    "edgar_nuscale_power_corp_ex10.15",
-    "edgar_chime_financial_inc_ex10.1",
-]
+from models.gemini_client import LIVE_DOCUMENTS_EXCLUDE
 
+DEFAULT_DOCUMENTS = [
+    doc_id for doc_id in list_answer_documents() if doc_id not in LIVE_DOCUMENTS_EXCLUDE
+]
 DEFAULT_CONDITIONS = ["clean", "noisy_prompt"]
 DEFAULT_STRATEGIES = ["single", "parallel_grounded"]
-DEFAULT_PROFILES = ["canonical", "decoy_anchored"]
+DEFAULT_STRATEGY = "parallel_grounded"
 
-# Fixed seeds for --deterministic runs (reproducible on any machine).
-# 3 docs × 2 profiles × 2 conditions × 2 strategies = 24 runs.
+# Fixed seeds for reproducible runs (one seed per document × condition pair).
 DETERMINISTIC_SEEDS = [
     11_001,
     11_002,
@@ -54,32 +52,20 @@ DETERMINISTIC_SEEDS = [
 ]
 
 
-def _model_lists(strategy: str) -> tuple[list[str], list[str]]:
-    if strategy == "single":
-        return ["mock-a"], ["mock-a"]
-    return ["mock-a", "mock-b"], ["mock-a", "mock-b"]
-
-
-def _pick_seed(deterministic: bool, run_index: int) -> int:
-    if deterministic:
-        return DETERMINISTIC_SEEDS[run_index % len(DETERMINISTIC_SEEDS)]
-    return fresh_seed()
-
-
-def run_mock_matrix(
+def run_gemini_matrix(
     *,
+    provider: LiveProvider,
     documents: list[str] | None = None,
     conditions: list[str] | None = None,
     strategies: list[str] | None = None,
-    profiles: list[str] | None = None,
-    deterministic: bool = True,
-    repetitions: int = 1,
+    model: str | None = None,
 ) -> list[dict[str, Any]]:
-    """Run full mock experiment matrix; returns serializable result rows."""
+    """Run the Gemini experiment matrix; returns serializable result rows."""
     docs = documents or DEFAULT_DOCUMENTS
     conds = conditions or DEFAULT_CONDITIONS
-    strats = strategies or DEFAULT_STRATEGIES
-    profs = profiles or DEFAULT_PROFILES
+    strats = strategies or [DEFAULT_STRATEGY]
+    resolved_model = model or provider.default_model
+    client_factory = provider.build_factory(resolved_model)
 
     results: list[dict[str, Any]] = []
     run_index = 0
@@ -90,65 +76,51 @@ def run_mock_matrix(
             print(f"Skip missing fixture: {doc_id}", file=sys.stderr)
             continue
 
-        for profile in profs:
-            if profile not in MOCK_PROFILES:
-                raise ValueError(f"Unknown mock profile: {profile}")
+        for condition in conds:
+            for strategy in strats:
+                seed = DETERMINISTIC_SEEDS[run_index % len(DETERMINISTIC_SEEDS)]
+                run_index += 1
 
-            for condition in conds:
-                for strategy in strats:
-                    for _rep in range(repetitions):
-                        seed = _pick_seed(deterministic, run_index)
-                        run_index += 1
+                print(
+                    f"  {doc_id} | {condition} | {strategy} | "
+                    f"{resolved_model} | seed={seed}",
+                    flush=True,
+                )
 
-                        # Build decoys list for decoy_anchored client before run
-                        from docProcessing.io import build_bundle_from_file
+                run_kwargs: dict[str, Any] = {}
+                if strategy == "parallel_grounded":
+                    run_kwargs["extract_models"] = [resolved_model]
+                    run_kwargs["playbook_models"] = [resolved_model]
 
-                        bundle = build_bundle_from_file(contract_path, seed=seed)
-                        ctx = build_prompt_context(bundle, condition, seed)
-
-                        client = build_mock_client(
-                            profile=profile,
-                            contract_path=contract_path,
-                            document_id=doc_id,
-                            seed=seed,
-                            decoys_in_prompt=ctx.decoys_in_prompt,
-                        )
-                        ext, pb = _model_lists(strategy)
-
-                        print(
-                            f"  {doc_id} | {condition} | {strategy} | "
-                            f"{profile} | seed={seed}",
-                            flush=True,
-                        )
-
-                        run = run_benchmark_case(
-                            contract_path,
-                            condition=condition,
-                            strategy=strategy,
-                            seed=seed,
-                            client=client,
-                            extract_models=ext,
-                            playbook_models=pb,
-                        )
-                        row = {
-                            "run_id": run.run_id,
-                            "document_id": run.document_id,
-                            "condition": run.condition,
-                            "strategy": run.strategy,
-                            "mock_profile": profile,
-                            "seed": run.seed,
-                            "decoys_in_prompt": run.decoys_in_prompt,
-                            "metrics": run.metrics.model_dump(),
-                            "task_scores": run.task_scores,
-                        }
-                        results.append(row)
-                        m = run.metrics
-                        print(
-                            f"    grounding={m.grounding_rate:.0%} "
-                            f"decoy={m.decoy_citation_rate:.0%} "
-                            f"accuracy={m.task_accuracy:.0%}",
-                            flush=True,
-                        )
+                run = run_benchmark_case(
+                    contract_path,
+                    condition=condition,
+                    strategy=strategy,
+                    seed=seed,
+                    client_factory=client_factory,
+                    model=resolved_model,
+                    **run_kwargs,
+                )
+                row = {
+                    "run_id": run.run_id,
+                    "document_id": run.document_id,
+                    "condition": run.condition,
+                    "strategy": run.strategy,
+                    "provider": provider.name,
+                    "model": resolved_model,
+                    "seed": run.seed,
+                    "decoys_in_prompt": run.decoys_in_prompt,
+                    "metrics": run.metrics.model_dump(),
+                    "task_scores": run.task_scores,
+                }
+                results.append(row)
+                m = run.metrics
+                print(
+                    f"    grounding={m.grounding_rate:.0%} "
+                    f"decoy={m.decoy_citation_rate:.0%} "
+                    f"accuracy={m.task_accuracy:.0%}",
+                    flush=True,
+                )
 
     return results
 

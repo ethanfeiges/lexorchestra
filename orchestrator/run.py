@@ -72,8 +72,8 @@ async def run_benchmark_case_async(
     decoys = prompt_ctx.decoys_in_prompt
     document_block = prompt_ctx.document_block
 
-    ext_models = extract_models or ([model] if strategy == "single" else ["mock-a", "mock-b"])
-    pb_models = playbook_models or ([model] if strategy == "single" else ["mock-a", "mock-b"])
+    ext_models = extract_models or [model]
+    pb_models = playbook_models or [model]
 
     manifest = RunManifest(
         document_id=bundle.document_id,

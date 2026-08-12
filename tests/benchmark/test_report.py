@@ -3,13 +3,13 @@
 from benchmark.report import render_markdown
 
 
-def test_render_markdown_includes_profiles():
+def test_render_markdown_includes_model_summary():
     results = [
         {
             "document_id": "doc",
             "condition": "noisy_prompt",
-            "strategy": "single",
-            "mock_profile": "decoy_anchored",
+            "strategy": "parallel_grounded",
+            "model": "gemini-2.0-flash",
             "seed": 1,
             "decoys_in_prompt": ["outdated_wrong_terms"],
             "metrics": {
@@ -20,18 +20,18 @@ def test_render_markdown_includes_profiles():
         }
     ]
     md = render_markdown(results)
-    assert "decoy_anchored" in md
+    assert "gemini-2.0-flash" in md
     assert "noisy_prompt" in md
+    assert "Summary by model" in md
 
 
-def test_render_markdown_includes_ablation_summary():
+def test_render_markdown_includes_strategy_summary():
     results = [
         {
             "document_id": "doc",
-            "condition": "noisy_prompt",
+            "condition": "clean",
             "strategy": "single",
-            "mock_profile": "decoy_anchored",
-            "ablation": "no_verifier",
+            "model": "gemini-2.0-flash",
             "seed": 1,
             "decoys_in_prompt": [],
             "metrics": {
@@ -42,6 +42,5 @@ def test_render_markdown_includes_ablation_summary():
         }
     ]
     md = render_markdown(results)
-    assert "Summary by ablation" in md
-    assert "no_verifier" in md
-    assert "Ablation" in md
+    assert "Summary by strategy" in md
+    assert "single" in md

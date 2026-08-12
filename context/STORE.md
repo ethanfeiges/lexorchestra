@@ -8,7 +8,7 @@
 
 LexOrchestra runs parallel LLM subtasks on contracts, keeps the parsed document as the single source of truth (SoT), and verifies that model outputs are grounded in that document.
 
-**Committed experiments:** Live Gemini — [`experimentDocs/EXPERIMENTS.md`](../experimentDocs/EXPERIMENTS.md). Mock/CI — [`experimentDocs/MOCK_EXPERIMENTS.md`](../experimentDocs/MOCK_EXPERIMENTS.md). Findings — [`experimentDocs/FINDINGS.md`](../experimentDocs/FINDINGS.md).
+**Committed experiments:** [`experimentDocs/EXPERIMENTS.md`](../experimentDocs/EXPERIMENTS.md). Findings — [`experimentDocs/FINDINGS.md`](../experimentDocs/FINDINGS.md).
 
 ---
 
@@ -638,13 +638,11 @@ Future phase prompts should include: *"Run pytest yourself before finishing; do 
 | Public contract fetch | done        | `benchmark/fetch_contracts.py` — SEC EDGAR EX-10 |
 | Public contract fixtures | done     | `fixtures/contracts/public/` + `manifest.json` |
 | Auto-test hooks        | done        | `.cursor/hooks.json` — pytest on edit + agent stop |
-| Model clients        | done        | `models/` — mock + Gemini adapter |
+| Model clients        | done        | `models/` — Gemini adapter + test stubs |
 | Orchestrator         | done        | `orchestrator/` — tasks, runner, run_benchmark_case |
 | Grounding verifier   | done        | `grounding/` — canonical-only verify + decoy detect |
-| Benchmark            | done        | `benchmark/answers/`, experiment + ablation + live runners |
-| Mock baseline        | done        | `experiments/mock_baseline/` — 24-run committed results |
-| Ablation baseline    | done        | `experiments/ablations/` — 6-run verifier/label ablations |
-| Live Gemini baseline | done        | `experiments/live_gemini/` — 4-run gemini-2.5-flash results |
+| Benchmark            | done        | `benchmark/answers/`, Gemini experiment runner |
+| Gemini baseline      | done        | `experiments/live_gemini/` — committed Gemini results |
 | CI + doc sync        | done        | `.github/workflows/ci.yml`, `scripts/sync_experiment_docs.py` |
 
 
@@ -672,13 +670,10 @@ Future phase prompts should include: *"Run pytest yourself before finishing; do 
 | 2026-08-12 | SEC EDGAR for real contracts      | Fetch EX-10 exhibits via EFTS API; stdlib only; manifest tracks source URLs |
 | 2026-08-12 | Auto-run tests on every change    | Agent runs pytest via Shell after edits; never prompt user; hooks optional backup |
 | 2026-08-12 | Orchestration phase implemented   | Parallel runner, grounding verifier, answer keys, eval harness |
-| 2026-08-12 | Mock baseline + decoy profile     | Reproducible experiment without LLM; committed results |
-| 2026-08-12 | Chime in default mock matrix      | 24 runs (3 docs); seeds 11001–11024 |
-| 2026-08-12 | Ablation suite (no_verifier, unlabeled) | Proves verifier is load-bearing |
-| 2026-08-12 | Live Gemini baseline              | gemini-2.5-flash; NuScale decoy citation under noise |
+| 2026-08-12 | Gemini-only experiments           | All benchmark runs via Gemini API; mock profiles removed |
 | 2026-08-12 | MAX_CLAUSE_LENGTH 12000           | Live prompts must include deep clause text (ICC at ~7k) |
 | 2026-08-12 | experimentDocs/EXPERIMENTS.md + sync rule   | Single catalog; agent updates docs when baselines change |
-| 2026-08-12 | experimentDocs/MOCK_EXPERIMENTS.md split    | Live Gemini focus in EXPERIMENTS.md; mock/CI separate |
+| 2026-08-12 | Default model gemini-2.0-flash    | NuScale decoy citation under noise in prior runs |
 
 
 ---

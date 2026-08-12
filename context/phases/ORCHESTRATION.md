@@ -2,7 +2,7 @@
 
 > **Use this file as a Cursor prompt** to implement the orchestration layer for LexOrchestra.
 >
-> **Live Gemini experiments:** [`experimentDocs/EXPERIMENTS.md`](../experimentDocs/EXPERIMENTS.md). **Mock/CI:** [`experimentDocs/MOCK_EXPERIMENTS.md`](../experimentDocs/MOCK_EXPERIMENTS.md).
+> **Gemini experiments:** [`experimentDocs/EXPERIMENTS.md`](../experimentDocs/EXPERIMENTS.md).
 >
 > Before starting, read [`context/STORE.md`](../STORE.md) and confirm the documents layer is complete (`context/phases/DOCUMENTS.md`).
 

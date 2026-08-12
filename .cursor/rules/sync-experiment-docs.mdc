@@ -12,24 +12,21 @@ When you change experiment config or commit new baselines, **update experimentDo
 
 | File | Contents |
 |------|----------|
-| **`experimentDocs/EXPERIMENTS.md`** | Live LLM tests (Gemini API) — real MSAs, task outcomes, real-world examples |
-| **`experimentDocs/MOCK_EXPERIMENTS.md`** | Mock baseline + ablations — CI, simulated agents, no API |
-| **`experimentDocs/FINDINGS.md`** | Interpretation (live-first; link to mock doc) |
+| **`experimentDocs/EXPERIMENTS.md`** | Gemini API tests — real MSAs, task outcomes, real-world examples |
+| **`experimentDocs/FINDINGS.md`** | Interpretation of Gemini results |
 
 ## Triggers
 
-- `benchmark/run_live_experiment.py`, `benchmark/live_providers.py` → update **EXPERIMENTS.md**, FINDINGS.md
-- `benchmark/experiment.py`, `benchmark/run_ablations.py` → update **MOCK_EXPERIMENTS.md**
-- Committed `experiments/*/results.json` → update the matching doc + FINDINGS if interpretation changes
+- `benchmark/run_experiment.py`, `benchmark/live_providers.py`, `benchmark/experiment.py` → update **EXPERIMENTS.md**, FINDINGS.md
+- Committed `experiments/live_gemini/results.json` → update EXPERIMENTS.md + FINDINGS if interpretation changes
 
 ## Checklist
 
-1. `experimentDocs/EXPERIMENTS.md` — live runs, real-life scenarios, per-task Gemini outcomes
-2. `experimentDocs/MOCK_EXPERIMENTS.md` — mock/ablation matrices and CI summaries
-3. `experimentDocs/FINDINGS.md` — live interpretation
-4. `README.md` — link live doc first; mock doc second
-5. `context/STORE.md` — status + decisions log
-6. Bump `Last synced` dates in both catalog files
+1. `experimentDocs/EXPERIMENTS.md` — Gemini runs, real-life scenarios, per-task outcomes
+2. `experimentDocs/FINDINGS.md` — interpretation
+3. `README.md` — setup and quick reference
+4. `context/STORE.md` — status + decisions log
+5. Bump `Last synced` date in EXPERIMENTS.md
 
 ## Verification
 

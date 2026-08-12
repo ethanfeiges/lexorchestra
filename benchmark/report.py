@@ -68,35 +68,19 @@ def render_markdown(
             f"{stats['decoy_citation_rate']:.0%} | {stats['task_accuracy']:.0%} |"
         )
 
-    if any("mock_profile" in r for r in results):
+    if any("model" in r for r in results):
         lines.extend(
             [
                 "",
-                "## Summary by mock profile",
+                "## Summary by model",
                 "",
-                "| Profile | Runs | Grounding | Decoy rate | Task accuracy |",
-                "|---------|------|-----------|------------|---------------|",
+                "| Model | Runs | Grounding | Decoy rate | Task accuracy |",
+                "|-------|------|-----------|------------|---------------|",
             ]
         )
-        for profile, stats in summarize_by_key(results, "mock_profile").items():
+        for model, stats in summarize_by_key(results, "model").items():
             lines.append(
-                f"| {profile} | {int(stats['runs'])} | {stats['grounding_rate']:.0%} | "
-                f"{stats['decoy_citation_rate']:.0%} | {stats['task_accuracy']:.0%} |"
-            )
-
-    if any("ablation" in r for r in results):
-        lines.extend(
-            [
-                "",
-                "## Summary by ablation",
-                "",
-                "| Ablation | Runs | Grounding | Decoy rate | Task accuracy |",
-                "|----------|------|-----------|------------|---------------|",
-            ]
-        )
-        for ablation, stats in summarize_by_key(results, "ablation").items():
-            lines.append(
-                f"| {ablation} | {int(stats['runs'])} | {stats['grounding_rate']:.0%} | "
+                f"| {model} | {int(stats['runs'])} | {stats['grounding_rate']:.0%} | "
                 f"{stats['decoy_citation_rate']:.0%} | {stats['task_accuracy']:.0%} |"
             )
 
@@ -116,41 +100,32 @@ def render_markdown(
         )
 
     lines.extend(["", "## Per-run detail", ""])
-    has_ablation = any("ablation" in r for r in results)
-    detail_header = (
-        "| Document | Condition | Strategy | Profile | Seed | Decoys | Ground | Decoy | Acc | Ablation |"
-        if has_ablation
-        else "| Document | Condition | Strategy | Profile | Seed | Decoys | Ground | Decoy | Acc |"
+    lines.append(
+        "| Document | Condition | Strategy | Model | Seed | Decoys | Ground | Decoy | Acc |"
     )
-    detail_rule = (
-        "|----------|-----------|----------|---------|------|--------|--------|-------|-----|----------|"
-        if has_ablation
-        else "|----------|-----------|----------|---------|------|--------|--------|-------|-----|"
+    lines.append(
+        "|----------|-----------|----------|-------|------|--------|--------|-------|-----|"
     )
-    lines.append(detail_header)
-    lines.append(detail_rule)
     for row in results:
         m = row["metrics"]
         decoys = ", ".join(row.get("decoys_in_prompt") or []) or "—"
-        profile = row.get("mock_profile", "—")
-        row_line = (
+        model = row.get("model", "—")
+        lines.append(
             f"| {row['document_id']} | {row['condition']} | {row['strategy']} | "
-            f"{profile} | {row['seed']} | {decoys} | {m['grounding_rate']:.0%} | "
+            f"{model} | {row['seed']} | {decoys} | {m['grounding_rate']:.0%} | "
             f"{m['decoy_citation_rate']:.0%} | {m['task_accuracy']:.0%} |"
         )
-        if has_ablation:
-            row_line = f"{row_line} {row.get('ablation', '—')} |"
-        lines.append(row_line)
 
     lines.extend(
         [
             "",
             "## Interpretation",
             "",
-            "- **canonical** mock profile simulates agents that always cite `signed_contract` correctly.",
-            "- **decoy_anchored** mock profile simulates agents that faithfully use decoy text — "
-            "grounding and task accuracy should drop under `noisy_prompt`.",
-            "- Comparing profiles on the same seeds shows what the verifier catches without live LLM cost.",
+            "- **Grounding rate** measures whether claims cite valid clause IDs and exact quotes "
+            "from the canonical signed contract.",
+            "- **Decoy citation rate** rises when the model anchors on corrupted document versions "
+            "shown in the prompt.",
+            "- **Task accuracy** compares verified answers against pre-authored gold labels.",
             "",
         ]
     )

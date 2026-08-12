@@ -14,31 +14,20 @@ import re
 import sys
 from pathlib import Path
 
-from benchmark.run_live_experiment import LIVE_DOCUMENTS
+from benchmark.experiment import DEFAULT_DOCUMENTS, DEFAULT_STRATEGY
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 EXPERIMENTS = REPO_ROOT / "experiments"
 LIVE_CATALOG = REPO_ROOT / "experimentDocs" / "EXPERIMENTS.md"
-MOCK_CATALOG = REPO_ROOT / "experimentDocs" / "MOCK_EXPERIMENTS.md"
 
-LIVE_EXPECTED_RUNS = len(LIVE_DOCUMENTS) * 2
+LIVE_EXPECTED_RUNS = len(DEFAULT_DOCUMENTS) * 2
 
 EXPECTED = {
-    "mock_baseline": {
-        "runs": 24,
-        "doc": MOCK_CATALOG,
-        "keywords": ["11001", "11024", "decoy_anchored", "edgar_chime_financial_inc_ex10.1"],
-    },
-    "ablations": {
-        "runs": 6,
-        "doc": MOCK_CATALOG,
-        "keywords": ["full_pipeline", "no_verifier", "unlabeled", "unlabeled_noisy"],
-    },
     "live_gemini": {
         "runs": LIVE_EXPECTED_RUNS,
         "doc": LIVE_CATALOG,
         "keywords": [
-            "gemini-2.5-flash",
+            "gemini-2.0-flash",
             "parallel_grounded",
             "edgar_aspira_women_s_health_inc_ex10.1",
             "edgar_pulmatrix_inc_ex10.6",
@@ -86,8 +75,7 @@ def print_state(state: dict[str, dict]) -> None:
             print(f"    generated: {m['generated']}")
         if m.get("status"):
             print(f"    status: {m['status']}")
-    print(f"\n  Live catalog: {LIVE_CATALOG.relative_to(REPO_ROOT)}")
-    print(f"  Mock catalog: {MOCK_CATALOG.relative_to(REPO_ROOT)}")
+    print(f"\n  Experiment catalog: {LIVE_CATALOG.relative_to(REPO_ROOT)}")
 
 
 def check_docs(state: dict[str, dict]) -> list[str]:
@@ -95,11 +83,8 @@ def check_docs(state: dict[str, dict]) -> list[str]:
 
     if not LIVE_CATALOG.is_file():
         errors.append("experimentDocs/EXPERIMENTS.md is missing")
-    if not MOCK_CATALOG.is_file():
-        errors.append("experimentDocs/MOCK_EXPERIMENTS.md is missing")
 
     live_text = LIVE_CATALOG.read_text(encoding="utf-8") if LIVE_CATALOG.is_file() else ""
-    mock_text = MOCK_CATALOG.read_text(encoding="utf-8") if MOCK_CATALOG.is_file() else ""
 
     for suite, info in state.items():
         expected = info["expected_runs"]
@@ -113,31 +98,23 @@ def check_docs(state: dict[str, dict]) -> list[str]:
                 )
 
         cfg = EXPECTED[suite]
-        doc_text = live_text if cfg["doc"] == LIVE_CATALOG else mock_text
         doc_name = cfg["doc"].relative_to(REPO_ROOT)
         for keyword in cfg["keywords"]:
-            if keyword not in doc_text:
+            if keyword not in live_text:
                 errors.append(f"{doc_name} missing expected keyword: {keyword!r}")
 
-    if f"{LIVE_EXPECTED_RUNS} runs" not in live_text and "8-run" not in live_text and "8 runs" not in live_text:
+    if (
+        f"{LIVE_EXPECTED_RUNS} runs" not in live_text
+        and "8-run" not in live_text
+        and "8 runs" not in live_text
+    ):
         if "4 runs" not in live_text and "4-run" not in live_text:
             errors.append(
                 f"experimentDocs/EXPERIMENTS.md should describe live Gemini run count (~{LIVE_EXPECTED_RUNS})"
             )
-    if "24 runs" not in mock_text:
-        errors.append("experimentDocs/MOCK_EXPERIMENTS.md should mention '24 runs' for mock baseline")
-    if "6 runs" not in mock_text and "6 run" not in mock_text:
-        errors.append("experimentDocs/MOCK_EXPERIMENTS.md should mention ablation run count")
 
     if not re.search(r"Last synced", live_text):
         errors.append("experimentDocs/EXPERIMENTS.md missing 'Last synced' line")
-    if not re.search(r"Last synced", mock_text):
-        errors.append("experimentDocs/MOCK_EXPERIMENTS.md missing 'Last synced' line")
-
-    if "MOCK_EXPERIMENTS.md" not in live_text:
-        errors.append("experimentDocs/EXPERIMENTS.md should link to MOCK_EXPERIMENTS.md")
-    if "EXPERIMENTS.md" not in mock_text:
-        errors.append("experimentDocs/MOCK_EXPERIMENTS.md should link to EXPERIMENTS.md")
 
     return errors
 
@@ -166,7 +143,7 @@ def main() -> int:
             for err in errors:
                 print(f"  - {err}", file=sys.stderr)
             print(
-                "\nFix: update experimentDocs/EXPERIMENTS.md, experimentDocs/MOCK_EXPERIMENTS.md, "
+                "\nFix: update experimentDocs/EXPERIMENTS.md, "
                 "FINDINGS.md, README.md, context/STORE.md",
                 file=sys.stderr,
             )

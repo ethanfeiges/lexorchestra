@@ -2,7 +2,7 @@
 
 > **Phase spec** for the `docProcessing/` package: parse contracts into clauses, build decoy bundles, format prompt blocks.
 >
-> **Live Gemini experiments:** [`experimentDocs/EXPERIMENTS.md`](../experimentDocs/EXPERIMENTS.md). **Mock/CI:** [`experimentDocs/MOCK_EXPERIMENTS.md`](../experimentDocs/MOCK_EXPERIMENTS.md). Read [`context/STORE.md`](../STORE.md) for full project context.
+> **Gemini experiments:** [`experimentDocs/EXPERIMENTS.md`](../experimentDocs/EXPERIMENTS.md). Read [`context/STORE.md`](../STORE.md) for full project context.
 
 ---
 

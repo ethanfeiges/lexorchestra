@@ -8,7 +8,7 @@ from collections.abc import Callable
 
 from models.base import ModelClient
 
-DEFAULT_GEMINI_MODEL = "gemini-2.5-pro"
+DEFAULT_GEMINI_MODEL = "gemini-2.0-flash"
 MAX_RETRIES = 5
 RETRY_BASE_SEC = 5.0
 
@@ -51,7 +51,7 @@ class GeminiClient:
             from google.genai import types
         except ImportError as exc:
             raise RuntimeError(
-                "Install google-genai: pip install 'lexorchestra[llm]'"
+                "Install google-genai: pip install google-genai"
             ) from exc
 
         client = genai.Client(api_key=self._api_key)

@@ -59,7 +59,7 @@ Checks:
 - Every referenced clause ID exists in the canonical parse
 - Every `required_substrings` entry appears in at least one referenced clause
 
-Also runs automatically in `python -m benchmark.run_experiment`, `python -m benchmark.run_ablations`, and `python -m benchmark.run_live_experiment` (unless `--skip-answers-check`).
+Also runs automatically in `python -m benchmark.run_experiment` (unless `--skip-answers-check`).
 
 ## Add or edit answers
 

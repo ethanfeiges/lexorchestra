@@ -3,7 +3,7 @@
 Committed output of:
 
 ```powershell
-python -m benchmark.run_live_experiment --provider gemini --model gemini-2.5-flash
+python -m benchmark.run_experiment --provider gemini --model gemini-2.0-flash
 ```
 
 **4 runs:** Edgemode + NuScale × `clean` + `noisy_prompt`, strategy `single`, seeds `11001`–`11004`.
@@ -16,8 +16,7 @@ python -m benchmark.run_live_experiment --provider gemini --model gemini-2.5-fla
 Re-run (requires `GEMINI_API_KEY` in `.env`):
 
 ```powershell
-pip install -e ".[llm]"
-python -m benchmark.run_live_experiment --provider gemini
+python -m benchmark.run_experiment --provider gemini
 ```
 
 Full test write-up: [`experimentDocs/EXPERIMENTS.md`](../../experimentDocs/EXPERIMENTS.md).

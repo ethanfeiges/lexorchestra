@@ -42,7 +42,7 @@ class LiveProvider:
         print(
             f"{keys} is not set.\n"
             "Export it or add it to .env at the repo root, then re-run:\n"
-            f"  python -m benchmark.run_live_experiment --provider {self.name}",
+            f"  python -m benchmark.run_experiment --provider {self.name}",
             file=sys.stderr,
         )
         raise SystemExit(2)
