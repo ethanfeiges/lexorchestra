@@ -1,0 +1,31 @@
+{
+  "mode": "stub_matrix",
+  "status": "completed",
+  "provider": "stub",
+  "documents": [
+    "edgar_edgemode_inc_ex10.1",
+    "edgar_amd_ex10.79",
+    "edgar_hg_holdings_inc_ex10.2",
+    "edgar_emerald_holding_inc_ex10.43",
+    "edgar_enviri_corp_ex10.1"
+  ],
+  "conditions": [
+    "clean",
+    "noisy_prompt",
+    "portfolio_clean",
+    "cross_type_mislabeled"
+  ],
+  "strategies": [
+    "single",
+    "parallel_grounded",
+    "parallel_source_probe",
+    "parallel_cross_type_discrimination"
+  ],
+  "model": "canonical-stub",
+  "deterministic": true,
+  "seeds": "DETERMINISTIC_SEEDS",
+  "generated": "2026-08-13T02:32:28.011749+00:00",
+  "completed_runs": 32,
+  "expected_runs": 32,
+  "notes": "Canonical stub clients; validates pipeline per strategy without Gemini API."
+}

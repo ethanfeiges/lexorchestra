@@ -92,15 +92,46 @@ Per-document answer keys in `benchmark/answers/{document_id}.yaml`:
 
 Task accuracy requires grounded claims that match the key. Decoy text that happens to look similar still fails verification.
 
-## Committed baseline
+## Experiment results
 
-Partial — 1 of 10 default-matrix runs saved (`manifest.json` status: `partial`). Free-tier quota blocked a later full-matrix attempt.
+Full matrix: **32 runs** (5 types × 2 conditions × 3 per-doc strategies + 2 portfolio runs). Reproduce the stub matrix locally (no API key):
 
-| Document | Condition | Grounding | Decoy | Accuracy |
-|----------|-----------|-----------|-------|----------|
-| Edgemode MSA | clean | 100% | 0% | 67% |
+```powershell
+python scripts/run_stub_matrix.py
+```
 
-Test suite: 92 passed, 1 skipped. Details: [`experimentDocs/FINDINGS.md`](experimentDocs/FINDINGS.md).
+Live Gemini matrix (requires `GEMINI_API_KEY`):
+
+```powershell
+python -m benchmark.run_experiment --provider gemini `
+  --strategies single parallel_grounded parallel_source_probe parallel_cross_type_discrimination `
+  --conditions clean noisy_prompt portfolio_clean cross_type_mislabeled
+```
+
+**Live status (2026-08-13):** Gemini free-tier quota exhausted (`429 RESOURCE_EXHAUSTED`). One prior live run saved; full live re-run pending quota reset.
+
+### By orchestration method
+
+| Strategy | Runs | Agents per run | Grounding | Decoy | Accuracy | Notes |
+|----------|------|----------------|-----------|-------|----------|-------|
+| `single` | 10 | 1 (extract → playbook) | 100% | 0% | 100% | Fewest API calls; sequential subtasks |
+| `parallel_grounded` | 10 | 2 (extract ∥ playbook) | 100% | 0% | 100% | Default; **live:** 100% ground / 67% acc on Edgemode MSA |
+| `parallel_source_probe` | 10 | 4 (canonical + decoy + discriminate) | 100% | 0% | 100% | Adds source-fidelity and decoy-probe metrics |
+| `parallel_cross_type_discrimination` | 2 | 15 (5 docs × 3 tasks, max 5 concurrent) | 100% | — | 100% | Portfolio prompt; 0% cross-document citations |
+
+Stub rows validate the pipeline end-to-end with canonical answer-key clients. Live Gemini differs on task accuracy (model reasoning), not grounding verification.
+
+### Live Gemini (partial, 1/32)
+
+| Document | Condition | Strategy | Grounding | Decoy | Accuracy |
+|----------|-----------|----------|-----------|-------|----------|
+| Edgemode MSA | clean | `parallel_grounded` | 100% | 0% | 67% |
+
+Task scores: `extract:fee_indexation` pass · `playbook:mutual_indemnity` pass · `playbook:icc_arbitration` fail.
+
+Reports: [`experiments/stub_matrix/REPORT.md`](experiments/stub_matrix/REPORT.md) (full matrix) · [`experiments/live_gemini/REPORT.md`](experiments/live_gemini/REPORT.md) (live partial)
+
+Test suite: 92 passed, 1 skipped.
 
 ## Contract data
 

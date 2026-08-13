@@ -1,0 +1,1027 @@
+[
+  {
+    "run_id": "46e96474-7d68-442a-9f02-12af0dafc56e",
+    "document_id": "portfolio:primary_five",
+    "document_type": "portfolio",
+    "condition": "portfolio_clean",
+    "strategy": "parallel_cross_type_discrimination",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11001,
+    "decoys_in_prompt": [],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 1.0,
+      "task_accuracy": 1.0,
+      "total_claims": 20,
+      "grounded_claims": 20,
+      "decoy_citations": 20,
+      "correct_tasks": 15,
+      "total_tasks": 15,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": null,
+      "explicit_mislabel_rate": 0.0,
+      "cross_document_citation_rate": 0.0
+    },
+    "task_scores": {
+      "edgar_edgemode_inc_ex10.1:playbook:icc_arbitration": true,
+      "edgar_edgemode_inc_ex10.1:playbook:mutual_indemnity": true,
+      "edgar_edgemode_inc_ex10.1:extract:fee_indexation": true,
+      "edgar_amd_ex10.79:playbook:perpetual_license": true,
+      "edgar_amd_ex10.79:playbook:license_fees": true,
+      "edgar_amd_ex10.79:extract:governing_law": true,
+      "edgar_hg_holdings_inc_ex10.2:playbook:mutual_confidentiality": true,
+      "edgar_hg_holdings_inc_ex10.2:playbook:return_of_materials": true,
+      "edgar_hg_holdings_inc_ex10.2:extract:nda_term": true,
+      "edgar_emerald_holding_inc_ex10.43:playbook:confidentiality_duty": true,
+      "edgar_emerald_holding_inc_ex10.43:playbook:mutual_indemnity": true,
+      "edgar_emerald_holding_inc_ex10.43:extract:governing_law": true,
+      "edgar_enviri_corp_ex10.1:playbook:ny_governing_law": true,
+      "edgar_enviri_corp_ex10.1:playbook:icc_arbitration": true,
+      "edgar_enviri_corp_ex10.1:extract:amendment_number": true
+    }
+  },
+  {
+    "run_id": "5663141b-d300-4602-8b6b-fe0fc9b03d2c",
+    "document_id": "portfolio:primary_five",
+    "document_type": "portfolio",
+    "condition": "cross_type_mislabeled",
+    "strategy": "parallel_cross_type_discrimination",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11002,
+    "decoys_in_prompt": [
+      "edgar_emerald_holding_inc_ex10.43->edgar_hg_holdings_inc_ex10.2"
+    ],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 1.0,
+      "task_accuracy": 1.0,
+      "total_claims": 20,
+      "grounded_claims": 20,
+      "decoy_citations": 20,
+      "correct_tasks": 15,
+      "total_tasks": 15,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": null,
+      "explicit_mislabel_rate": 0.0,
+      "cross_document_citation_rate": 0.0
+    },
+    "task_scores": {
+      "edgar_edgemode_inc_ex10.1:playbook:icc_arbitration": true,
+      "edgar_edgemode_inc_ex10.1:playbook:mutual_indemnity": true,
+      "edgar_edgemode_inc_ex10.1:extract:fee_indexation": true,
+      "edgar_amd_ex10.79:playbook:perpetual_license": true,
+      "edgar_amd_ex10.79:playbook:license_fees": true,
+      "edgar_amd_ex10.79:extract:governing_law": true,
+      "edgar_hg_holdings_inc_ex10.2:playbook:mutual_confidentiality": true,
+      "edgar_hg_holdings_inc_ex10.2:playbook:return_of_materials": true,
+      "edgar_hg_holdings_inc_ex10.2:extract:nda_term": true,
+      "edgar_emerald_holding_inc_ex10.43:playbook:confidentiality_duty": true,
+      "edgar_emerald_holding_inc_ex10.43:playbook:mutual_indemnity": true,
+      "edgar_emerald_holding_inc_ex10.43:extract:governing_law": true,
+      "edgar_enviri_corp_ex10.1:playbook:ny_governing_law": true,
+      "edgar_enviri_corp_ex10.1:playbook:icc_arbitration": true,
+      "edgar_enviri_corp_ex10.1:extract:amendment_number": true
+    }
+  },
+  {
+    "run_id": "2c876892-5577-46b7-a9e2-9b42ce1a7d74",
+    "document_id": "edgar_edgemode_inc_ex10.1",
+    "document_type": "msa",
+    "condition": "clean",
+    "strategy": "single",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11003,
+    "decoys_in_prompt": [],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 3,
+      "grounded_claims": 3,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": null,
+      "explicit_mislabel_rate": null,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:icc_arbitration": true,
+      "playbook:mutual_indemnity": true,
+      "extract:fee_indexation": true
+    }
+  },
+  {
+    "run_id": "2cd735b1-4dcd-44e0-b6e7-8492593ebf7c",
+    "document_id": "edgar_edgemode_inc_ex10.1",
+    "document_type": "msa",
+    "condition": "clean",
+    "strategy": "parallel_grounded",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11004,
+    "decoys_in_prompt": [],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 3,
+      "grounded_claims": 3,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": null,
+      "explicit_mislabel_rate": null,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:icc_arbitration": true,
+      "playbook:mutual_indemnity": true,
+      "extract:fee_indexation": true
+    }
+  },
+  {
+    "run_id": "0913374f-4b0d-4815-983a-c10171ffd892",
+    "document_id": "edgar_edgemode_inc_ex10.1",
+    "document_type": "msa",
+    "condition": "clean",
+    "strategy": "parallel_source_probe",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11005,
+    "decoys_in_prompt": [],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 5,
+      "grounded_claims": 5,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": 0.0,
+      "explicit_mislabel_rate": 0.0,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:icc_arbitration": true,
+      "playbook:mutual_indemnity": true,
+      "extract:fee_indexation": true
+    }
+  },
+  {
+    "run_id": "cb102a0d-4fbe-4324-9b11-2d27428393bb",
+    "document_id": "edgar_edgemode_inc_ex10.1",
+    "document_type": "msa",
+    "condition": "noisy_prompt",
+    "strategy": "single",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11006,
+    "decoys_in_prompt": [
+      "bad_parse_extra_clause",
+      "bad_parse_wrong_ids"
+    ],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 3,
+      "grounded_claims": 3,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": null,
+      "explicit_mislabel_rate": null,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:icc_arbitration": true,
+      "playbook:mutual_indemnity": true,
+      "extract:fee_indexation": true
+    }
+  },
+  {
+    "run_id": "06e910dc-ddf0-4208-90d9-2d363556b292",
+    "document_id": "edgar_edgemode_inc_ex10.1",
+    "document_type": "msa",
+    "condition": "noisy_prompt",
+    "strategy": "parallel_grounded",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11007,
+    "decoys_in_prompt": [
+      "outdated_wrong_terms",
+      "bad_parse_wrong_ids"
+    ],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 3,
+      "grounded_claims": 3,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": null,
+      "explicit_mislabel_rate": null,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:icc_arbitration": true,
+      "playbook:mutual_indemnity": true,
+      "extract:fee_indexation": true
+    }
+  },
+  {
+    "run_id": "baecbc00-a328-4c52-bf9f-9abf2d74f5f3",
+    "document_id": "edgar_edgemode_inc_ex10.1",
+    "document_type": "msa",
+    "condition": "noisy_prompt",
+    "strategy": "parallel_source_probe",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11008,
+    "decoys_in_prompt": [
+      "draft_missing_section",
+      "bad_parse_wrong_ids"
+    ],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 5,
+      "grounded_claims": 5,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": 0.0,
+      "explicit_mislabel_rate": 0.0,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:icc_arbitration": true,
+      "playbook:mutual_indemnity": true,
+      "extract:fee_indexation": true
+    }
+  },
+  {
+    "run_id": "65a50d86-d0a0-49a7-8e6b-8ece3d0e56f4",
+    "document_id": "edgar_amd_ex10.79",
+    "document_type": "software_license",
+    "condition": "clean",
+    "strategy": "single",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11009,
+    "decoys_in_prompt": [],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 3,
+      "grounded_claims": 3,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": null,
+      "explicit_mislabel_rate": null,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:perpetual_license": true,
+      "playbook:license_fees": true,
+      "extract:governing_law": true
+    }
+  },
+  {
+    "run_id": "3994791d-6d43-491c-880b-bfafc74a3276",
+    "document_id": "edgar_amd_ex10.79",
+    "document_type": "software_license",
+    "condition": "clean",
+    "strategy": "parallel_grounded",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11010,
+    "decoys_in_prompt": [],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 3,
+      "grounded_claims": 3,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": null,
+      "explicit_mislabel_rate": null,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:perpetual_license": true,
+      "playbook:license_fees": true,
+      "extract:governing_law": true
+    }
+  },
+  {
+    "run_id": "a578083b-9394-4a18-be35-b588ff87f251",
+    "document_id": "edgar_amd_ex10.79",
+    "document_type": "software_license",
+    "condition": "clean",
+    "strategy": "parallel_source_probe",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11011,
+    "decoys_in_prompt": [],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 5,
+      "grounded_claims": 5,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": 0.0,
+      "explicit_mislabel_rate": 0.0,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:perpetual_license": true,
+      "playbook:license_fees": true,
+      "extract:governing_law": true
+    }
+  },
+  {
+    "run_id": "9c61c39e-5eb3-4612-b37b-94a043e3489e",
+    "document_id": "edgar_amd_ex10.79",
+    "document_type": "software_license",
+    "condition": "noisy_prompt",
+    "strategy": "single",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11012,
+    "decoys_in_prompt": [
+      "draft_missing_section"
+    ],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 3,
+      "grounded_claims": 3,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": null,
+      "explicit_mislabel_rate": null,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:perpetual_license": true,
+      "playbook:license_fees": true,
+      "extract:governing_law": true
+    }
+  },
+  {
+    "run_id": "d0d40983-ec61-41e8-9cf8-d205a139e00b",
+    "document_id": "edgar_amd_ex10.79",
+    "document_type": "software_license",
+    "condition": "noisy_prompt",
+    "strategy": "parallel_grounded",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11013,
+    "decoys_in_prompt": [
+      "bad_parse_wrong_ids"
+    ],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 3,
+      "grounded_claims": 3,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": null,
+      "explicit_mislabel_rate": null,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:perpetual_license": true,
+      "playbook:license_fees": true,
+      "extract:governing_law": true
+    }
+  },
+  {
+    "run_id": "06dd4adb-3bac-4baa-828e-4810d196f3e4",
+    "document_id": "edgar_amd_ex10.79",
+    "document_type": "software_license",
+    "condition": "noisy_prompt",
+    "strategy": "parallel_source_probe",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11014,
+    "decoys_in_prompt": [
+      "bad_parse_extra_clause"
+    ],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 5,
+      "grounded_claims": 5,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": 0.0,
+      "explicit_mislabel_rate": 0.0,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:perpetual_license": true,
+      "playbook:license_fees": true,
+      "extract:governing_law": true
+    }
+  },
+  {
+    "run_id": "34ee4d02-da5f-438f-a519-c062c2029e7c",
+    "document_id": "edgar_hg_holdings_inc_ex10.2",
+    "document_type": "nda",
+    "condition": "clean",
+    "strategy": "single",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11015,
+    "decoys_in_prompt": [],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 3,
+      "grounded_claims": 3,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": null,
+      "explicit_mislabel_rate": null,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:mutual_confidentiality": true,
+      "playbook:return_of_materials": true,
+      "extract:nda_term": true
+    }
+  },
+  {
+    "run_id": "d0d161e2-0004-4c73-9fb2-bb66fdf03426",
+    "document_id": "edgar_hg_holdings_inc_ex10.2",
+    "document_type": "nda",
+    "condition": "clean",
+    "strategy": "parallel_grounded",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11016,
+    "decoys_in_prompt": [],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 3,
+      "grounded_claims": 3,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": null,
+      "explicit_mislabel_rate": null,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:mutual_confidentiality": true,
+      "playbook:return_of_materials": true,
+      "extract:nda_term": true
+    }
+  },
+  {
+    "run_id": "01b74a39-50f1-45db-bd9d-0e2675be4e29",
+    "document_id": "edgar_hg_holdings_inc_ex10.2",
+    "document_type": "nda",
+    "condition": "clean",
+    "strategy": "parallel_source_probe",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11017,
+    "decoys_in_prompt": [],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 5,
+      "grounded_claims": 5,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": 0.0,
+      "explicit_mislabel_rate": 0.0,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:mutual_confidentiality": true,
+      "playbook:return_of_materials": true,
+      "extract:nda_term": true
+    }
+  },
+  {
+    "run_id": "b560f074-1b50-46e5-9c81-6a26a7b0fc36",
+    "document_id": "edgar_hg_holdings_inc_ex10.2",
+    "document_type": "nda",
+    "condition": "noisy_prompt",
+    "strategy": "single",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11018,
+    "decoys_in_prompt": [
+      "outdated_wrong_terms",
+      "bad_parse_extra_clause"
+    ],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 3,
+      "grounded_claims": 3,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": null,
+      "explicit_mislabel_rate": null,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:mutual_confidentiality": true,
+      "playbook:return_of_materials": true,
+      "extract:nda_term": true
+    }
+  },
+  {
+    "run_id": "5b0e10d8-b338-47eb-b40c-af753265f39e",
+    "document_id": "edgar_hg_holdings_inc_ex10.2",
+    "document_type": "nda",
+    "condition": "noisy_prompt",
+    "strategy": "parallel_grounded",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11019,
+    "decoys_in_prompt": [
+      "draft_missing_section"
+    ],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 3,
+      "grounded_claims": 3,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": null,
+      "explicit_mislabel_rate": null,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:mutual_confidentiality": true,
+      "playbook:return_of_materials": true,
+      "extract:nda_term": true
+    }
+  },
+  {
+    "run_id": "bb406e51-4c29-4dd1-a3c1-08b77edeea56",
+    "document_id": "edgar_hg_holdings_inc_ex10.2",
+    "document_type": "nda",
+    "condition": "noisy_prompt",
+    "strategy": "parallel_source_probe",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11020,
+    "decoys_in_prompt": [
+      "draft_missing_section",
+      "outdated_wrong_terms"
+    ],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 5,
+      "grounded_claims": 5,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": 0.0,
+      "explicit_mislabel_rate": 0.0,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:mutual_confidentiality": true,
+      "playbook:return_of_materials": true,
+      "extract:nda_term": true
+    }
+  },
+  {
+    "run_id": "ddeaf622-95e4-4bab-aa6a-47b7b400974f",
+    "document_id": "edgar_emerald_holding_inc_ex10.43",
+    "document_type": "employment",
+    "condition": "clean",
+    "strategy": "single",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11021,
+    "decoys_in_prompt": [],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 3,
+      "grounded_claims": 3,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": null,
+      "explicit_mislabel_rate": null,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:confidentiality_duty": true,
+      "playbook:mutual_indemnity": true,
+      "extract:governing_law": true
+    }
+  },
+  {
+    "run_id": "315cf799-a2b1-409b-9d58-4bdf68c64695",
+    "document_id": "edgar_emerald_holding_inc_ex10.43",
+    "document_type": "employment",
+    "condition": "clean",
+    "strategy": "parallel_grounded",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11022,
+    "decoys_in_prompt": [],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 3,
+      "grounded_claims": 3,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": null,
+      "explicit_mislabel_rate": null,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:confidentiality_duty": true,
+      "playbook:mutual_indemnity": true,
+      "extract:governing_law": true
+    }
+  },
+  {
+    "run_id": "f673fd9b-602f-4deb-a6cd-0776f9c9e87b",
+    "document_id": "edgar_emerald_holding_inc_ex10.43",
+    "document_type": "employment",
+    "condition": "clean",
+    "strategy": "parallel_source_probe",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11023,
+    "decoys_in_prompt": [],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 5,
+      "grounded_claims": 5,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": 0.0,
+      "explicit_mislabel_rate": 0.0,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:confidentiality_duty": true,
+      "playbook:mutual_indemnity": true,
+      "extract:governing_law": true
+    }
+  },
+  {
+    "run_id": "3fc54ede-fe0a-4494-b86a-00a6c3c832a5",
+    "document_id": "edgar_emerald_holding_inc_ex10.43",
+    "document_type": "employment",
+    "condition": "noisy_prompt",
+    "strategy": "single",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11024,
+    "decoys_in_prompt": [
+      "outdated_wrong_terms"
+    ],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 3,
+      "grounded_claims": 3,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": null,
+      "explicit_mislabel_rate": null,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:confidentiality_duty": true,
+      "playbook:mutual_indemnity": true,
+      "extract:governing_law": true
+    }
+  },
+  {
+    "run_id": "fe1e9473-8173-4de1-90af-010900e4e6c2",
+    "document_id": "edgar_emerald_holding_inc_ex10.43",
+    "document_type": "employment",
+    "condition": "noisy_prompt",
+    "strategy": "parallel_grounded",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11001,
+    "decoys_in_prompt": [
+      "outdated_wrong_terms"
+    ],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 3,
+      "grounded_claims": 3,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": null,
+      "explicit_mislabel_rate": null,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:confidentiality_duty": true,
+      "playbook:mutual_indemnity": true,
+      "extract:governing_law": true
+    }
+  },
+  {
+    "run_id": "bf621472-48b4-482f-a007-c403b76b41d8",
+    "document_id": "edgar_emerald_holding_inc_ex10.43",
+    "document_type": "employment",
+    "condition": "noisy_prompt",
+    "strategy": "parallel_source_probe",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11002,
+    "decoys_in_prompt": [
+      "bad_parse_wrong_ids",
+      "bad_parse_extra_clause"
+    ],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 5,
+      "grounded_claims": 5,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": 0.0,
+      "explicit_mislabel_rate": 0.0,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:confidentiality_duty": true,
+      "playbook:mutual_indemnity": true,
+      "extract:governing_law": true
+    }
+  },
+  {
+    "run_id": "79b5e226-cf71-4f13-9b45-22a119f1c68e",
+    "document_id": "edgar_enviri_corp_ex10.1",
+    "document_type": "credit",
+    "condition": "clean",
+    "strategy": "single",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11003,
+    "decoys_in_prompt": [],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 3,
+      "grounded_claims": 3,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": null,
+      "explicit_mislabel_rate": null,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:ny_governing_law": true,
+      "playbook:icc_arbitration": true,
+      "extract:amendment_number": true
+    }
+  },
+  {
+    "run_id": "f58b9487-8607-424b-97d6-a6b1a1b2eb93",
+    "document_id": "edgar_enviri_corp_ex10.1",
+    "document_type": "credit",
+    "condition": "clean",
+    "strategy": "parallel_grounded",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11004,
+    "decoys_in_prompt": [],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 3,
+      "grounded_claims": 3,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": null,
+      "explicit_mislabel_rate": null,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:ny_governing_law": true,
+      "playbook:icc_arbitration": true,
+      "extract:amendment_number": true
+    }
+  },
+  {
+    "run_id": "e62f9758-e105-4091-9cd7-56b751db74d7",
+    "document_id": "edgar_enviri_corp_ex10.1",
+    "document_type": "credit",
+    "condition": "clean",
+    "strategy": "parallel_source_probe",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11005,
+    "decoys_in_prompt": [],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 5,
+      "grounded_claims": 5,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": 0.0,
+      "explicit_mislabel_rate": 0.0,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:ny_governing_law": true,
+      "playbook:icc_arbitration": true,
+      "extract:amendment_number": true
+    }
+  },
+  {
+    "run_id": "fcadd376-e240-4a45-969f-17ebb0adf47c",
+    "document_id": "edgar_enviri_corp_ex10.1",
+    "document_type": "credit",
+    "condition": "noisy_prompt",
+    "strategy": "single",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11006,
+    "decoys_in_prompt": [
+      "bad_parse_extra_clause",
+      "bad_parse_wrong_ids"
+    ],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 3,
+      "grounded_claims": 3,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": null,
+      "explicit_mislabel_rate": null,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:ny_governing_law": true,
+      "playbook:icc_arbitration": true,
+      "extract:amendment_number": true
+    }
+  },
+  {
+    "run_id": "867f9331-6424-467c-b338-9c71ca92808a",
+    "document_id": "edgar_enviri_corp_ex10.1",
+    "document_type": "credit",
+    "condition": "noisy_prompt",
+    "strategy": "parallel_grounded",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11007,
+    "decoys_in_prompt": [
+      "outdated_wrong_terms",
+      "bad_parse_wrong_ids"
+    ],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 3,
+      "grounded_claims": 3,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": null,
+      "explicit_mislabel_rate": null,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:ny_governing_law": true,
+      "playbook:icc_arbitration": true,
+      "extract:amendment_number": true
+    }
+  },
+  {
+    "run_id": "97cdeda5-f974-4611-8c6a-3b351af42425",
+    "document_id": "edgar_enviri_corp_ex10.1",
+    "document_type": "credit",
+    "condition": "noisy_prompt",
+    "strategy": "parallel_source_probe",
+    "provider": "stub",
+    "model": "canonical-stub",
+    "seed": 11008,
+    "decoys_in_prompt": [
+      "draft_missing_section",
+      "bad_parse_wrong_ids"
+    ],
+    "metrics": {
+      "grounding_rate": 1.0,
+      "decoy_citation_rate": 0.0,
+      "task_accuracy": 1.0,
+      "total_claims": 5,
+      "grounded_claims": 5,
+      "decoy_citations": 0,
+      "correct_tasks": 3,
+      "total_tasks": 3,
+      "source_fidelity": 1.0,
+      "decoy_probe_match_rate": 0.0,
+      "explicit_mislabel_rate": 0.0,
+      "cross_document_citation_rate": null
+    },
+    "task_scores": {
+      "playbook:ny_governing_law": true,
+      "playbook:icc_arbitration": true,
+      "extract:amendment_number": true
+    }
+  }
+]

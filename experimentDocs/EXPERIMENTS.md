@@ -2,7 +2,7 @@
 
 > **All experiments run through the Gemini API** — real SEC contracts across **five document types**, orchestrated subtasks, mechanical verification.
 
-Last synced: **2026-08-12**
+Last synced: **2026-08-13**
 
 ---
 
@@ -71,22 +71,25 @@ Design: [`context/phases/MULTI_TYPE.md`](../context/phases/MULTI_TYPE.md)
 
 ## Committed results status
 
-**Status:** `partial` — **1 of 10** expected default-matrix runs saved in `results.json` (free-tier quota blocked incremental save during a later full-matrix attempt).
+**Stub matrix (32/32):** [`experiments/stub_matrix/REPORT.md`](../experiments/stub_matrix/REPORT.md) — all four strategies, canonical stub clients.
 
-| Document | Type | Condition | Strategy | Grounding | Decoy rate | Task accuracy |
-|----------|------|-----------|----------|-----------|------------|---------------|
-| `edgar_edgemode_inc_ex10.1` | MSA | clean | `parallel_grounded` | **100%** | **0%** | **67%** |
+**Live Gemini (1/32 partial):** quota exhausted on 2026-08-13. One saved run (Edgemode MSA · clean · `parallel_grounded`: 100% grounding, 67% accuracy).
 
-**Task scores (Edgemode, clean):** `extract:fee_indexation` pass · `playbook:mutual_indemnity` pass · `playbook:icc_arbitration` fail.
+| Strategy | Stub runs | Stub grounding | Stub accuracy | Live note |
+|----------|-----------|----------------|---------------|-----------|
+| `single` | 10 | 100% | 100% | pending quota |
+| `parallel_grounded` | 10 | 100% | 100% | 1 live run (67% acc) |
+| `parallel_source_probe` | 10 | 100% | 100% | pending quota |
+| `parallel_cross_type_discrimination` | 2 | 100% | 100% | pending quota |
 
-**Test suite (2026-08-12):** `python -m pytest tests/ -q` → **92 passed, 1 skipped**.
+Re-run stub matrix: `python scripts/run_stub_matrix.py`
 
-See [`experiments/live_gemini/REPORT.md`](../experiments/live_gemini/REPORT.md) for the aggregated report.
-
-Re-run the full matrix:
+Re-run live matrix:
 
 ```powershell
-python -m benchmark.run_experiment --provider gemini --model gemini-flash-latest
+python -m benchmark.run_experiment --provider gemini --model gemini-flash-latest `
+  --strategies single parallel_grounded parallel_source_probe parallel_cross_type_discrimination `
+  --conditions clean noisy_prompt portfolio_clean cross_type_mislabeled
 ```
 Source-probe smoke test:
 
