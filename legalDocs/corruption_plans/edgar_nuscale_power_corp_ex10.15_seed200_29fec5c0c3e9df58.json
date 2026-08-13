@@ -1,0 +1,513 @@
+{
+  "document_id": "edgar_nuscale_power_corp_ex10.15",
+  "seed": 200,
+  "content_hash": "29fec5c0c3e9df58",
+  "mode": "local",
+  "span_edits": [
+    {
+      "clause_id": "c-018",
+      "category": "duration",
+      "original": "ninety (90) days",
+      "replacement": "ten (10) days"
+    },
+    {
+      "clause_id": "c-018",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-019",
+      "category": "money",
+      "original": "$2,000",
+      "replacement": "$2,660"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "duration",
+      "original": "ninety days",
+      "replacement": "thirty (30) days"
+    },
+    {
+      "clause_id": "c-003",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-017",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-017",
+      "category": "duration",
+      "original": "30 days",
+      "replacement": "two (22) days"
+    },
+    {
+      "clause_id": "c-018",
+      "category": "duration",
+      "original": "thirty (30) days",
+      "replacement": "ninety (90) days"
+    },
+    {
+      "clause_id": "c-005",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-015",
+      "category": "percentage",
+      "original": "75% ",
+      "replacement": "80% "
+    },
+    {
+      "clause_id": "c-019",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-005",
+      "category": "obligation",
+      "original": "will not",
+      "replacement": "will"
+    },
+    {
+      "clause_id": "c-018",
+      "category": "obligation",
+      "original": "will not",
+      "replacement": "will"
+    },
+    {
+      "clause_id": "c-014",
+      "category": "money",
+      "original": "$10,000",
+      "replacement": "$15,000"
+    },
+    {
+      "clause_id": "c-005",
+      "category": "obligation",
+      "original": "may not",
+      "replacement": "shall"
+    },
+    {
+      "clause_id": "c-005",
+      "category": "duration",
+      "original": "ten (10) years",
+      "replacement": "thirty (30) days"
+    },
+    {
+      "clause_id": "c-003",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "duration",
+      "original": "15 days",
+      "replacement": "30 Days"
+    },
+    {
+      "clause_id": "c-010",
+      "category": "duration",
+      "original": "one (1) year",
+      "replacement": "90 DAYS"
+    },
+    {
+      "clause_id": "c-008",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-015",
+      "category": "money",
+      "original": "$110,",
+      "replacement": "$82.5"
+    },
+    {
+      "clause_id": "c-014",
+      "category": "money",
+      "original": "$100,000",
+      "replacement": "$200,000"
+    },
+    {
+      "clause_id": "c-009",
+      "category": "obligation",
+      "original": "will not",
+      "replacement": "will"
+    },
+    {
+      "clause_id": "c-010",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "money",
+      "original": "$75",
+      "replacement": "$112.50"
+    },
+    {
+      "clause_id": "c-012",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-018",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "duration",
+      "original": "90 DAYS",
+      "replacement": "three (3) months"
+    },
+    {
+      "clause_id": "c-019",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-018",
+      "category": "duration",
+      "original": "four (4) weeks",
+      "replacement": "one (1) year"
+    },
+    {
+      "clause_id": "c-019",
+      "category": "money",
+      "original": "$46",
+      "replacement": "$30.82"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "duration",
+      "original": "twenty (20) years",
+      "replacement": "ninety days"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "obligation",
+      "original": "will not",
+      "replacement": "will"
+    },
+    {
+      "clause_id": "c-017",
+      "category": "money",
+      "original": "$10",
+      "replacement": "$5"
+    },
+    {
+      "clause_id": "c-017",
+      "category": "money",
+      "original": "$600",
+      "replacement": "$750"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "duration",
+      "original": "one  day",
+      "replacement": "four (4) weeks"
+    },
+    {
+      "clause_id": "c-018",
+      "category": "obligation",
+      "original": "may not",
+      "replacement": "shall"
+    },
+    {
+      "clause_id": "c-017",
+      "category": "money",
+      "original": "$46.00",
+      "replacement": "$69.00"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-007",
+      "category": "money",
+      "original": "$50,000,000",
+      "replacement": "$62,500,000"
+    },
+    {
+      "clause_id": "c-009",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-003",
+      "category": "date",
+      "original": "September 30, 2011",
+      "replacement": "September 30, 2010"
+    },
+    {
+      "clause_id": "c-017",
+      "category": "duration",
+      "original": "thirty (30) days",
+      "replacement": "15 days"
+    },
+    {
+      "clause_id": "c-015",
+      "category": "duration",
+      "original": "90 DAYS",
+      "replacement": "four (4) weeks"
+    },
+    {
+      "clause_id": "c-007",
+      "category": "money",
+      "original": "$10,000,000",
+      "replacement": "$7,500,000"
+    },
+    {
+      "clause_id": "c-017",
+      "category": "rate",
+      "original": "$300/month",
+      "replacement": "$375/month"
+    },
+    {
+      "clause_id": "c-011",
+      "category": "obligation",
+      "original": "will not",
+      "replacement": "will"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "jurisdiction",
+      "original": "laws of the states having jurisdiction over Fluor",
+      "replacement": "laws of the State of Oregon"
+    },
+    {
+      "clause_id": "c-002",
+      "category": "duration",
+      "original": "30 Days",
+      "replacement": "ten (10) years"
+    },
+    {
+      "clause_id": "c-017",
+      "category": "money",
+      "original": "$900.00",
+      "replacement": "$675.00"
+    },
+    {
+      "clause_id": "c-007",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-011",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-018",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-017",
+      "category": "money",
+      "original": "$3,180.00",
+      "replacement": "$6,360.00"
+    },
+    {
+      "clause_id": "c-017",
+      "category": "money",
+      "original": "$30",
+      "replacement": "$45"
+    },
+    {
+      "clause_id": "c-017",
+      "category": "money",
+      "original": "three hundred",
+      "replacement": "$110,"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "money",
+      "original": "one million",
+      "replacement": "$1,000,000"
+    },
+    {
+      "clause_id": "c-008",
+      "category": "percentage",
+      "original": "75%",
+      "replacement": "85%"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-012",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-017",
+      "category": "money",
+      "original": "$300",
+      "replacement": "$450"
+    },
+    {
+      "clause_id": "c-014",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-009",
+      "category": "duration",
+      "original": "ten (10) days",
+      "replacement": "90 DAYS"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "duration",
+      "original": "three (3) months",
+      "replacement": "one (1) year"
+    },
+    {
+      "clause_id": "c-009",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-013",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-013",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-017",
+      "category": "money",
+      "original": "$46",
+      "replacement": "$69"
+    },
+    {
+      "clause_id": "c-017",
+      "category": "money",
+      "original": "$40",
+      "replacement": "$26.80"
+    },
+    {
+      "clause_id": "c-007",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-015",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "money",
+      "original": "$1,000,000",
+      "replacement": "$670,000"
+    },
+    {
+      "clause_id": "c-010",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-018",
+      "category": "duration",
+      "original": "two weeks",
+      "replacement": "thirty (30) days"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "jurisdiction",
+      "original": "laws of the State of Oregon",
+      "replacement": "laws of the states having jurisdiction over Fluor"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-015",
+      "category": "money",
+      "original": "$100",
+      "replacement": "$50"
+    },
+    {
+      "clause_id": "c-018",
+      "category": "duration",
+      "original": "two (22) days",
+      "replacement": "three (3) months"
+    }
+  ],
+  "missing_clause_ids": [
+    "c-018",
+    "c-006",
+    "c-003",
+    "c-012",
+    "c-020",
+    "c-019",
+    "c-008",
+    "c-004",
+    "c-016",
+    "c-013",
+    "c-014",
+    "c-017",
+    "c-011",
+    "c-009",
+    "c-005",
+    "c-010",
+    "c-015",
+    "c-002",
+    "c-007"
+  ],
+  "extra_clause": {
+    "text": "Indemnification. Notwithstanding any other provision, obligations under this section survive termination for 30 Days following the effective date of termination.",
+    "insert_index": 2
+  }
+}

@@ -71,14 +71,23 @@ Design: [`context/phases/MULTI_TYPE.md`](../context/phases/MULTI_TYPE.md)
 
 ## Committed results status
 
-See [`experiments/live_gemini/REPORT.md`](../experiments/live_gemini/REPORT.md) for the latest committed baseline.
+**Status:** `partial` — **1 of 10** expected default-matrix runs saved in `results.json` (free-tier quota blocked incremental save during a later full-matrix attempt).
+
+| Document | Type | Condition | Strategy | Grounding | Decoy rate | Task accuracy |
+|----------|------|-----------|----------|-----------|------------|---------------|
+| `edgar_edgemode_inc_ex10.1` | MSA | clean | `parallel_grounded` | **100%** | **0%** | **67%** |
+
+**Task scores (Edgemode, clean):** `extract:fee_indexation` pass · `playbook:mutual_indemnity` pass · `playbook:icc_arbitration` fail.
+
+**Test suite (2026-08-12):** `python -m pytest tests/ -q` → **92 passed, 1 skipped**.
+
+See [`experiments/live_gemini/REPORT.md`](../experiments/live_gemini/REPORT.md) for the aggregated report.
 
 Re-run the full matrix:
 
 ```powershell
 python -m benchmark.run_experiment --provider gemini --model gemini-flash-latest
 ```
-
 Source-probe smoke test:
 
 ```powershell
@@ -113,12 +122,18 @@ python -m benchmark.run_experiment --provider gemini `
 
 ## Pipeline per API call
 
-1. Parse SEC EX-10 → canonical clauses (type-tuned decoy targets).
-2. Build decoy bundle (seeded).
+1. Parse SEC EX-10 → canonical clauses.
+2. Resolve **document-specific corruption plan** (`corruption_plan.py`; local or cached Gemini plan) → build decoy bundle (seeded).
 3. Prompt Gemini with document block + task instructions (JSON claims schema).
 4. **Parallel:** extract subtask ∥ playbook subtask (or source probes).
 5. Verify every claim against canonical SoT.
 6. Score vs answer YAML; report metrics by document type.
+
+Pre-generate Gemini corruption plans (optional, one-time per document/seed):
+
+```powershell
+python scripts/generate_corruption_plans.py --mode gemini --seed 42
+```
 
 ---
 

@@ -5,7 +5,7 @@ Generated: 2026-08-12 22:49 UTC
 ## Run configuration
 
 - **mode**: `live_gemini`
-- **status**: `completed`
+- **status**: `partial`
 - **provider**: `gemini`
 - **documents**: `['edgar_edgemode_inc_ex10.1']`
 - **conditions**: `['clean']`

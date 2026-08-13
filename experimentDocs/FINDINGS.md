@@ -10,31 +10,37 @@ Regenerate: `python -m benchmark.run_experiment --provider gemini`
 
 ### Headline
 
-On **real SEC-filed contracts across five document types**, Gemini (`gemini-flash-latest`) stayed **100% grounded** on all completed runs — including under `noisy_prompt` with decoys present. Task accuracy varied by document type and task design, not by grounding failures. No decoy citations were detected in the completed 9/10 run matrix (free-tier daily quota blocked the final run).
+The **committed baseline is partial**: only **1 of 10** default-matrix runs is saved in `results.json`. On that run — Edgemode MSA under `clean` with `parallel_grounded` — Gemini stayed **100% grounded** with **0% decoy citations** and **67% task accuracy** (2/3 tasks correct).
 
-### By condition (9 completed runs)
+A later session attempted a full multi-strategy matrix (including portfolio cross-type runs) but was **aborted** when Gemini free-tier rate limits hit; incremental save left the repo with this single-row baseline.
 
-| Condition | Runs | Grounding | Decoy rate | Task accuracy |
-|-----------|------|-----------|------------|---------------|
-| clean | 5 | 100% | 0% | 73% |
-| noisy_prompt | 4 | 100% | 0% | 58% |
+### Committed run (1 row)
 
-### By document type (completed runs)
+| Document | Type | Condition | Strategy | Grounding | Decoy rate | Task accuracy |
+|----------|------|-----------|----------|-----------|------------|---------------|
+| `edgar_edgemode_inc_ex10.1` | MSA | clean | `parallel_grounded` | 100% | 0% | 67% |
 
-| Type | Document | Clean acc | Noisy acc | Notes |
-|------|----------|-----------|-----------|-------|
-| MSA | Edgemode | 67% | 67% | Fee indexation extract missed |
-| Software license | AMD | 100% | 67% | Strong on license playbook |
-| NDA | HG Holdings | 100% | — | Noisy run blocked by API quota |
-| Employment | Emerald | 67% | 67% | Confidentiality playbook correct |
-| Credit | Enviri | 33% | 33% | Amendment-number extract difficult |
+**Task breakdown:**
 
-### Implications
+| Task | Result |
+|------|--------|
+| `extract:fee_indexation` | pass |
+| `playbook:mutual_indemnity` | pass |
+| `playbook:icc_arbitration` | fail |
 
-1. **Grounding generalizes across types.** 100% grounding on MSAs, licenses, NDAs, employment, and credit amendments — decoys in prompt did not cause canonical mis-citation in completed runs.
-2. **Task accuracy is type-dependent.** Credit agreement amendment (Enviri) scored lowest; software license (AMD) scored highest on clean runs.
-3. **Noise effect is modest so far.** Aggregate task accuracy dropped from 73% (clean) to 58% (noisy) on four noisy runs — without decoy citation rate rising, suggesting errors are quote-selection or rule interpretation, not wrong-document anchoring.
-4. **Re-run needed.** Full 10-run committed baseline pending quota reset for `edgar_hg_holdings_inc_ex10.2` noisy_prompt.
+### Engineering status (2026-08-12)
+
+| Check | Result |
+|-------|--------|
+| `python -m pytest tests/ -q` | **92 passed, 1 skipped** |
+| Portfolio API concurrency cap | **5** parallel calls (`run_parallel_cross_type_discrimination`) |
+| Experiment matrix run delay | **20 s** between runs (rate-limit mitigation) |
+
+### Implications (from committed data)
+
+1. **Grounding holds on the saved run.** All three claims cited valid canonical clause IDs and exact quotes.
+2. **Task accuracy ≠ grounding.** The ICC arbitration playbook rule failed despite perfect grounding — likely rule interpretation or quote selection, not wrong-document anchoring.
+3. **Full baseline pending.** Re-run `python -m benchmark.run_experiment --provider gemini` when quota resets to populate the remaining 9 default-matrix cells and optional portfolio / source-probe strategies.
 
 ### Prior MSA-only baseline (4 runs, `single` strategy)
 

@@ -4,12 +4,14 @@ from __future__ import annotations
 
 import json
 import sys
+import time
 from pathlib import Path
 from typing import Any
 
 from benchmark.answers import list_answer_documents
 from benchmark.document_types import primary_fixtures
 from benchmark.live_providers import LiveProvider
+from orchestrator.portfolio_run import run_portfolio_benchmark_case
 from orchestrator.run import run_benchmark_case
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -17,7 +19,12 @@ FIXTURES = REPO_ROOT / "legalDocs" / "contracts" / "public"
 
 DEFAULT_DOCUMENTS = primary_fixtures()
 DEFAULT_CONDITIONS = ["clean", "noisy_prompt"]
-DEFAULT_STRATEGIES = ["single", "parallel_grounded", "parallel_source_probe"]
+DEFAULT_STRATEGIES = [
+    "single",
+    "parallel_grounded",
+    "parallel_source_probe",
+    "parallel_cross_type_discrimination",
+]
 DEFAULT_STRATEGY = "parallel_grounded"
 
 # Fixed seeds for reproducible runs (one seed per document × condition pair).
@@ -49,6 +56,32 @@ DETERMINISTIC_SEEDS = [
 ]
 
 
+PORTFOLIO_STRATEGIES = frozenset({"parallel_cross_type_discrimination"})
+PORTFOLIO_CONDITIONS = ["portfolio_clean", "cross_type_mislabeled"]
+RUN_DELAY_SEC = 20.0
+
+
+def count_expected_runs(
+    documents: list[str],
+    conditions: list[str],
+    strategies: list[str],
+) -> int:
+    """Count matrix rows the runner will actually execute."""
+    portfolio_strats = [s for s in strategies if s in PORTFOLIO_STRATEGIES]
+    doc_strats = [s for s in strategies if s not in PORTFOLIO_STRATEGIES]
+    total = 0
+    for condition in conditions:
+        for strategy in portfolio_strats:
+            if condition in PORTFOLIO_CONDITIONS:
+                total += 1
+    for _doc_id in documents:
+        for condition in conditions:
+            if condition in PORTFOLIO_CONDITIONS:
+                continue
+            total += len(doc_strats)
+    return total
+
+
 def run_gemini_matrix(
     *,
     provider: LiveProvider,
@@ -70,6 +103,42 @@ def run_gemini_matrix(
     results: list[dict[str, Any]] = []
     run_index = 0
 
+    portfolio_strats = [s for s in strats if s in PORTFOLIO_STRATEGIES]
+    doc_strats = [s for s in strats if s not in PORTFOLIO_STRATEGIES]
+
+    for condition in conds:
+        for strategy in portfolio_strats:
+            if condition not in PORTFOLIO_CONDITIONS:
+                continue
+            seed = DETERMINISTIC_SEEDS[run_index % len(DETERMINISTIC_SEEDS)]
+            run_index += 1
+            print(
+                f"  portfolio:primary_five | {condition} | {strategy} | "
+                f"{resolved_model} | seed={seed}",
+                flush=True,
+            )
+            try:
+                run = run_portfolio_benchmark_case(
+                    condition=condition,
+                    strategy=strategy,
+                    seed=seed,
+                    client_factory=client_factory,
+                    model=resolved_model,
+                    models=[resolved_model],
+                )
+            except Exception as exc:
+                print(f"    ERROR: {exc}", file=sys.stderr)
+                if not continue_on_error:
+                    raise
+            else:
+                row = _result_row(run, provider, resolved_model)
+                results.append(row)
+                save_results(results, results_path)
+                _print_metrics(run.metrics)
+            finally:
+                if RUN_DELAY_SEC > 0:
+                    time.sleep(RUN_DELAY_SEC)
+
     for doc_id in docs:
         contract_path = FIXTURES / f"{doc_id}.txt"
         if not contract_path.exists():
@@ -77,7 +146,9 @@ def run_gemini_matrix(
             continue
 
         for condition in conds:
-            for strategy in strats:
+            if condition in PORTFOLIO_CONDITIONS:
+                continue
+            for strategy in doc_strats:
                 seed = DETERMINISTIC_SEEDS[run_index % len(DETERMINISTIC_SEEDS)]
                 run_index += 1
 
@@ -106,32 +177,43 @@ def run_gemini_matrix(
                     print(f"    ERROR: {exc}", file=sys.stderr)
                     if not continue_on_error:
                         raise
-                    continue
-
-                row = {
-                    "run_id": run.run_id,
-                    "document_id": run.document_id,
-                    "document_type": run.document_type,
-                    "condition": run.condition,
-                    "strategy": run.strategy,
-                    "provider": provider.name,
-                    "model": resolved_model,
-                    "seed": run.seed,
-                    "decoys_in_prompt": run.decoys_in_prompt,
-                    "metrics": run.metrics.model_dump(),
-                    "task_scores": run.task_scores,
-                }
-                results.append(row)
-                save_results(results, results_path)
-                m = run.metrics
-                print(
-                    f"    grounding={m.grounding_rate:.0%} "
-                    f"decoy={m.decoy_citation_rate:.0%} "
-                    f"accuracy={m.task_accuracy:.0%}",
-                    flush=True,
-                )
+                else:
+                    row = _result_row(run, provider, resolved_model)
+                    results.append(row)
+                    save_results(results, results_path)
+                    _print_metrics(run.metrics)
+                finally:
+                    if RUN_DELAY_SEC > 0:
+                        time.sleep(RUN_DELAY_SEC)
 
     return results
+
+
+def _result_row(run, provider: LiveProvider, resolved_model: str) -> dict[str, Any]:
+    return {
+        "run_id": run.run_id,
+        "document_id": run.document_id,
+        "document_type": run.document_type,
+        "condition": run.condition,
+        "strategy": run.strategy,
+        "provider": provider.name,
+        "model": resolved_model,
+        "seed": run.seed,
+        "decoys_in_prompt": run.decoys_in_prompt,
+        "metrics": run.metrics.model_dump(),
+        "task_scores": run.task_scores,
+    }
+
+
+def _print_metrics(metrics) -> None:
+    cross = metrics.cross_document_citation_rate
+    cross_text = f" cross_doc={cross:.0%}" if cross is not None else ""
+    print(
+        f"    grounding={metrics.grounding_rate:.0%} "
+        f"decoy={metrics.decoy_citation_rate:.0%} "
+        f"accuracy={metrics.task_accuracy:.0%}{cross_text}",
+        flush=True,
+    )
 
 
 def save_results(results: list[dict[str, Any]], path: Path) -> None:

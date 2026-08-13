@@ -1,0 +1,530 @@
+{
+  "document_id": "edgar_pulmatrix_inc_ex10.6",
+  "seed": 42,
+  "content_hash": "bb63688a29738cf9",
+  "mode": "local",
+  "span_edits": [
+    {
+      "clause_id": "c-063",
+      "category": "jurisdiction",
+      "original": "Delaware",
+      "replacement": "laws of the Commonwealth"
+    },
+    {
+      "clause_id": "c-053",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-015",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-008",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-031",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-024",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-001",
+      "category": "jurisdiction",
+      "original": "Delaware",
+      "replacement": "laws of the Commonwealth"
+    },
+    {
+      "clause_id": "c-068",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-017",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-056",
+      "category": "duration",
+      "original": "thirty (30)\ndays",
+      "replacement": "thirty (30) days"
+    },
+    {
+      "clause_id": "c-057",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-010",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-047",
+      "category": "duration",
+      "original": "thirty (30) days",
+      "replacement": "sixty (60) days"
+    },
+    {
+      "clause_id": "c-024",
+      "category": "duration",
+      "original": "thirty (30) days",
+      "replacement": "sixty (60) days"
+    },
+    {
+      "clause_id": "c-046",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-019",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-045",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-038",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-058",
+      "category": "jurisdiction",
+      "original": "laws of any jurisdiction other than those of the Commonwealth of Massachusetts",
+      "replacement": "Delaware"
+    },
+    {
+      "clause_id": "c-028",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-049",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-067",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-041",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-030",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-011",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-060",
+      "category": "obligation",
+      "original": "will not",
+      "replacement": "will"
+    },
+    {
+      "clause_id": "c-029",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-007",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-035",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-003",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-056",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-043",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-041",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-039",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-046",
+      "category": "duration",
+      "original": "twelve months",
+      "replacement": "thirty (30) days"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-014",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-033",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-021",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-037",
+      "category": "duration",
+      "original": "ten (10) years",
+      "replacement": "thirty (30) days"
+    },
+    {
+      "clause_id": "c-038",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-019",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-058",
+      "category": "jurisdiction",
+      "original": "laws of the Commonwealth",
+      "replacement": "Delaware"
+    },
+    {
+      "clause_id": "c-051",
+      "category": "obligation",
+      "original": "may not",
+      "replacement": "shall"
+    },
+    {
+      "clause_id": "c-063",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-032",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-027",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-042",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-002",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-018",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-036",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-048",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-059",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-021",
+      "category": "duration",
+      "original": "thirty (30) day",
+      "replacement": "thirty (30) days"
+    },
+    {
+      "clause_id": "c-052",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-022",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-005",
+      "category": "percentage",
+      "original": "20%",
+      "replacement": "23%"
+    },
+    {
+      "clause_id": "c-005",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-021",
+      "category": "duration",
+      "original": "thirty (30) days",
+      "replacement": "thirty (30) day"
+    },
+    {
+      "clause_id": "c-043",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-054",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-024",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-020",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-063",
+      "category": "date",
+      "original": "March 1, 2024",
+      "replacement": "March 1, 2022"
+    },
+    {
+      "clause_id": "c-040",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-048",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-021",
+      "category": "duration",
+      "original": "sixty (60) days",
+      "replacement": "ten (10) years"
+    },
+    {
+      "clause_id": "c-001",
+      "category": "date",
+      "original": "July 8, 2024",
+      "replacement": "July 8, 2022"
+    },
+    {
+      "clause_id": "c-033",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-050",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-025",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-048",
+      "category": "duration",
+      "original": "thirty (30) days",
+      "replacement": "sixty (60) days"
+    },
+    {
+      "clause_id": "c-061",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    }
+  ],
+  "missing_clause_ids": [
+    "c-020",
+    "c-022",
+    "c-061",
+    "c-054",
+    "c-028",
+    "c-046",
+    "c-008",
+    "c-003",
+    "c-041",
+    "c-030",
+    "c-040",
+    "c-013",
+    "c-044",
+    "c-052",
+    "c-004",
+    "c-015",
+    "c-051",
+    "c-024",
+    "c-035",
+    "c-045",
+    "c-026",
+    "c-038",
+    "c-023",
+    "c-002",
+    "c-019",
+    "c-066",
+    "c-050",
+    "c-059",
+    "c-021",
+    "c-032",
+    "c-014",
+    "c-006",
+    "c-047",
+    "c-012",
+    "c-057",
+    "c-009",
+    "c-005",
+    "c-007",
+    "c-063",
+    "c-034",
+    "c-055",
+    "c-016",
+    "c-025",
+    "c-062",
+    "c-048",
+    "c-065",
+    "c-039",
+    "c-053",
+    "c-056",
+    "c-036",
+    "c-037",
+    "c-049",
+    "c-017",
+    "c-010",
+    "c-018",
+    "c-011",
+    "c-031",
+    "c-064",
+    "c-060",
+    "c-058",
+    "c-027",
+    "c-033",
+    "c-043",
+    "c-067",
+    "c-042",
+    "c-029"
+  ],
+  "extra_clause": {
+    "text": "Assignment. Notwithstanding any other provision, obligations under this section survive termination for thirty (30) day following the effective date of termination.",
+    "insert_index": 67
+  }
+}

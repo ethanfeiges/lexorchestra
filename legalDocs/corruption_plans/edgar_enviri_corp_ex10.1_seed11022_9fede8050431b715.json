@@ -1,0 +1,268 @@
+{
+  "document_id": "edgar_enviri_corp_ex10.1",
+  "seed": 11022,
+  "content_hash": "9fede8050431b715",
+  "mode": "local",
+  "span_edits": [
+    {
+      "clause_id": "c-016",
+      "category": "date",
+      "original": "June 28, 2019",
+      "replacement": "June 28, 2018"
+    },
+    {
+      "clause_id": "c-008",
+      "category": "jurisdiction",
+      "original": "New York",
+      "replacement": "Delaware"
+    },
+    {
+      "clause_id": "c-001",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "date",
+      "original": "December 21, 2022",
+      "replacement": "December 21, 2024"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "jurisdiction",
+      "original": "FLORIDA",
+      "replacement": "DELAWARE"
+    },
+    {
+      "clause_id": "c-010",
+      "category": "jurisdiction",
+      "original": "NEW YORK",
+      "replacement": "Delaware"
+    },
+    {
+      "clause_id": "c-003",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-015",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "jurisdiction",
+      "original": "Delaware",
+      "replacement": "FLORIDA"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "jurisdiction",
+      "original": "NEW YORK",
+      "replacement": "FLORIDA"
+    },
+    {
+      "clause_id": "c-010",
+      "category": "obligation",
+      "original": "SHALL",
+      "replacement": "May"
+    },
+    {
+      "clause_id": "c-009",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "date",
+      "original": "March 10, 2021",
+      "replacement": "March 10, 2022"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "jurisdiction",
+      "original": "DELAWARE",
+      "replacement": "NEVADA"
+    },
+    {
+      "clause_id": "c-014",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-008",
+      "category": "date",
+      "original": "July 15, 2024",
+      "replacement": "July 15, 2023"
+    },
+    {
+      "clause_id": "c-005",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-013",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "date",
+      "original": "October 27, 2021",
+      "replacement": "October 27, 2023"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "date",
+      "original": "November 2, 2016",
+      "replacement": "November 2, 2017"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "date",
+      "original": "June 24, 2022",
+      "replacement": "June 24, 2024"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "date",
+      "original": "August 29, 2022",
+      "replacement": "August 29, 2023"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "date",
+      "original": "February 22, 2022",
+      "replacement": "February 22, 2021"
+    },
+    {
+      "clause_id": "c-012",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "date",
+      "original": "June 26, 2020",
+      "replacement": "June 26, 2021"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "date",
+      "original": "August 19, 2022",
+      "replacement": "August 19, 2023"
+    },
+    {
+      "clause_id": "c-015",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-008",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "date",
+      "original": "March 31, 2020",
+      "replacement": "March 31, 2019"
+    },
+    {
+      "clause_id": "c-007",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-009",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "date",
+      "original": "June 18, 2018",
+      "replacement": "June 18, 2017"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "date",
+      "original": "December 8, 2017",
+      "replacement": "December 8, 2019"
+    },
+    {
+      "clause_id": "c-002",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "date",
+      "original": "September 5, 2024",
+      "replacement": "September 5, 2026"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "jurisdiction",
+      "original": "NEVADA",
+      "replacement": "NEW YORK"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    }
+  ],
+  "missing_clause_ids": [
+    "c-006",
+    "c-015",
+    "c-009",
+    "c-011",
+    "c-007",
+    "c-008",
+    "c-013",
+    "c-014",
+    "c-012",
+    "c-005",
+    "c-002",
+    "c-010",
+    "c-004",
+    "c-003"
+  ],
+  "extra_clause": {
+    "text": "Assignment. The parties agree that any amendment to this section requires written consent and thirty (30) days prior notice to the other party's authorized representative.",
+    "insert_index": 9
+  }
+}

@@ -52,6 +52,11 @@ def get_candidate_by_label(bundle: SoTBundle, label: str) -> SoTCandidate | None
     return None
 
 
+def portfolio_prompt_label(document_id: str) -> str:
+    """Prompt label for a document's signed canonical block."""
+    return f"signed_contract:{document_id}"
+
+
 def signed_contract_candidate(bundle: SoTBundle) -> SoTCandidate:
     candidate = get_candidate_by_label(bundle, "signed_contract")
     if candidate is None:

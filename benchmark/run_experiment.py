@@ -14,6 +14,7 @@ from benchmark.experiment import (
     DEFAULT_DOCUMENTS,
     DEFAULT_STRATEGY,
     DEFAULT_STRATEGIES,
+    count_expected_runs,
     run_gemini_matrix,
     save_results,
 )
@@ -60,7 +61,11 @@ def main(argv: list[str] | None = None) -> int:
         "--conditions",
         nargs="*",
         default=DEFAULT_CONDITIONS,
-        help="Prompt conditions (default: clean noisy_prompt)",
+        help=(
+            "Prompt conditions (default: clean noisy_prompt). "
+            "Portfolio runs: portfolio_clean cross_type_mislabeled "
+            "(use with --strategies parallel_cross_type_discrimination)."
+        ),
     )
     parser.add_argument(
         "--strategies",
@@ -106,7 +111,7 @@ def main(argv: list[str] | None = None) -> int:
     report_path = output_path.with_name("REPORT.md")
     manifest_path = output_path.with_name("manifest.json")
 
-    run_count = len(documents) * len(args.conditions) * len(args.strategies)
+    run_count = count_expected_runs(documents, args.conditions, args.strategies)
     print(f"LexOrchestra Gemini experiment")
     print(f"  documents: {', '.join(documents)}")
     print(f"  conditions: {', '.join(args.conditions)}")

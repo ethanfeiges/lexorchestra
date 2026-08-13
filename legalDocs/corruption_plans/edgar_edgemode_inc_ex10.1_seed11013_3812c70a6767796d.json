@@ -1,0 +1,588 @@
+{
+  "document_id": "edgar_edgemode_inc_ex10.1",
+  "seed": 11013,
+  "content_hash": "3812c70a6767796d",
+  "mode": "local",
+  "span_edits": [
+    {
+      "clause_id": "c-005",
+      "category": "money",
+      "original": "€ 5",
+      "replacement": "€6.65"
+    },
+    {
+      "clause_id": "c-009",
+      "category": "duration",
+      "original": "3 years",
+      "replacement": "7 days"
+    },
+    {
+      "clause_id": "c-012",
+      "category": "duration",
+      "original": "3 months",
+      "replacement": "one ( 1 ) week"
+    },
+    {
+      "clause_id": "c-002",
+      "category": "date",
+      "original": "January 21, 2025",
+      "replacement": "January 21, 2027"
+    },
+    {
+      "clause_id": "c-007",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-002",
+      "category": "jurisdiction",
+      "original": "Nevada",
+      "replacement": "Florida"
+    },
+    {
+      "clause_id": "c-009",
+      "category": "money",
+      "original": "$130",
+      "replacement": "$65"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-011",
+      "category": "duration",
+      "original": "14 days",
+      "replacement": "12 months"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "duration",
+      "original": "3 months",
+      "replacement": "14 days"
+    },
+    {
+      "clause_id": "c-007",
+      "category": "jurisdiction",
+      "original": "Florida courts",
+      "replacement": "United Kingdom"
+    },
+    {
+      "clause_id": "c-013",
+      "category": "duration",
+      "original": "14 days",
+      "replacement": "one ( 1 ) week"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "obligation",
+      "original": "will not",
+      "replacement": "will"
+    },
+    {
+      "clause_id": "c-005",
+      "category": "duration",
+      "original": "7 days",
+      "replacement": "14 days"
+    },
+    {
+      "clause_id": "c-007",
+      "category": "duration",
+      "original": "2 Working Days",
+      "replacement": "14 days"
+    },
+    {
+      "clause_id": "c-007",
+      "category": "jurisdiction",
+      "original": "laws of the country stated in the Particulars above",
+      "replacement": "laws of Florida"
+    },
+    {
+      "clause_id": "c-011",
+      "category": "duration",
+      "original": "2 Working Days",
+      "replacement": "14 days"
+    },
+    {
+      "clause_id": "c-005",
+      "category": "percentage",
+      "original": "125 % ",
+      "replacement": "132 % "
+    },
+    {
+      "clause_id": "c-010",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-002",
+      "category": "jurisdiction",
+      "original": "Laws of Country Governing this",
+      "replacement": "United Kingdom"
+    },
+    {
+      "clause_id": "c-014",
+      "category": "duration",
+      "original": "one ( 1 ) week",
+      "replacement": "2 Working Days"
+    },
+    {
+      "clause_id": "c-005",
+      "category": "percentage",
+      "original": "3 % ",
+      "replacement": "0 % "
+    },
+    {
+      "clause_id": "c-006",
+      "category": "duration",
+      "original": "14 days",
+      "replacement": "30 days"
+    },
+    {
+      "clause_id": "c-012",
+      "category": "duration",
+      "original": "30 days",
+      "replacement": "3 months"
+    },
+    {
+      "clause_id": "c-007",
+      "category": "duration",
+      "original": "8 weeks",
+      "replacement": "3 years"
+    },
+    {
+      "clause_id": "c-009",
+      "category": "duration",
+      "original": "6 months",
+      "replacement": "14 days"
+    },
+    {
+      "clause_id": "c-005",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-015",
+      "category": "percentage",
+      "original": "20% ",
+      "replacement": "22% "
+    },
+    {
+      "clause_id": "c-015",
+      "category": "duration",
+      "original": "12 months",
+      "replacement": "6 months"
+    },
+    {
+      "clause_id": "c-015",
+      "category": "percentage",
+      "original": "100% ",
+      "replacement": "95% "
+    },
+    {
+      "clause_id": "c-009",
+      "category": "money",
+      "original": "$0.07",
+      "replacement": "$1.00"
+    },
+    {
+      "clause_id": "c-013",
+      "category": "duration",
+      "original": "3 months",
+      "replacement": "14 days"
+    },
+    {
+      "clause_id": "c-007",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-007",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-013",
+      "category": "duration",
+      "original": "30 days",
+      "replacement": "7 days"
+    },
+    {
+      "clause_id": "c-005",
+      "category": "money",
+      "original": "€ 50",
+      "replacement": "€75"
+    },
+    {
+      "clause_id": "c-009",
+      "category": "percentage",
+      "original": "50% ",
+      "replacement": "48% "
+    },
+    {
+      "clause_id": "c-014",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-009",
+      "category": "money",
+      "original": "$303,548.72",
+      "replacement": "$227,661.54"
+    },
+    {
+      "clause_id": "c-012",
+      "category": "obligation",
+      "original": "will not",
+      "replacement": "will"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "duration",
+      "original": "90 days",
+      "replacement": "30 days"
+    },
+    {
+      "clause_id": "c-011",
+      "category": "obligation",
+      "original": "will not",
+      "replacement": "will"
+    },
+    {
+      "clause_id": "c-013",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-003",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "obligation",
+      "original": "will not",
+      "replacement": "will"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "duration",
+      "original": "30 days",
+      "replacement": "3 months"
+    },
+    {
+      "clause_id": "c-015",
+      "category": "duration",
+      "original": "3 months",
+      "replacement": "7 days"
+    },
+    {
+      "clause_id": "c-005",
+      "category": "duration",
+      "original": "90 days",
+      "replacement": "14 days"
+    },
+    {
+      "clause_id": "c-012",
+      "category": "obligation",
+      "original": "may not",
+      "replacement": "shall"
+    },
+    {
+      "clause_id": "c-012",
+      "category": "duration",
+      "original": "14 days",
+      "replacement": "2 Working Days"
+    },
+    {
+      "clause_id": "c-007",
+      "category": "jurisdiction",
+      "original": "laws of Florida",
+      "replacement": "United Kingdom"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "duration",
+      "original": "12 months",
+      "replacement": "14 days"
+    },
+    {
+      "clause_id": "c-011",
+      "category": "duration",
+      "original": "3 Days",
+      "replacement": "12 months"
+    },
+    {
+      "clause_id": "c-007",
+      "category": "jurisdiction",
+      "original": "Florida",
+      "replacement": "United Kingdom"
+    },
+    {
+      "clause_id": "c-018",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-005",
+      "category": "money",
+      "original": "five million",
+      "replacement": "$303,548.72"
+    },
+    {
+      "clause_id": "c-015",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-003",
+      "category": "jurisdiction",
+      "original": "Florida",
+      "replacement": "Florida courts"
+    },
+    {
+      "clause_id": "c-003",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-011",
+      "category": "duration",
+      "original": "7 days",
+      "replacement": "12 months"
+    },
+    {
+      "clause_id": "c-011",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-002",
+      "category": "jurisdiction",
+      "original": "United Kingdom",
+      "replacement": "laws of Florida"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-010",
+      "category": "percentage",
+      "original": "10 % ",
+      "replacement": "20 % "
+    },
+    {
+      "clause_id": "c-015",
+      "category": "percentage",
+      "original": "50% ",
+      "replacement": "53% "
+    },
+    {
+      "clause_id": "c-004",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-005",
+      "category": "duration",
+      "original": "12 months",
+      "replacement": "3 months"
+    },
+    {
+      "clause_id": "c-005",
+      "category": "duration",
+      "original": "30 days",
+      "replacement": "3 months"
+    },
+    {
+      "clause_id": "c-018",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-005",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-012",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "duration",
+      "original": "30 days",
+      "replacement": "3 years"
+    },
+    {
+      "clause_id": "c-009",
+      "category": "rate",
+      "original": "$130/hour",
+      "replacement": "$87.10/hour"
+    },
+    {
+      "clause_id": "c-009",
+      "category": "duration",
+      "original": "2 years",
+      "replacement": "30 days"
+    },
+    {
+      "clause_id": "c-009",
+      "category": "date",
+      "original": "January  21, 2025",
+      "replacement": "January  21, 2023"
+    },
+    {
+      "clause_id": "c-007",
+      "category": "duration",
+      "original": "14 days",
+      "replacement": "30 days"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-002",
+      "category": "jurisdiction",
+      "original": "Florida",
+      "replacement": "Nevada"
+    },
+    {
+      "clause_id": "c-015",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-002",
+      "category": "date",
+      "original": "January  21, 2025",
+      "replacement": "January  21, 2024"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-013",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-003",
+      "category": "jurisdiction",
+      "original": "United Kingdom",
+      "replacement": "Florida"
+    },
+    {
+      "clause_id": "c-005",
+      "category": "money",
+      "original": "fifty thousand",
+      "replacement": "$0.07"
+    },
+    {
+      "clause_id": "c-003",
+      "category": "jurisdiction",
+      "original": "laws of Florida",
+      "replacement": "laws of the country stated in the Particulars above"
+    },
+    {
+      "clause_id": "c-005",
+      "category": "duration",
+      "original": "14 days",
+      "replacement": "one ( 1 ) week"
+    },
+    {
+      "clause_id": "c-012",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-015",
+      "category": "percentage",
+      "original": "10% ",
+      "replacement": "17% "
+    },
+    {
+      "clause_id": "c-015",
+      "category": "percentage",
+      "original": "25% ",
+      "replacement": "28% "
+    },
+    {
+      "clause_id": "c-015",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    }
+  ],
+  "missing_clause_ids": [
+    "c-009",
+    "c-003",
+    "c-002",
+    "c-016",
+    "c-011",
+    "c-017",
+    "c-014",
+    "c-006",
+    "c-012",
+    "c-005",
+    "c-008",
+    "c-007",
+    "c-010",
+    "c-004",
+    "c-015",
+    "c-013"
+  ],
+  "extra_clause": {
+    "text": "Termination. Notwithstanding any other provision, obligations under this section survive termination for 3 Days following the effective date of termination.",
+    "insert_index": 10
+  }
+}

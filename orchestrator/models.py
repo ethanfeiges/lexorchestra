@@ -14,6 +14,7 @@ class Claim(BaseModel):
     statement: str
     clause_id: str
     quote: str
+    document_id: str | None = None
     sot_label: str | None = None
     rule_id: str | None = None
     verdict: str | None = None
@@ -28,6 +29,8 @@ class VerifiedClaim(BaseModel):
     model: str
     task: str
     decoy_match: str | None = None
+    cross_document_match: str | None = None
+    expected_document_id: str | None = None
 
 
 class RunMetrics(BaseModel):
@@ -44,6 +47,7 @@ class RunMetrics(BaseModel):
     source_fidelity: float | None = None
     decoy_probe_match_rate: float | None = None
     explicit_mislabel_rate: float | None = None
+    cross_document_citation_rate: float | None = None
 
 
 class RunManifest(BaseModel):

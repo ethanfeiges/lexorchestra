@@ -255,9 +255,17 @@ class SoTStore:
 
 ---
 
-## Bundle generator (`docProcessing/bundle.py`)
+## Bundle generator (`docProcessing/bundle.py` + `docProcessing/corruption_plan.py`)
 
-Generate invalid candidates from canonical. Each corruption is **deterministic** given a seed so benchmarks reproduce.
+Generate invalid candidates from canonical. Each corruption is **deterministic** given a `(document, seed)` pair so benchmarks reproduce. Corruptions are **document-specific**: edits target spans (money, duration, dates, obligations, etc.) extracted from that contract, not a global substitution table.
+
+### Corruption plan (`corruption_plan.py`)
+
+1. **Extract** corruptible spans from canonical clause text (regex by category).
+2. **Assign replacements** — local mode swaps/scales using values from the same document; Gemini mode calls the API for plausible wrong edits.
+3. **Cache** the plan to `legalDocs/corruption_plans/{document_id}_seed{seed}_{content_hash}.json`.
+
+Pre-generate with: `python scripts/generate_corruption_plans.py --mode gemini --seed 42`
 
 ### Corruption types (implement all four)
 
@@ -265,10 +273,10 @@ Each corruption powers one decoy label (see table above):
 
 | `corruption` | → `label` | Behavior |
 |--------------|-----------|----------|
-| `missing_clause` | `draft_missing_section` | Remove one clause. Default target: clause whose text contains `"liability"` (case-insensitive); else remove middle clause. Renumber IDs sequentially after removal. |
-| `altered_text` | `outdated_wrong_terms` | Copy canonical; pick same target clause; replace one numeric/capital phrase via fixed substitution table (e.g. `$1,000,000` → `$500,000`, ` thirty (30) ` → ` fifteen (15) `). IDs unchanged. |
-| `extra_clause` | `bad_parse_extra_clause` | Append one fake clause with plausible legal boilerplate (template string in code). New ID = next sequential. |
-| `reordered` | `bad_parse_wrong_ids` | Same clause texts, shuffle order with fixed seed, reassign IDs `c-001`… in new order. |
+| `missing_clause` | `draft_missing_section` | Remove one clause from plan's eligible set (type-tuned targets as fallback). Renumber IDs sequentially. |
+| `altered_text` | `outdated_wrong_terms` | Apply one span edit from the document plan (e.g. change a dollar amount or duration found in that filing). IDs unchanged. |
+| `extra_clause` | `bad_parse_extra_clause` | Insert a fake clause at a random position; text echoes topics in the document (or Gemini-generated). |
+| `reordered` | `bad_parse_wrong_ids` | Same clause texts, shuffle order with seeded RNG, reassign IDs `c-001`… in new order. |
 
 ### Public API
 
@@ -279,8 +287,14 @@ def build_bundle(
     source_path: str,
     seed: int = 42,
     corruptions: list[str] | None = None,  # default: all four
+    document_type: str = "msa",
+    *,
+    corruption_mode: Literal["local", "gemini", "auto"] = "local",
+    use_corruption_cache: bool = True,
 ) -> SoTBundle: ...
 ```
+
+`corruption_mode`: `local` = no API; `gemini` = LLM plan; `auto` = Gemini if API key set.
 
 Bundle structure:
 - `canonical` field = original clauses (same as `signed_contract` candidate)
@@ -350,6 +364,10 @@ def build_bundle_from_file(
     path: Path,
     seed: int = 42,
     corruptions: list[str] | None = None,
+    document_type: str | None = None,
+    *,
+    corruption_mode: Literal["local", "gemini", "auto"] = "local",
+    use_corruption_cache: bool = True,
 ) -> SoTBundle:
     """Parse contract file, build SoT bundle. Primary entry point — no CLI."""
     ...

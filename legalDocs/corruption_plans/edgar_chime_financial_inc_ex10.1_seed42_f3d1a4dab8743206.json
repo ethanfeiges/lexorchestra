@@ -1,0 +1,1774 @@
+{
+  "document_id": "edgar_chime_financial_inc_ex10.1",
+  "seed": 42,
+  "content_hash": "f3d1a4dab8743206",
+  "mode": "local",
+  "span_edits": [
+    {
+      "clause_id": "c-105",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-131",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-139",
+      "category": "duration",
+      "original": "eighty (180) days",
+      "replacement": "one hundred twenty (120) days"
+    },
+    {
+      "clause_id": "c-104",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-074",
+      "category": "duration",
+      "original": "30 days",
+      "replacement": "sixty (60) days"
+    },
+    {
+      "clause_id": "c-071",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-011",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-022",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-027",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-161",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-024",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-024",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-173",
+      "category": "duration",
+      "original": "thirty (30) days",
+      "replacement": "one hundred twenty (120) days"
+    },
+    {
+      "clause_id": "c-104",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-183",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-080",
+      "category": "obligation",
+      "original": "SHALL",
+      "replacement": "May"
+    },
+    {
+      "clause_id": "c-044",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-014",
+      "category": "duration",
+      "original": "twenty (120) days",
+      "replacement": "one (1) year"
+    },
+    {
+      "clause_id": "c-014",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-086",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-117",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-184",
+      "category": "date",
+      "original": "August 5, 2025",
+      "replacement": "August 5, 2026"
+    },
+    {
+      "clause_id": "c-045",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-141",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-163",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-057",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-062",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-084",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-001",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-028",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-173",
+      "category": "date",
+      "original": "June 9, 2023",
+      "replacement": "June 9, 2024"
+    },
+    {
+      "clause_id": "c-168",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-028",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-029",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-129",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-173",
+      "category": "date",
+      "original": "July 1, 2023",
+      "replacement": "July 1, 2022"
+    },
+    {
+      "clause_id": "c-073",
+      "category": "obligation",
+      "original": "may not",
+      "replacement": "shall"
+    },
+    {
+      "clause_id": "c-094",
+      "category": "jurisdiction",
+      "original": "Delaware",
+      "replacement": "California"
+    },
+    {
+      "clause_id": "c-181",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-094",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-013",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-156",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-067",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-133",
+      "category": "date",
+      "original": "June 9, 2023",
+      "replacement": "June 9, 2021"
+    },
+    {
+      "clause_id": "c-179",
+      "category": "jurisdiction",
+      "original": "California",
+      "replacement": "Delaware"
+    },
+    {
+      "clause_id": "c-048",
+      "category": "jurisdiction",
+      "original": "laws of the State of Delaware and is duly qualified and is properly authorized or licensed to do business in each jurisdiction in which the nature of Bank",
+      "replacement": "California"
+    },
+    {
+      "clause_id": "c-113",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-069",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-052",
+      "category": "money",
+      "original": "three hundred",
+      "replacement": "two hundred"
+    },
+    {
+      "clause_id": "c-072",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-040",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-011",
+      "category": "duration",
+      "original": "sixty (60) days",
+      "replacement": "five (5) years"
+    },
+    {
+      "clause_id": "c-012",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-099",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-028",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-173",
+      "category": "percentage",
+      "original": "200%",
+      "replacement": "207%"
+    },
+    {
+      "clause_id": "c-032",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-022",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-114",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-052",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-158",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-171",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-121",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-058",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-072",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-155",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-054",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-101",
+      "category": "obligation",
+      "original": "may not",
+      "replacement": "shall"
+    },
+    {
+      "clause_id": "c-033",
+      "category": "date",
+      "original": "January 1, 2024",
+      "replacement": "January 1, 2022"
+    },
+    {
+      "clause_id": "c-136",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-184",
+      "category": "date",
+      "original": "July 1, 2023",
+      "replacement": "July 1, 2022"
+    },
+    {
+      "clause_id": "c-066",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-093",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-012",
+      "category": "money",
+      "original": "one hundred",
+      "replacement": "$750"
+    },
+    {
+      "clause_id": "c-105",
+      "category": "date",
+      "original": "June 9, 2023",
+      "replacement": "June 9, 2022"
+    },
+    {
+      "clause_id": "c-095",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-079",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-174",
+      "category": "date",
+      "original": "February 27, 2025",
+      "replacement": "February 27, 2023"
+    },
+    {
+      "clause_id": "c-111",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-008",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-033",
+      "category": "obligation",
+      "original": "will not",
+      "replacement": "will"
+    },
+    {
+      "clause_id": "c-061",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-133",
+      "category": "jurisdiction",
+      "original": "California",
+      "replacement": "Delaware"
+    },
+    {
+      "clause_id": "c-124",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-033",
+      "category": "duration",
+      "original": "one hundred twenty (120) days",
+      "replacement": "thirty (30) days"
+    },
+    {
+      "clause_id": "c-053",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-060",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-154",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-015",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-032",
+      "category": "percentage",
+      "original": "10%",
+      "replacement": "5%"
+    },
+    {
+      "clause_id": "c-064",
+      "category": "obligation",
+      "original": "will not",
+      "replacement": "will"
+    },
+    {
+      "clause_id": "c-019",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-033",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-144",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-047",
+      "category": "obligation",
+      "original": "may not",
+      "replacement": "shall"
+    },
+    {
+      "clause_id": "c-112",
+      "category": "duration",
+      "original": "four hours",
+      "replacement": "sixty (60) days"
+    },
+    {
+      "clause_id": "c-181",
+      "category": "date",
+      "original": "July 1, 2023",
+      "replacement": "July 1, 2022"
+    },
+    {
+      "clause_id": "c-043",
+      "category": "duration",
+      "original": "thirty (30) days",
+      "replacement": "one hundred twenty (120) days"
+    },
+    {
+      "clause_id": "c-122",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-034",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-053",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-157",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-134",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-039",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-128",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-099",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-119",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-110",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-085",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-009",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-173",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-059",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-010",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-112",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-179",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-086",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-134",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-043",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-132",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-172",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-027",
+      "category": "obligation",
+      "original": "will not",
+      "replacement": "will"
+    },
+    {
+      "clause_id": "c-179",
+      "category": "date",
+      "original": "March 19, 2025",
+      "replacement": "March 19, 2027"
+    },
+    {
+      "clause_id": "c-108",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-174",
+      "category": "date",
+      "original": "June 9, 2023",
+      "replacement": "June 9, 2022"
+    },
+    {
+      "clause_id": "c-019",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-080",
+      "category": "obligation",
+      "original": "SHALL NOT",
+      "replacement": "May"
+    },
+    {
+      "clause_id": "c-183",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-120",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-181",
+      "category": "jurisdiction",
+      "original": "California",
+      "replacement": "Delaware"
+    },
+    {
+      "clause_id": "c-052",
+      "category": "duration",
+      "original": "five (365) days",
+      "replacement": "30 days"
+    },
+    {
+      "clause_id": "c-030",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-173",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-148",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-121",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-183",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-027",
+      "category": "duration",
+      "original": "thirty (30) days",
+      "replacement": "sixty (60) days"
+    },
+    {
+      "clause_id": "c-085",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-100",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-021",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-097",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-013",
+      "category": "obligation",
+      "original": "may not",
+      "replacement": "shall"
+    },
+    {
+      "clause_id": "c-087",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-014",
+      "category": "duration",
+      "original": "sixty (60) days",
+      "replacement": "four hours"
+    },
+    {
+      "clause_id": "c-014",
+      "category": "duration",
+      "original": "thirty (30) days",
+      "replacement": "sixty (60) days"
+    },
+    {
+      "clause_id": "c-174",
+      "category": "date",
+      "original": "July 1, 2023",
+      "replacement": "July 1, 2024"
+    },
+    {
+      "clause_id": "c-105",
+      "category": "jurisdiction",
+      "original": "California",
+      "replacement": "laws of the State of Delaware and is duly qualified and is properly authorized or licensed to do business in each jurisdiction in which the nature of Bank"
+    },
+    {
+      "clause_id": "c-181",
+      "category": "date",
+      "original": "June 9, 2023",
+      "replacement": "June 9, 2024"
+    },
+    {
+      "clause_id": "c-034",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-052",
+      "category": "duration",
+      "original": "five (5) years",
+      "replacement": "thirty (30) days"
+    },
+    {
+      "clause_id": "c-160",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-132",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "duration",
+      "original": "sixty (60) days",
+      "replacement": "one hundred twenty (120) days"
+    },
+    {
+      "clause_id": "c-184",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-053",
+      "category": "money",
+      "original": "one hundred",
+      "replacement": "two hundred"
+    },
+    {
+      "clause_id": "c-108",
+      "category": "duration",
+      "original": "eighty (180) days",
+      "replacement": "one hundred twenty (120) days"
+    },
+    {
+      "clause_id": "c-127",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-155",
+      "category": "duration",
+      "original": "four hours",
+      "replacement": "sixty (60) days"
+    },
+    {
+      "clause_id": "c-184",
+      "category": "date",
+      "original": "June 9, 2023",
+      "replacement": "June 9, 2024"
+    },
+    {
+      "clause_id": "c-026",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-063",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-152",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-029",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-108",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-123",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-115",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-051",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-151",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-091",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-027",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-090",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-169",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-001",
+      "category": "percentage",
+      "original": "25%",
+      "replacement": "22%"
+    },
+    {
+      "clause_id": "c-082",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-150",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-074",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-049",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-179",
+      "category": "date",
+      "original": "July 1, 2023",
+      "replacement": "July 1, 2024"
+    },
+    {
+      "clause_id": "c-184",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-173",
+      "category": "percentage",
+      "original": "125%",
+      "replacement": "122%"
+    },
+    {
+      "clause_id": "c-174",
+      "category": "jurisdiction",
+      "original": "California",
+      "replacement": "laws of the State of Delaware and is duly qualified and is properly authorized or licensed to do business in each jurisdiction in which the nature of Bank"
+    },
+    {
+      "clause_id": "c-170",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-137",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-018",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-133",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-149",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-003",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-099",
+      "category": "jurisdiction",
+      "original": "California",
+      "replacement": "Delaware"
+    },
+    {
+      "clause_id": "c-038",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-096",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-084",
+      "category": "jurisdiction",
+      "original": "Delaware",
+      "replacement": "California"
+    },
+    {
+      "clause_id": "c-147",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-064",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-065",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-174",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-108",
+      "category": "money",
+      "original": "one hundred",
+      "replacement": "three hundred"
+    },
+    {
+      "clause_id": "c-073",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-125",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-149",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-025",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-112",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-024",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-017",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-012",
+      "category": "money",
+      "original": "$750",
+      "replacement": "$502.50"
+    },
+    {
+      "clause_id": "c-139",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-014",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-088",
+      "category": "obligation",
+      "original": "will not",
+      "replacement": "will"
+    },
+    {
+      "clause_id": "c-092",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-173",
+      "category": "money",
+      "original": "two hundred",
+      "replacement": "one hundred"
+    },
+    {
+      "clause_id": "c-033",
+      "category": "duration",
+      "original": "thirty (30) days",
+      "replacement": "five (5) years"
+    },
+    {
+      "clause_id": "c-061",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-177",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-164",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-073",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-105",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-139",
+      "category": "money",
+      "original": "one hundred",
+      "replacement": "two hundred"
+    },
+    {
+      "clause_id": "c-173",
+      "category": "date",
+      "original": "December 6, 2023",
+      "replacement": "December 6, 2024"
+    },
+    {
+      "clause_id": "c-098",
+      "category": "duration",
+      "original": "30 days",
+      "replacement": "thirty (30) days"
+    },
+    {
+      "clause_id": "c-100",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-138",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-037",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-023",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-041",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-184",
+      "category": "jurisdiction",
+      "original": "California",
+      "replacement": "Delaware"
+    },
+    {
+      "clause_id": "c-083",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-116",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-173",
+      "category": "money",
+      "original": "one hundred",
+      "replacement": "two hundred"
+    },
+    {
+      "clause_id": "c-068",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-089",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-120",
+      "category": "duration",
+      "original": "one (1) year",
+      "replacement": "five (365) days"
+    },
+    {
+      "clause_id": "c-174",
+      "category": "date",
+      "original": "January 1, 2025",
+      "replacement": "January 1, 2024"
+    },
+    {
+      "clause_id": "c-179",
+      "category": "date",
+      "original": "June 9, 2023",
+      "replacement": "June 9, 2025"
+    },
+    {
+      "clause_id": "c-133",
+      "category": "date",
+      "original": "July 1, 2023",
+      "replacement": "July 1, 2024"
+    },
+    {
+      "clause_id": "c-172",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-102",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-173",
+      "category": "date",
+      "original": "January 6, 2025",
+      "replacement": "January 6, 2023"
+    },
+    {
+      "clause_id": "c-033",
+      "category": "money",
+      "original": "one hundred",
+      "replacement": "$750"
+    },
+    {
+      "clause_id": "c-013",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-042",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-069",
+      "category": "obligation",
+      "original": "will not",
+      "replacement": "will"
+    },
+    {
+      "clause_id": "c-052",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-153",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-010",
+      "category": "duration",
+      "original": "sixty (60) days",
+      "replacement": "five (365) days"
+    },
+    {
+      "clause_id": "c-155",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-033",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-012",
+      "category": "duration",
+      "original": "one hundred twenty (120) days",
+      "replacement": "twenty (120) days"
+    },
+    {
+      "clause_id": "c-145",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-142",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-160",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-184",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-126",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-074",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-098",
+      "category": "obligation",
+      "original": "may not",
+      "replacement": "shall"
+    },
+    {
+      "clause_id": "c-140",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-173",
+      "category": "jurisdiction",
+      "original": "California",
+      "replacement": "laws of the State of Delaware and is duly qualified and is properly authorized or licensed to do business in each jurisdiction in which the nature of Bank"
+    },
+    {
+      "clause_id": "c-053",
+      "category": "duration",
+      "original": "eighty (180) days",
+      "replacement": "one hundred twenty (120) days"
+    },
+    {
+      "clause_id": "c-088",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-055",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-023",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    }
+  ],
+  "missing_clause_ids": [
+    "c-112",
+    "c-098",
+    "c-135",
+    "c-105",
+    "c-122",
+    "c-177",
+    "c-099",
+    "c-037",
+    "c-113",
+    "c-107",
+    "c-170",
+    "c-093",
+    "c-120",
+    "c-133",
+    "c-017",
+    "c-116",
+    "c-012",
+    "c-067",
+    "c-148",
+    "c-181",
+    "c-086",
+    "c-165",
+    "c-155",
+    "c-134",
+    "c-075",
+    "c-038",
+    "c-160",
+    "c-010",
+    "c-040",
+    "c-104",
+    "c-065",
+    "c-026",
+    "c-068",
+    "c-052",
+    "c-053",
+    "c-106",
+    "c-152",
+    "c-149",
+    "c-008",
+    "c-150",
+    "c-140",
+    "c-039",
+    "c-013",
+    "c-102",
+    "c-009",
+    "c-158",
+    "c-136",
+    "c-077",
+    "c-045",
+    "c-061",
+    "c-034",
+    "c-043",
+    "c-088",
+    "c-059",
+    "c-051",
+    "c-111",
+    "c-179",
+    "c-159",
+    "c-023",
+    "c-070",
+    "c-014",
+    "c-080",
+    "c-154",
+    "c-109",
+    "c-144",
+    "c-125",
+    "c-046",
+    "c-060",
+    "c-176",
+    "c-030",
+    "c-062",
+    "c-108",
+    "c-050",
+    "c-117",
+    "c-085",
+    "c-168",
+    "c-094",
+    "c-123",
+    "c-126",
+    "c-084",
+    "c-005",
+    "c-095",
+    "c-024",
+    "c-121",
+    "c-032",
+    "c-130",
+    "c-081",
+    "c-151",
+    "c-115",
+    "c-097",
+    "c-132",
+    "c-087",
+    "c-033",
+    "c-138",
+    "c-147",
+    "c-047",
+    "c-101",
+    "c-048",
+    "c-142",
+    "c-128",
+    "c-124",
+    "c-057",
+    "c-166",
+    "c-118",
+    "c-076",
+    "c-049",
+    "c-006",
+    "c-153",
+    "c-021",
+    "c-090",
+    "c-011",
+    "c-016",
+    "c-003",
+    "c-073",
+    "c-164",
+    "c-092",
+    "c-129",
+    "c-058",
+    "c-157",
+    "c-022",
+    "c-169",
+    "c-083",
+    "c-018",
+    "c-100",
+    "c-044",
+    "c-002",
+    "c-007",
+    "c-072",
+    "c-110",
+    "c-025",
+    "c-015",
+    "c-066",
+    "c-127",
+    "c-163",
+    "c-145",
+    "c-054",
+    "c-089",
+    "c-055",
+    "c-156",
+    "c-071",
+    "c-041",
+    "c-029",
+    "c-031",
+    "c-162",
+    "c-036",
+    "c-028",
+    "c-175",
+    "c-143",
+    "c-171",
+    "c-137",
+    "c-079",
+    "c-141",
+    "c-114",
+    "c-042",
+    "c-074",
+    "c-096",
+    "c-064",
+    "c-019",
+    "c-091",
+    "c-178",
+    "c-180",
+    "c-131",
+    "c-056",
+    "c-139",
+    "c-172",
+    "c-027",
+    "c-146",
+    "c-161",
+    "c-174",
+    "c-004",
+    "c-020",
+    "c-182",
+    "c-119",
+    "c-078",
+    "c-167",
+    "c-183",
+    "c-035",
+    "c-103",
+    "c-069",
+    "c-063",
+    "c-082",
+    "c-173"
+  ],
+  "extra_clause": {
+    "text": "Data Protection. Notwithstanding any other provision, obligations under this section survive termination for thirty (30) days following the effective date of termination.",
+    "insert_index": 44
+  }
+}

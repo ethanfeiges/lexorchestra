@@ -78,6 +78,73 @@ def build_task_scores(
     return scores
 
 
+def build_portfolio_task_scores(
+    verified: list[VerifiedClaim],
+    answers_by_doc: dict[str, DocumentAnswers],
+    *,
+    naive: bool = False,
+) -> dict[str, bool]:
+    """Score portfolio tasks keyed as document_id:playbook:rule_id."""
+    scores: dict[str, bool] = {}
+    for doc_id, answers in answers_by_doc.items():
+        doc_verified = []
+        for v in verified:
+            if v.expected_document_id != doc_id and v.claim.document_id != doc_id:
+                continue
+            if v.task == f"playbook:{doc_id}":
+                doc_verified.append(v.model_copy(update={"task": "playbook"}))
+            elif v.task == f"extract:{doc_id}":
+                doc_verified.append(v.model_copy(update={"task": "extract"}))
+        doc_scores = build_task_scores(doc_verified, answers, naive=naive)
+        for key, ok in doc_scores.items():
+            scores[f"{doc_id}:{key}"] = ok
+    return scores
+
+
+def compute_portfolio_metrics(
+    verified: list[VerifiedClaim],
+    task_scores: dict[str, bool],
+    *,
+    trust_model_labels: bool = False,
+) -> RunMetrics:
+    """Aggregate metrics for a portfolio run."""
+    metrics = compute_metrics(verified, task_scores, trust_model_labels=trust_model_labels)
+
+    canonical = [
+        v
+        for v in verified
+        if v.task.startswith("extract:") or v.task.startswith("playbook:")
+    ]
+    discriminate = [v for v in verified if v.task.startswith("extract_discriminate:")]
+
+    cross_doc = sum(1 for v in verified if v.cross_document_match is not None)
+    cross_document_citation_rate = cross_doc / len(verified) if verified else 0.0
+
+    source_fidelity: float | None = None
+    if canonical:
+        canon_grounded = sum(1 for v in canonical if v.status == "grounded")
+        source_fidelity = canon_grounded / len(canonical)
+
+    explicit_mislabel_rate: float | None = None
+    if discriminate:
+        mislabeled = sum(
+            1
+            for v in discriminate
+            if v.claim.document_id
+            and v.expected_document_id
+            and v.claim.document_id != v.expected_document_id
+        )
+        explicit_mislabel_rate = mislabeled / len(discriminate)
+
+    return metrics.model_copy(
+        update={
+            "source_fidelity": source_fidelity,
+            "cross_document_citation_rate": cross_document_citation_rate,
+            "explicit_mislabel_rate": explicit_mislabel_rate,
+        }
+    )
+
+
 def score_playbook_claim_naive(
     verified: VerifiedClaim,
     rule: PlaybookRuleAnswer,

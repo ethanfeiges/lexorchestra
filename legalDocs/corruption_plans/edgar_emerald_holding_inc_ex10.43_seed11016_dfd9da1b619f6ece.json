@@ -1,0 +1,282 @@
+{
+  "document_id": "edgar_emerald_holding_inc_ex10.43",
+  "seed": 11016,
+  "content_hash": "dfd9da1b619f6ece",
+  "mode": "local",
+  "span_edits": [
+    {
+      "clause_id": "c-003",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "duration",
+      "original": "thirty (30) days",
+      "replacement": "twelve (12) month"
+    },
+    {
+      "clause_id": "c-023",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-021",
+      "category": "money",
+      "original": "$100,000",
+      "replacement": "$67,000"
+    },
+    {
+      "clause_id": "c-015",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-021",
+      "category": "money",
+      "original": "$250,000",
+      "replacement": "$332,500"
+    },
+    {
+      "clause_id": "c-011",
+      "category": "duration",
+      "original": "5 days",
+      "replacement": "six (36) weeks"
+    },
+    {
+      "clause_id": "c-018",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-017",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-021",
+      "category": "date",
+      "original": "March 22, 2021",
+      "replacement": "March 22, 2022"
+    },
+    {
+      "clause_id": "c-009",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-021",
+      "category": "money",
+      "original": "$342,500",
+      "replacement": "$513,750"
+    },
+    {
+      "clause_id": "c-009",
+      "category": "obligation",
+      "original": "will not",
+      "replacement": "will"
+    },
+    {
+      "clause_id": "c-021",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-023",
+      "category": "money",
+      "original": "$609,107.77",
+      "replacement": "$304,553.89"
+    },
+    {
+      "clause_id": "c-024",
+      "category": "obligation",
+      "original": "may not",
+      "replacement": "shall"
+    },
+    {
+      "clause_id": "c-022",
+      "category": "obligation",
+      "original": "may not",
+      "replacement": "shall"
+    },
+    {
+      "clause_id": "c-001",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "duration",
+      "original": "six (36) weeks",
+      "replacement": "one (1) week"
+    },
+    {
+      "clause_id": "c-022",
+      "category": "money",
+      "original": "$608,000.00",
+      "replacement": "$808,640.00"
+    },
+    {
+      "clause_id": "c-024",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "duration",
+      "original": "one (1) week",
+      "replacement": "twelve (12) months"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "duration",
+      "original": "ninety (90) days",
+      "replacement": "six (36) weeks"
+    },
+    {
+      "clause_id": "c-003",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-009",
+      "category": "duration",
+      "original": "twelve (12) months",
+      "replacement": "six (36) weeks"
+    },
+    {
+      "clause_id": "c-023",
+      "category": "obligation",
+      "original": "may not",
+      "replacement": "shall"
+    },
+    {
+      "clause_id": "c-021",
+      "category": "money",
+      "original": "$150,000",
+      "replacement": "$100,500"
+    },
+    {
+      "clause_id": "c-018",
+      "category": "jurisdiction",
+      "original": "laws of the Province as outlined on the first page of this Agreement and the laws of Canada applicable in such Province",
+      "replacement": "laws of the Texas as outlined on the first page of this Agreement and the laws of Canada applicable in such Province"
+    },
+    {
+      "clause_id": "c-011",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-014",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-017",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-021",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-009",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-009",
+      "category": "duration",
+      "original": "twelve (12) month",
+      "replacement": "one (1) week"
+    },
+    {
+      "clause_id": "c-021",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-022",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-017",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-024",
+      "category": "date",
+      "original": "January 1, 2023",
+      "replacement": "January 1, 2021"
+    }
+  ],
+  "missing_clause_ids": [
+    "c-021",
+    "c-018",
+    "c-004",
+    "c-020",
+    "c-009",
+    "c-022",
+    "c-002",
+    "c-008",
+    "c-010",
+    "c-019",
+    "c-015",
+    "c-011",
+    "c-013",
+    "c-016",
+    "c-006",
+    "c-023",
+    "c-012",
+    "c-005",
+    "c-017",
+    "c-014",
+    "c-003",
+    "c-007"
+  ],
+  "extra_clause": {
+    "text": "Indemnification. The parties agree that any amendment to this section requires written consent and twelve (12) months prior notice to the other party's authorized representative.",
+    "insert_index": 8
+  }
+}

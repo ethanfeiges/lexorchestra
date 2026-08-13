@@ -1,0 +1,8 @@
+portfolio_id: primary_five
+description: One primary SEC fixture per document type for cross-type portfolio runs.
+document_ids:
+  - edgar_edgemode_inc_ex10.1
+  - edgar_amd_ex10.79
+  - edgar_hg_holdings_inc_ex10.2
+  - edgar_emerald_holding_inc_ex10.43
+  - edgar_enviri_corp_ex10.1

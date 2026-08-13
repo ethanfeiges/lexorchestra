@@ -140,15 +140,17 @@ prompt_block = format_candidates_for_prompt(
 
 ### What changes with a new seed
 
-Even with the same four corruption **types**, a new seed changes:
+Even with the same four corruption **types**, a new seed changes the underlying **corruption plan** and how it is applied:
 
 
-| Corruption       | Seed-sensitive behavior                                                                |
-| ---------------- | -------------------------------------------------------------------------------------- |
-| `altered_text`   | Which substitution applies; which numeric phrase is halved                             |
-| `missing_clause` | Target clause if multiple match "liability" (future: extend to random eligible clause) |
-| `reordered`      | Shuffle order of clauses                                                               |
-| `extra_clause`   | Currently static template — **extend** to pick among N boilerplate templates via `rng` |
+| Corruption       | Seed-sensitive behavior                                                                 |
+| ---------------- | --------------------------------------------------------------------------------------- |
+| `altered_text`   | Which document-specific span is edited (money, duration, obligation, etc.) and the replacement value |
+| `missing_clause` | Which eligible clause is removed (from plan + type-tuned targets)                       |
+| `reordered`      | Shuffle order of clauses                                                                |
+| `extra_clause`   | Insert position and clause text themed to document topics (or Gemini-generated)         |
+
+Plans are built once per `(document_id, seed)` and cached in `legalDocs/corruption_plans/`. Use `corruption_mode="local"` (tests), `"gemini"`, or `"auto"` when calling `build_bundle_from_file()`.
 
 
 

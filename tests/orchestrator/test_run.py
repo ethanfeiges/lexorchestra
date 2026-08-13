@@ -143,7 +143,34 @@ def _decoy_citing_client(path: Path, seed: int) -> MockModelClient:
     bundle = build_bundle_from_file(path, seed=seed)
     answers = load_answers(bundle.document_id)
     ctx = build_prompt_context(bundle, "noisy_prompt", seed)
-    decoy_label = ctx.decoys_in_prompt[0] if ctx.decoys_in_prompt else "outdated_wrong_terms"
+    canon = {c.id: c.text for c in bundle.canonical}
+    answer_ids = {
+        cid
+        for q in answers.extract_questions
+        for cid in q.acceptable_clause_ids
+    } | {cid for r in answers.rules for cid in r.canonical_clause_ids}
+
+    def _decoy_differs(decoy_label: str) -> bool:
+        decoy = get_candidate_by_label(bundle, decoy_label)
+        if decoy is None:
+            return False
+        decoy_map = {c.id: c.text for c in decoy.clauses}
+        return any(
+            cid not in decoy_map or decoy_map[cid] != canon[cid]
+            for cid in answer_ids
+            if cid in canon
+        )
+
+    preferred = ctx.decoys_in_prompt or ["outdated_wrong_terms"]
+    decoy_label = next((label for label in preferred if _decoy_differs(label)), None)
+    if decoy_label is None:
+        decoy_label = next(
+            (c.label for c in bundle.candidates if not c.valid and _decoy_differs(c.label)),
+            None,
+        )
+    assert decoy_label is not None and _decoy_differs(decoy_label), (
+        "No decoy produces answer-key clause text that differs from canonical"
+    )
     decoy = get_candidate_by_label(bundle, decoy_label)
     assert decoy is not None
     decoy_clauses = {c.id: c.text for c in decoy.clauses}

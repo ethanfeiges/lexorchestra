@@ -5,9 +5,15 @@ from __future__ import annotations
 import copy
 import hashlib
 import random
-import re
 from typing import Callable
 
+from docProcessing.corruption_plan import (
+    CorruptionMode,
+    DocumentCorruptionPlan,
+    apply_span_edit,
+    pick_span_edit,
+    resolve_corruption_plan,
+)
 from docProcessing.models import Clause, SoTBundle, SoTCandidate
 
 CORRUPTION_LABELS: dict[str, str] = {
@@ -18,75 +24,6 @@ CORRUPTION_LABELS: dict[str, str] = {
 }
 
 DEFAULT_CORRUPTIONS = list(CORRUPTION_LABELS.keys())
-
-SUBSTITUTIONS: list[tuple[str, str]] = [
-    ("$1,000,000", "$500,000"),
-    ("$1,000,000", "$750,000"),
-    ("$1M", "$500K"),
-    ("$1M", "$750K"),
-    ("$500,000", "$250,000"),
-    ("$500,000", "$750,000"),
-    (" thirty (30) ", " fifteen (15) "),
-    (" thirty (30) ", " forty-five (45) "),
-    (" sixty (60) ", " thirty (30) "),
-    (" sixty (60) ", " forty-five (45) "),
-    (" ninety (90) ", " forty-five (45) "),
-    (" ninety (90) ", " one hundred twenty (120) "),
-    ("12 months", "6 months"),
-    ("12 months", "18 months"),
-    ("24 months", "12 months"),
-    ("24 months", "36 months"),
-    ("30 days", "15 days"),
-    ("30 days", "45 days"),
-    ("60 days", "30 days"),
-    ("60 days", "90 days"),
-    ("binding arbitration", "non-binding mediation"),
-    ("exclusive jurisdiction", "non-exclusive jurisdiction"),
-    ("shall not disclose", "may disclose"),
-    ("without limitation", "subject to the limitations set forth herein"),
-]
-
-NUMERIC_FACTORS: tuple[float, ...] = (0.5, 0.75, 1.25, 1.5, 2.0)
-
-TEXT_SUFFIXES: tuple[str, ...] = (
-    " [REVISED]",
-    " (as amended)",
-    " — see Schedule A",
-)
-
-FAKE_CLAUSE_TEMPLATES: list[str] = [
-    (
-        "Miscellaneous. The parties agree that any dispute arising under this Agreement "
-        "shall be resolved through binding arbitration in accordance with the rules of "
-        "the American Arbitration Association. The prevailing party shall be entitled to "
-        "recover reasonable attorneys' fees and costs."
-    ),
-    (
-        "Force Majeure. Neither party shall be liable for any failure or delay in "
-        "performance due to causes beyond its reasonable control, including acts of God, "
-        "war, terrorism, or government action, for a period of ninety (90) days."
-    ),
-    (
-        "Audit Rights. The customer may audit the vendor's records once per calendar year "
-        "upon thirty (30) days written notice, during normal business hours, subject to "
-        "confidentiality obligations."
-    ),
-    (
-        "Assignment. Neither party may assign this Agreement without the prior written "
-        "consent of the other party, except in connection with a merger or sale of "
-        "substantially all of its assets."
-    ),
-    (
-        "Notices. All notices under this Agreement shall be in writing and delivered "
-        "by certified mail, overnight courier, or email to the addresses set forth on "
-        "the signature page."
-    ),
-    (
-        "Survival. The provisions of Sections relating to confidentiality, indemnification, "
-        "limitation of liability, and governing law shall survive termination or expiration "
-        "of this Agreement."
-    ),
-]
 
 
 def _format_clause_id(index: int) -> str:
@@ -171,33 +108,26 @@ def _corruption_rng(seed: int, corruption: str) -> random.Random:
     return random.Random(int.from_bytes(digest[:4], "big"))
 
 
-def _target_index(clauses: list[Clause], document_type: str, rng: random.Random) -> int:
+def _clause_index_by_id(clauses: list[Clause], clause_id: str) -> int | None:
+    for i, clause in enumerate(clauses):
+        if clause.id == clause_id:
+            return i
+    return None
+
+
+def _target_index(
+    clauses: list[Clause],
+    document_type: str,
+    rng: random.Random,
+    plan: DocumentCorruptionPlan,
+) -> int:
+    if plan.missing_clause_ids:
+        for clause_id in plan.missing_clause_ids:
+            idx = _clause_index_by_id(clauses, clause_id)
+            if idx is not None:
+                return idx
     finder = CORRUPTION_TARGETS.get(document_type, _find_liability_clause_indices)
     return rng.choice(finder(clauses))
-
-
-def _apply_substitution(text: str, rng: random.Random) -> str:
-    applicable = [pair for pair in SUBSTITUTIONS if pair[0] in text]
-    if applicable:
-        old, new = rng.choice(applicable)
-        return text.replace(old, new, 1)
-
-    numbers = list(re.finditer(r"\$[\d,]+(?:\.\d+)?|\b\d+\b", text))
-    if numbers:
-        match = rng.choice(numbers)
-        old_val = match.group()
-        factor = rng.choice(NUMERIC_FACTORS)
-        if old_val.startswith("$"):
-            digits = re.sub(r"[^\d]", "", old_val)
-            if digits:
-                new_num = str(max(1, int(int(digits) * factor)))
-                new_val = f"${int(new_num):,}" if "," in old_val else f"${new_num}"
-                return text[: match.start()] + new_val + text[match.end() :]
-        else:
-            new_val = str(max(1, int(int(old_val) * factor)))
-            return text[: match.start()] + new_val + text[match.end() :]
-
-    return text + rng.choice(TEXT_SUFFIXES)
 
 
 def corrupt_missing_clause(
@@ -205,11 +135,12 @@ def corrupt_missing_clause(
     rng: random.Random,
     *,
     document_type: str = "msa",
+    plan: DocumentCorruptionPlan,
 ) -> list[Clause]:
     if len(clauses) <= 1:
         return _renumber_sequential(clauses[:0])
 
-    idx = _target_index(clauses, document_type, rng)
+    idx = _target_index(clauses, document_type, rng, plan)
     remaining = [c for i, c in enumerate(clauses) if i != idx]
     return _renumber_sequential(remaining)
 
@@ -219,39 +150,54 @@ def corrupt_altered_text(
     rng: random.Random,
     *,
     document_type: str = "msa",
+    plan: DocumentCorruptionPlan,
 ) -> list[Clause]:
-    idx = _target_index(clauses, document_type)
+    edit = pick_span_edit(plan, clauses, rng)
+    if edit is not None:
+        return apply_span_edit(clauses, edit)
+
+    idx = _target_index(clauses, document_type, rng, plan)
     result = copy.deepcopy(clauses)
     result[idx] = Clause(
         id=result[idx].id,
-        text=_apply_substitution(result[idx].text, rng),
+        text=result[idx].text + " (as amended)",
         start_offset=result[idx].start_offset,
         end_offset=result[idx].end_offset,
     )
     return result
 
 
-def corrupt_extra_clause(clauses: list[Clause], rng: random.Random) -> list[Clause]:
+def corrupt_extra_clause(
+    clauses: list[Clause],
+    rng: random.Random,
+    *,
+    plan: DocumentCorruptionPlan,
+) -> list[Clause]:
     result = copy.deepcopy(clauses)
-    next_id = _format_clause_id(len(result) + 1)
-    last_end = result[-1].end_offset if result else 0
-    fake_text = rng.choice(FAKE_CLAUSE_TEMPLATES)
-    result.append(
-        Clause(
-            id=next_id,
-            text=fake_text,
-            start_offset=last_end,
-            end_offset=last_end + len(fake_text),
-        )
+    spec = plan.extra_clause
+    if spec is None:
+        insert_at = rng.randint(0, len(result))
+        fake_text = "Miscellaneous. The parties agree to amend this Agreement upon mutual consent."
+    else:
+        insert_at = min(spec.insert_index, len(result))
+        fake_text = spec.text
+
+    prev_end = result[insert_at - 1].end_offset if insert_at > 0 else 0
+    next_start = result[insert_at].start_offset if insert_at < len(result) else prev_end
+    fake_clause = Clause(
+        id=_format_clause_id(insert_at + 1),
+        text=fake_text,
+        start_offset=prev_end,
+        end_offset=next_start if next_start > prev_end else prev_end + len(fake_text),
     )
-    return result
+    result.insert(insert_at, fake_clause)
+    return _renumber_sequential(result)
 
 
 def corrupt_reordered(clauses: list[Clause], rng: random.Random) -> list[Clause]:
     texts = [c.text for c in clauses]
     indices = list(range(len(clauses)))
     rng.shuffle(indices)
-    # Ensure order actually changes when possible
     if len(clauses) > 1 and indices == list(range(len(clauses))):
         indices[0], indices[1] = indices[1], indices[0]
 
@@ -284,10 +230,20 @@ def build_bundle(
     seed: int = 42,
     corruptions: list[str] | None = None,
     document_type: str = "msa",
+    *,
+    corruption_mode: CorruptionMode = "local",
+    use_corruption_cache: bool = True,
 ) -> SoTBundle:
-    """Build an SoT bundle with signed_contract plus deterministic decoy candidates."""
+    """Build an SoT bundle with signed_contract plus seeded decoy candidates."""
     active_corruptions = corruptions if corruptions is not None else DEFAULT_CORRUPTIONS
     canonical = copy.deepcopy(clauses)
+    plan = resolve_corruption_plan(
+        canonical,
+        document_id,
+        seed,
+        mode=corruption_mode,
+        use_cache=use_corruption_cache,
+    )
 
     signed = SoTCandidate(
         label="signed_contract",
@@ -302,14 +258,18 @@ def build_bundle(
         if corruption not in CORRUPTION_HANDLERS:
             raise ValueError(f"Unknown corruption type: {corruption}")
         handler = CORRUPTION_HANDLERS[corruption]
-        if corruption in ("missing_clause", "altered_text"):
+        rng = _corruption_rng(seed, corruption)
+        if corruption == "reordered":
+            corrupted_clauses = handler(canonical, rng)
+        elif corruption in ("missing_clause", "altered_text"):
             corrupted_clauses = handler(
                 canonical,
-                random.Random(seed),
+                rng,
                 document_type=document_type,
+                plan=plan,
             )
         else:
-            corrupted_clauses = handler(canonical, random.Random(seed))
+            corrupted_clauses = handler(canonical, rng, plan=plan)
         candidates.append(
             SoTCandidate(
                 label=CORRUPTION_LABELS[corruption],

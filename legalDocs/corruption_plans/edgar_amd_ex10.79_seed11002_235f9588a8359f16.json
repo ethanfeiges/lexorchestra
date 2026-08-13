@@ -1,0 +1,289 @@
+{
+  "document_id": "edgar_amd_ex10.79",
+  "seed": 11002,
+  "content_hash": "235f9588a8359f16",
+  "mode": "local",
+  "span_edits": [
+    {
+      "clause_id": "c-028",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-008",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-027",
+      "category": "jurisdiction",
+      "original": "Texas",
+      "replacement": "laws of any jurisdiction other than those of the State of California"
+    },
+    {
+      "clause_id": "c-035",
+      "category": "obligation",
+      "original": "will not",
+      "replacement": "will"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-034",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-030",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-026",
+      "category": "jurisdiction",
+      "original": "laws of the State of California",
+      "replacement": "Texas"
+    },
+    {
+      "clause_id": "c-032",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-018",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-008",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-030",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-036",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-013",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-037",
+      "category": "obligation",
+      "original": "will not",
+      "replacement": "will"
+    },
+    {
+      "clause_id": "c-002",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-022",
+      "category": "obligation",
+      "original": "SHALL NOT",
+      "replacement": "May"
+    },
+    {
+      "clause_id": "c-027",
+      "category": "jurisdiction",
+      "original": "California",
+      "replacement": "laws of any jurisdiction other than those of the State of California"
+    },
+    {
+      "clause_id": "c-021",
+      "category": "obligation",
+      "original": "SHALL",
+      "replacement": "May"
+    },
+    {
+      "clause_id": "c-015",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-007",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-003",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-026",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-028",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-020",
+      "category": "obligation",
+      "original": "SHALL",
+      "replacement": "May"
+    },
+    {
+      "clause_id": "c-011",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-009",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-029",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-032",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-033",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-007",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-023",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-026",
+      "category": "jurisdiction",
+      "original": "California",
+      "replacement": "Texas"
+    },
+    {
+      "clause_id": "c-026",
+      "category": "jurisdiction",
+      "original": "laws of any jurisdiction other than those of the State of California",
+      "replacement": "California"
+    },
+    {
+      "clause_id": "c-029",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-027",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-025",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-031",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    }
+  ],
+  "missing_clause_ids": [
+    "c-029",
+    "c-006",
+    "c-026",
+    "c-036",
+    "c-023",
+    "c-017",
+    "c-032",
+    "c-035",
+    "c-033",
+    "c-015",
+    "c-030",
+    "c-005",
+    "c-007",
+    "c-022",
+    "c-024",
+    "c-002",
+    "c-008",
+    "c-034",
+    "c-031",
+    "c-028",
+    "c-009",
+    "c-016",
+    "c-018",
+    "c-025",
+    "c-020",
+    "c-011",
+    "c-012",
+    "c-027",
+    "c-014",
+    "c-010",
+    "c-003",
+    "c-019",
+    "c-004",
+    "c-021",
+    "c-013"
+  ],
+  "extra_clause": {
+    "text": "Confidentiality. The parties agree that any amendment to this section requires written consent and thirty (30) days prior notice to the other party's authorized representative.",
+    "insert_index": 17
+  }
+}

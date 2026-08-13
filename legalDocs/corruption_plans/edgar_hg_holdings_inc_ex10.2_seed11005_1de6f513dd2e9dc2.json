@@ -1,0 +1,277 @@
+{
+  "document_id": "edgar_hg_holdings_inc_ex10.2",
+  "seed": 11005,
+  "content_hash": "1de6f513dd2e9dc2",
+  "mode": "local",
+  "span_edits": [
+    {
+      "clause_id": "c-027",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-001",
+      "category": "date",
+      "original": "December 31, 2024",
+      "replacement": "December 31, 2023"
+    },
+    {
+      "clause_id": "c-022",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-007",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-003",
+      "category": "money",
+      "original": "$12,000",
+      "replacement": "$18,000"
+    },
+    {
+      "clause_id": "c-005",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-010",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-021",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-005",
+      "category": "obligation",
+      "original": "will not",
+      "replacement": "will"
+    },
+    {
+      "clause_id": "c-023",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-028",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-031",
+      "category": "obligation",
+      "original": "may not",
+      "replacement": "shall"
+    },
+    {
+      "clause_id": "c-030",
+      "category": "jurisdiction",
+      "original": "laws of the State of North Carolina without reference to its conflict of law provisions",
+      "replacement": "laws of the State of North Carolina"
+    },
+    {
+      "clause_id": "c-012",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-013",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-001",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-015",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-018",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-018",
+      "category": "jurisdiction",
+      "original": "laws of the State of North Carolina",
+      "replacement": "laws of the State of North Carolina without reference to its conflict of law provisions"
+    },
+    {
+      "clause_id": "c-028",
+      "category": "duration",
+      "original": "five (5) years",
+      "replacement": "10 days"
+    },
+    {
+      "clause_id": "c-027",
+      "category": "duration",
+      "original": "10 days",
+      "replacement": "thirty (30) days"
+    },
+    {
+      "clause_id": "c-020",
+      "category": "date",
+      "original": "June 1, 2024",
+      "replacement": "June 1, 2026"
+    },
+    {
+      "clause_id": "c-020",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-008",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-031",
+      "category": "date",
+      "original": "June 3, 2024",
+      "replacement": "June 3, 2025"
+    },
+    {
+      "clause_id": "c-030",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-009",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-029",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-031",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-024",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-009",
+      "category": "duration",
+      "original": "thirty (30) days",
+      "replacement": "five (5) years"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-019",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-002",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-022",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "obligation",
+      "original": "must",
+      "replacement": "may"
+    }
+  ],
+  "missing_clause_ids": [
+    "c-016",
+    "c-007",
+    "c-005",
+    "c-013",
+    "c-019",
+    "c-029",
+    "c-025",
+    "c-018",
+    "c-017",
+    "c-009",
+    "c-030",
+    "c-028",
+    "c-026",
+    "c-008",
+    "c-027",
+    "c-024",
+    "c-012",
+    "c-014",
+    "c-022",
+    "c-023",
+    "c-002",
+    "c-011",
+    "c-021",
+    "c-010",
+    "c-006",
+    "c-020",
+    "c-004",
+    "c-015",
+    "c-003"
+  ],
+  "extra_clause": {
+    "text": "Audit Rights. Notwithstanding any other provision, obligations under this section survive termination for five (5) years following the effective date of termination.",
+    "insert_index": 18
+  }
+}

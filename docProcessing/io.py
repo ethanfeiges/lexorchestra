@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 
 from docProcessing.bundle import build_bundle
+from docProcessing.corruption_plan import CorruptionMode
 from docProcessing.models import SoTBundle
 from docProcessing.parser import parse_document
 
@@ -28,6 +29,9 @@ def build_bundle_from_file(
     seed: int = 42,
     corruptions: list[str] | None = None,
     document_type: str | None = None,
+    *,
+    corruption_mode: CorruptionMode = "local",
+    use_corruption_cache: bool = True,
 ) -> SoTBundle:
     """Parse a contract file and build an SoT bundle. Primary entry point."""
     clauses = parse_document(path)
@@ -46,4 +50,6 @@ def build_bundle_from_file(
         seed=seed,
         corruptions=corruptions,
         document_type=document_type,
+        corruption_mode=corruption_mode,
+        use_corruption_cache=use_corruption_cache,
     )

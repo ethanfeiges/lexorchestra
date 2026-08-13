@@ -32,8 +32,8 @@ We test whether a canonical Source-of-Truth (SoT) store plus quote-level verific
 
 ## Confounds
 
-- **Seed-dependent decoy sampling.** Different seeds pick different decoy subsets and shuffles.
-- **Decoy severity varies.** Some decoys (`outdated_wrong_terms`) alter key substrings; others share clause IDs but wrong text.
+- **Seed-dependent decoy sampling.** Different seeds pick different decoy subsets, shuffles, and corruption-plan edits.
+- **Decoy severity varies.** `outdated_wrong_terms` alters document-specific spans (amounts, durations, obligations from that filing); other decoys omit clauses, reorder IDs, or insert extra sections.
 - **Strategy interaction.** `parallel_grounded` runs two subtasks; failures compound differently than `single`.
 - **API quota and token limits.** Large MSAs (Chime) may hit Gemini rate limits.
 

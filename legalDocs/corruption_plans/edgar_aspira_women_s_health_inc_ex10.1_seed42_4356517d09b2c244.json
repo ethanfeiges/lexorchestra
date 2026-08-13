@@ -1,0 +1,404 @@
+{
+  "document_id": "edgar_aspira_women_s_health_inc_ex10.1",
+  "seed": 42,
+  "content_hash": "4356517d09b2c244",
+  "mode": "local",
+  "span_edits": [
+    {
+      "clause_id": "c-001",
+      "category": "date",
+      "original": "September 2, 2025",
+      "replacement": "September 2, 2023"
+    },
+    {
+      "clause_id": "c-022",
+      "category": "duration",
+      "original": "ten (10) days",
+      "replacement": "ten (10)\ndays"
+    },
+    {
+      "clause_id": "c-007",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-002",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-014",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-017",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-010",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-022",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "percentage",
+      "original": "1.0% ",
+      "replacement": "3.0% "
+    },
+    {
+      "clause_id": "c-006",
+      "category": "percentage",
+      "original": "12% ",
+      "replacement": "19% "
+    },
+    {
+      "clause_id": "c-015",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "duration",
+      "original": "six (6) month",
+      "replacement": "ten (10)\ndays"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "duration",
+      "original": "three (3) months",
+      "replacement": "ten (10) days"
+    },
+    {
+      "clause_id": "c-022",
+      "category": "duration",
+      "original": "five (45) days",
+      "replacement": "twelve (12) months"
+    },
+    {
+      "clause_id": "c-007",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-013",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-018",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-005",
+      "category": "duration",
+      "original": "15 days",
+      "replacement": "three (3) months"
+    },
+    {
+      "clause_id": "c-021",
+      "category": "obligation",
+      "original": "SHALL",
+      "replacement": "May"
+    },
+    {
+      "clause_id": "c-012",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "duration",
+      "original": "sixty (60) days",
+      "replacement": "thirty (30) days"
+    },
+    {
+      "clause_id": "c-005",
+      "category": "percentage",
+      "original": "100%",
+      "replacement": "102%"
+    },
+    {
+      "clause_id": "c-008",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "duration",
+      "original": "six (6) months",
+      "replacement": "twelve (12) months"
+    },
+    {
+      "clause_id": "c-016",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-003",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-014",
+      "category": "jurisdiction",
+      "original": "Texas",
+      "replacement": "LAWS OF THE STATE OF TEXAS"
+    },
+    {
+      "clause_id": "c-013",
+      "category": "obligation",
+      "original": "will not",
+      "replacement": "will"
+    },
+    {
+      "clause_id": "c-024",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-009",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-011",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "duration",
+      "original": "twelve (12) month",
+      "replacement": "one (1) year"
+    },
+    {
+      "clause_id": "c-026",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-003",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "duration",
+      "original": "six (6)\nmonths",
+      "replacement": "five (45) days"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "duration",
+      "original": "thirty (30) days",
+      "replacement": "ten (10)\ndays"
+    },
+    {
+      "clause_id": "c-005",
+      "category": "duration",
+      "original": "30 days",
+      "replacement": "thirty (30) days"
+    },
+    {
+      "clause_id": "c-010",
+      "category": "obligation",
+      "original": "will not",
+      "replacement": "will"
+    },
+    {
+      "clause_id": "c-020",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-019",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "duration",
+      "original": "thirty day",
+      "replacement": "six (6)\nmonths"
+    },
+    {
+      "clause_id": "c-010",
+      "category": "duration",
+      "original": "two years",
+      "replacement": "sixty (60) days"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "obligation",
+      "original": "will not",
+      "replacement": "will"
+    },
+    {
+      "clause_id": "c-003",
+      "category": "duration",
+      "original": "ten (10)\ndays",
+      "replacement": "one (1) year"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-012",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-021",
+      "category": "jurisdiction",
+      "original": "LAWS OF THE STATE OF TEXAS",
+      "replacement": "Texas"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "duration",
+      "original": "five (5) days",
+      "replacement": "two years"
+    },
+    {
+      "clause_id": "c-020",
+      "category": "obligation",
+      "original": "shall not",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "duration",
+      "original": "fifteen (15) days",
+      "replacement": "ten (10) days"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "duration",
+      "original": "one (1) year",
+      "replacement": "sixty days"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "duration",
+      "original": "thirty (30) days",
+      "replacement": "six (6)\nmonths"
+    },
+    {
+      "clause_id": "c-024",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-017",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "duration",
+      "original": "sixty days",
+      "replacement": "five (5) days"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "duration",
+      "original": "twelve (12) months",
+      "replacement": "thirty day"
+    },
+    {
+      "clause_id": "c-004",
+      "category": "obligation",
+      "original": "will not",
+      "replacement": "will"
+    },
+    {
+      "clause_id": "c-005",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-006",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    },
+    {
+      "clause_id": "c-015",
+      "category": "obligation",
+      "original": "shall",
+      "replacement": "may"
+    }
+  ],
+  "missing_clause_ids": [
+    "c-002",
+    "c-007",
+    "c-016",
+    "c-020",
+    "c-011",
+    "c-013",
+    "c-023",
+    "c-006",
+    "c-019",
+    "c-021",
+    "c-015",
+    "c-018",
+    "c-024",
+    "c-017",
+    "c-005",
+    "c-022",
+    "c-008",
+    "c-004",
+    "c-010",
+    "c-014",
+    "c-012",
+    "c-025",
+    "c-009",
+    "c-003"
+  ],
+  "extra_clause": {
+    "text": "Payment Terms. The parties agree that any amendment to this section requires written consent and 30 days prior notice to the other party's authorized representative.",
+    "insert_index": 7
+  }
+}

@@ -11,3 +11,5 @@ python -m benchmark.run_experiment --provider gemini --model gemini-flash-latest
 ```
 
 If the API quota is exhausted mid-run, the runner saves completed rows incrementally and sets `manifest.json` status to `partial`. Re-run when quota resets to fill remaining cells.
+
+**Current committed baseline (2026-08-12):** `partial` — 1/10 default-matrix runs saved (Edgemode MSA, clean: 100% grounding, 67% task accuracy). Test suite: 92 passed, 1 skipped.
