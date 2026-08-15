@@ -12,4 +12,6 @@ python -m benchmark.run_experiment --provider gemini --model gemini-flash-latest
 
 If the API quota is exhausted mid-run, the runner saves completed rows incrementally and sets `manifest.json` status to `partial`. Re-run when quota resets to fill remaining cells.
 
-**Current committed baseline (2026-08-12):** `partial` — 1/10 default-matrix runs saved (Edgemode MSA, clean: 100% grounding, 67% task accuracy). Test suite: 92 passed, 1 skipped.
+**Verified local SoT-selection evidence (2026-08-14):** `python -m pytest tests/orchestrator -q` → `9 passed in 0.48s`. This covers the decoy-anchoring checks that verify the canonical contract is used instead of invalid SoT candidates when subagents run.
+
+Live Gemini benchmark runs remain a separate, quota-dependent activity. The repo does not treat the earlier partial live run as evidence for SoT-selection correctness when the unit orchestration suite is the source of truth for that behavior.

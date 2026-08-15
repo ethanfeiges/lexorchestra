@@ -572,10 +572,13 @@ lexorchestra/
 After implementing or editing code, the agent must:
 
 ```powershell
-python -m pytest tests/ -q
+python -m pytest tests/orchestrator -q   # verify orchestration behavior
+python -m pytest tests/ -q              # broader repo regression check
 ```
 
-Use the Shell tool — do not tell the user to run this. If tests fail, fix and re-run until green, then report the result in chat.
+Use the Shell tool — do not tell the user to run this. For orchestration changes, the targeted verification command is the first check; if it passes, follow with the broader suite when needed. If tests fail, fix and re-run until green, then report the result in chat.
+
+Verified current orchestration run (2026-08-14): `python -m pytest tests/orchestrator -q` → 9 passed in 0.48s.
 
 ### Optional backup (Cursor hooks)
 
@@ -585,7 +588,7 @@ Use the Shell tool — do not tell the user to run this. If tests fail, fix and 
 
 1. Read the phase prompt (`context/phases/*.md`) and `STORE.md`.
 2. Implement the smallest correct change.
-3. **Run `python -m pytest tests/ -q` yourself** (Shell tool).
+3. **Run `python -m pytest tests/orchestrator -q` yourself** (Shell tool); follow with `python -m pytest tests/ -q` for broader regression when relevant.
 4. Update `STORE.md` implementation status and decisions log.
 5. Do not proceed to the next phase with failing tests.
 

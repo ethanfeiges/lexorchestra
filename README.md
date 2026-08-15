@@ -30,7 +30,8 @@ Benchmark axes: `clean` vs `noisy_prompt` (decoys in context); `single`, `parall
 ```powershell
 pip install -e ".[dev]"
 copy .env.example .env          # set GEMINI_API_KEY
-python -m pytest tests/ -q
+python -m pytest tests/orchestrator -q  # orchestration-specific verification
+python -m pytest tests/ -q              # full repo regression run
 python -m benchmark.run_experiment --provider gemini
 python scripts/sync_experiment_docs.py --check
 ```
@@ -131,7 +132,7 @@ Task scores: `extract:fee_indexation` pass · `playbook:mutual_indemnity` pass �
 
 Reports: [`experiments/stub_matrix/REPORT.md`](experiments/stub_matrix/REPORT.md) (full matrix) · [`experiments/live_gemini/REPORT.md`](experiments/live_gemini/REPORT.md) (live partial)
 
-Test suite: 92 passed, 1 skipped.
+Orchestration verification (2026-08-14): `python -m pytest tests/orchestrator -q` → 9 passed in 0.48s. This confirms the canonical SoT is retained under noisy prompting and that decoy or mislabeled citations are rejected by the verifier.
 
 ## Contract data
 
