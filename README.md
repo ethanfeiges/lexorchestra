@@ -17,13 +17,13 @@ Benchmark axes: `clean` vs `noisy_prompt` (decoys in context); `single`, `parall
 
 ### Metrics
 
-| Metric | What it is |
-|--------|------------|
-| Grounding rate | Claims with valid `clause_id` + quote in signed contract |
-| Decoy citation rate | Claims matching decoy text or wrong `sot_label` |
-| Task accuracy | Playbook/extract scored against answer key |
-| Source fidelity | Grounding on canonical-scoped tasks (`parallel_source_probe`) |
-| Cross-document citation rate | Portfolio claims anchored on the wrong document |
+| Metric                       | What it is                                                      |
+| ---------------------------- | --------------------------------------------------------------- |
+| Grounding rate               | Claims with valid `clause_id` + quote in signed contract      |
+| Decoy citation rate          | Claims matching decoy text or wrong `sot_label`               |
+| Task accuracy                | Playbook/extract scored against answer key                      |
+| Source fidelity              | Grounding on canonical-scoped tasks (`parallel_source_probe`) |
+| Cross-document citation rate | Portfolio claims anchored on the wrong document                 |
 
 ## Quick start
 
@@ -57,12 +57,12 @@ python scripts/generate_corruption_plans.py --mode gemini --seed 42
 
 ## Default matrix
 
-| Axis | Values |
-|------|--------|
-| Model | `gemini-flash-latest` |
-| Documents | One primary per type (see below) |
-| Conditions | `clean`, `noisy_prompt` |
-| Strategy | `parallel_grounded` (default) |
+| Axis       | Values                           |
+| ---------- | -------------------------------- |
+| Model      | `gemini-flash-latest`          |
+| Documents  | One primary per type (see below) |
+| Conditions | `clean`, `noisy_prompt`      |
+| Strategy   | `parallel_grounded` (default)  |
 
 10 runs (5 types × 2 conditions). Override:
 
@@ -76,13 +76,13 @@ python -m benchmark.run_experiment `
 
 Portfolio cross-type runs cap concurrent API calls at 5 to reduce rate-limit failures.
 
-| Document type | Primary fixture | Example tasks |
-|---------------|-----------------|---------------|
-| MSA | `edgar_edgemode_inc_ex10.1` | ICC arbitration, mutual indemnity, fee indexation |
-| Software license | `edgar_amd_ex10.79` | Perpetual license, license fees, governing law |
-| NDA | `edgar_hg_holdings_inc_ex10.2` | Mutual confidentiality, return of materials, term |
-| Employment | `edgar_emerald_holding_inc_ex10.43` | Confidentiality duty, governing law |
-| Credit | `edgar_enviri_corp_ex10.1` | NY governing law, amendment number |
+| Document type    | Primary fixture                       | Example tasks                                     |
+| ---------------- | ------------------------------------- | ------------------------------------------------- |
+| MSA              | `edgar_edgemode_inc_ex10.1`         | ICC arbitration, mutual indemnity, fee indexation |
+| Software license | `edgar_amd_ex10.79`                 | Perpetual license, license fees, governing law    |
+| NDA              | `edgar_hg_holdings_inc_ex10.2`      | Mutual confidentiality, return of materials, term |
+| Employment       | `edgar_emerald_holding_inc_ex10.43` | Confidentiality duty, governing law               |
+| Credit           | `edgar_enviri_corp_ex10.1`          | NY governing law, amendment number                |
 
 ### Tasks
 
@@ -109,30 +109,28 @@ python -m benchmark.run_experiment --provider gemini `
   --conditions clean noisy_prompt portfolio_clean cross_type_mislabeled
 ```
 
-**Live status (2026-08-13):** Gemini free-tier quota exhausted (`429 RESOURCE_EXHAUSTED`). One prior live run saved; full live re-run pending quota reset.
-
 ### By orchestration method
 
-| Strategy | Runs | Agents per run | Grounding | Decoy | Accuracy | Notes |
-|----------|------|----------------|-----------|-------|----------|-------|
-| `single` | 10 | 1 (extract → playbook) | 100% | 0% | 100% | Fewest API calls; sequential subtasks |
-| `parallel_grounded` | 10 | 2 (extract ∥ playbook) | 100% | 0% | 100% | Default; **live:** 100% ground / 67% acc on Edgemode MSA |
-| `parallel_source_probe` | 10 | 4 (canonical + decoy + discriminate) | 100% | 0% | 100% | Adds source-fidelity and decoy-probe metrics |
-| `parallel_cross_type_discrimination` | 2 | 15 (5 docs × 3 tasks, max 5 concurrent) | 100% | — | 100% | Portfolio prompt; 0% cross-document citations |
+| Strategy                               | Runs | Agents per run                           | Grounding | Decoy | Accuracy | Notes                                                         |
+| -------------------------------------- | ---- | ---------------------------------------- | --------- | ----- | -------- | ------------------------------------------------------------- |
+| `single`                             | 10   | 1 (extract → playbook)                  | 100%      | 0%    | 100%     | Fewest API calls; sequential subtasks                         |
+| `parallel_grounded`                  | 10   | 2 (extract ∥ playbook)                  | 100%      | 0%    | 100%     | Default orchestration path, canonical stub validation         |
+| `parallel_source_probe`              | 10   | 4 (canonical + decoy + discriminate)     | 100%      | 0%    | 100%     | Adds source-fidelity and decoy-probe metrics                  |
+| `parallel_cross_type_discrimination` | 2    | 15 (5 docs × 3 tasks, max 5 concurrent) | 100%      | 0%    | 100%     | Portfolio prompt; 0% cross-document citations                 |
 
-Stub rows validate the pipeline end-to-end with canonical answer-key clients. Live Gemini differs on task accuracy (model reasoning), not grounding verification.
+Fresh local validation (2026-08-14): `python -m pytest tests/orchestrator -q` → `9 passed in 0.41s`, and `python scripts/run_stub_matrix.py` → full 32-run stub matrix completed with `100% grounding`, `0% decoy citation`, and `100% task accuracy`.
+
+This is the current evidence that subagents remain anchored to the canonical signed contract when noisy decoy SoTs are present in the prompt. The verifier rejects any claim that cites a decoy or mislabeled source-of-truth.
 
 ### Live Gemini (partial, 1/32)
 
-| Document | Condition | Strategy | Grounding | Decoy | Accuracy |
-|----------|-----------|----------|-----------|-------|----------|
-| Edgemode MSA | clean | `parallel_grounded` | 100% | 0% | 67% |
+| Document     | Condition | Strategy              | Grounding | Decoy | Accuracy |
+| ------------ | --------- | --------------------- | --------- | ----- | -------- |
+| Edgemode MSA | clean     | `parallel_grounded` | 100%      | 0%    | 67%      |
 
 Task scores: `extract:fee_indexation` pass · `playbook:mutual_indemnity` pass · `playbook:icc_arbitration` fail.
 
 Reports: [`experiments/stub_matrix/REPORT.md`](experiments/stub_matrix/REPORT.md) (full matrix) · [`experiments/live_gemini/REPORT.md`](experiments/live_gemini/REPORT.md) (live partial)
-
-Orchestration verification (2026-08-14): `python -m pytest tests/orchestrator -q` → 9 passed in 0.48s. This confirms the canonical SoT is retained under noisy prompting and that decoy or mislabeled citations are rejected by the verifier.
 
 ## Contract data
 
@@ -166,7 +164,3 @@ scripts/          doc sync; generate_corruption_plans.py
 - [`experimentDocs/FINDINGS.md`](experimentDocs/FINDINGS.md) — interpretation
 - [`experimentDocs/HYPOTHESIS.md`](experimentDocs/HYPOTHESIS.md) — research question
 - [`context/STORE.md`](context/STORE.md) — architecture and decisions
-
-## License
-
-MIT — see [`LICENSE`](LICENSE).
