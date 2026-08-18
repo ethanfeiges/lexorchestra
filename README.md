@@ -8,34 +8,8 @@ Parallel Gemini subtasks on real SEC EDGAR contracts across five document types.
 
 1. **Parse** — real SEC EX-10 filings → clause store with stable IDs (`c-012`, etc.). This canonical parse is ground truth.
 2. **Bundle** — build a prompt with `signed_contract` (exact canonical copy) plus document-specific decoys from a seeded corruption plan.
-3. **Orchestrate** — extract and playbook tasks run in parallel (or other strategies below); output is structured JSON claims, not free text.
+3. **Orchestrate** — factual lookup (extract) and rule-evlauation (playbook) tasks run in parallel (or other strategies below); output is structured JSON claims, not free text.
 4. **Verify** — every claim checked against the canonical store. Decoy quotes fail even if they look right. Task accuracy scored against answer keys in `benchmark/answers/`.
-
-### What the task types mean
-
-#### `extract`
-
-This is the factual lookup task. The model answers a concrete question about the contract, such as:
-
-- "What governing law applies?"
-- "What is the initial term?"
-- "What is the liability cap?"
-
-The expected output is a single grounded claim backed by a clause ID and a direct quote from the canonical signed contract.
-
-#### `playbook`
-
-This is the rule-evaluation task. The model checks whether the contract satisfies a business policy, for example:
-
-- "Is arbitration mandatory?"
-- "Does the agreement grant a perpetual license?"
-- "Is there a mutual indemnity obligation?"
-
-The output is a `pass` or `fail` verdict for each rule, with a justification tied to the canonical clause.
-
-Truth is fixed before any LLM call. The model never votes on which document version is authoritative.
-
-Benchmark axes: `clean` vs `noisy_prompt` (decoys in context); `single`, `parallel_grounded`, `parallel_source_probe`, or `parallel_cross_type_discrimination` (scheduling and source routing). Verifier and answer keys stay fixed.
 
 ### Metrics
 
@@ -46,55 +20,6 @@ Benchmark axes: `clean` vs `noisy_prompt` (decoys in context); `single`, `parall
 | Task accuracy                | Playbook/extract scored against answer key                      |
 | Source fidelity              | Grounding on canonical-scoped tasks (`parallel_source_probe`) |
 | Cross-document citation rate | Portfolio claims anchored on the wrong document                 |
-
-## Quick start
-
-```powershell
-pip install -e ".[dev]"
-copy .env.example .env          # set GEMINI_API_KEY
-python -m pytest tests/orchestrator -q  # orchestration-specific verification
-python -m pytest tests/ -q              # full repo regression run
-python -m benchmark.run_experiment --provider gemini
-python scripts/sync_experiment_docs.py --check
-```
-
-Tests run without API calls (corruption plans default to local mode). Results land in `experiments/live_gemini/` — `results.json`, `REPORT.md`, `manifest.json`.
-
-Smoke test on one document:
-
-```powershell
-python -m benchmark.run_experiment --provider gemini `
-  --documents edgar_edgemode_inc_ex10.1 --conditions clean
-```
-
-More flags: [`experimentDocs/EXPERIMENT.md`](experimentDocs/EXPERIMENT.md).
-
-### Optional: Gemini corruption plans
-
-Decoys come from per-document corruption plans (`docProcessing/corruption_plan.py`). Local mode uses regex extraction; Gemini mode generates harder edits and caches to `legalDocs/corruption_plans/`:
-
-```powershell
-python scripts/generate_corruption_plans.py --mode gemini --seed 42
-```
-
-## Default matrix
-
-| Axis       | Values                           |
-| ---------- | -------------------------------- |
-| Model      | `gemini-flash-latest`          |
-| Documents  | One primary per type (see below) |
-| Conditions | `clean`, `noisy_prompt`      |
-| Strategy   | `parallel_grounded` (default)  |
-
-10 runs (5 types × 2 conditions). Override:
-
-```powershell
-python -m benchmark.run_experiment `
-  --provider gemini `
-  --documents edgar_edgemode_inc_ex10.1 `
-  --conditions clean noisy_prompt `
-  --strategy parallel_source_probe
-```
 
 Portfolio cross-type runs cap concurrent API calls at 5 to reduce rate-limit failures.
 
