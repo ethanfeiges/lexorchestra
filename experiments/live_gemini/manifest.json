@@ -3,24 +3,19 @@
   "status": "partial",
   "provider": "gemini",
   "documents": [
-    "edgar_amd_ex10.79",
-    "edgar_edgemode_inc_ex10.1",
-    "edgar_emerald_holding_inc_ex10.43",
-    "edgar_enviri_corp_ex10.1",
-    "edgar_hg_holdings_inc_ex10.2"
+    "edgar_amd_ex10.79"
   ],
   "conditions": [
-    "clean",
-    "noisy_prompt"
+    "clean"
   ],
   "strategies": [
-    "parallel_grounded"
+    "single"
   ],
   "model": "gemini-flash-latest",
   "deterministic": true,
   "seeds": "DETERMINISTIC_SEEDS",
-  "generated": "2026-08-12T22:54:52.974000+00:00",
+  "generated": "2026-08-18T10:25:00Z",
   "completed_runs": 1,
   "expected_runs": 10,
-  "notes": "9/10 live runs completed in session; free-tier daily quota blocked final run and incremental save. Re-run: python -m benchmark.run_experiment --provider gemini"
+  "notes": "One successful live smoke run on edgar_amd_ex10.79; full live matrix remains incomplete."
 }

@@ -11,6 +11,28 @@ Parallel Gemini subtasks on real SEC EDGAR contracts across five document types.
 3. **Orchestrate** — extract and playbook tasks run in parallel (or other strategies below); output is structured JSON claims, not free text.
 4. **Verify** — every claim checked against the canonical store. Decoy quotes fail even if they look right. Task accuracy scored against answer keys in `benchmark/answers/`.
 
+### What the task types mean
+
+#### `extract`
+
+This is the factual lookup task. The model answers a concrete question about the contract, such as:
+
+- "What governing law applies?"
+- "What is the initial term?"
+- "What is the liability cap?"
+
+The expected output is a single grounded claim backed by a clause ID and a direct quote from the canonical signed contract.
+
+#### `playbook`
+
+This is the rule-evaluation task. The model checks whether the contract satisfies a business policy, for example:
+
+- "Is arbitration mandatory?"
+- "Does the agreement grant a perpetual license?"
+- "Is there a mutual indemnity obligation?"
+
+The output is a `pass` or `fail` verdict for each rule, with a justification tied to the canonical clause.
+
 Truth is fixed before any LLM call. The model never votes on which document version is authoritative.
 
 Benchmark axes: `clean` vs `noisy_prompt` (decoys in context); `single`, `parallel_grounded`, `parallel_source_probe`, or `parallel_cross_type_discrimination` (scheduling and source routing). Verifier and answer keys stay fixed.
@@ -122,15 +144,13 @@ Fresh local validation (2026-08-14): `python -m pytest tests/orchestrator -q` �
 
 This is the current evidence that subagents remain anchored to the canonical signed contract when noisy decoy SoTs are present in the prompt. The verifier rejects any claim that cites a decoy or mislabeled source-of-truth.
 
-### Live Gemini (partial, 1/32)
+### Live Gemini smoke result (partial live run)
 
-| Document     | Condition | Strategy              | Grounding | Decoy | Accuracy |
-| ------------ | --------- | --------------------- | --------- | ----- | -------- |
-| Edgemode MSA | clean     | `parallel_grounded` | 100%      | 0%    | 67%      |
+| Document              | Condition | Strategy   | Grounding | Decoy | Accuracy | Notes                                                                                                                 |
+| --------------------- | --------- | ---------- | --------: | ----: | -------: | --------------------------------------------------------------------------------------------------------------------- |
+| `edgar_amd_ex10.79` | `clean` | `single` |      100% |    0% |     100% | Successful live smoke run on 2026-08-18; task scores: `playbook:perpetual_license`, `playbook:license_fees`, `extract:governing_law` |
 
-Task scores: `extract:fee_indexation` pass · `playbook:mutual_indemnity` pass · `playbook:icc_arbitration` fail.
-
-Reports: [`experiments/stub_matrix/REPORT.md`](experiments/stub_matrix/REPORT.md) (full matrix) · [`experiments/live_gemini/REPORT.md`](experiments/live_gemini/REPORT.md) (live partial)
+Reports: [`experiments/stub_matrix/REPORT.md`](experiments/stub_matrix/REPORT.md) (full matrix) · [`experiments/live_gemini/REPORT.md`](experiments/live_gemini/REPORT.md) (partial live smoke report)
 
 ## Contract data
 
