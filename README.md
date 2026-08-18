@@ -69,22 +69,6 @@ Fresh local validation (2026-08-14): `python -m pytest tests/orchestrator -q` â†
 
 This is the current evidence that subagents remain anchored to the canonical signed contract when noisy decoy SoTs are present in the prompt. The verifier rejects any claim that cites a decoy or mislabeled source-of-truth.
 
-### Live Gemini smoke result (partial live run)
-
-| Document              | Condition | Strategy   | Grounding | Decoy | Accuracy | Notes                                                                                                                 |
-| --------------------- | --------- | ---------- | --------: | ----: | -------: | --------------------------------------------------------------------------------------------------------------------- |
-| `edgar_amd_ex10.79` | `clean` | `single` |      100% |    0% |     100% | Successful live smoke run on 2026-08-18; task scores: `playbook:perpetual_license`, `playbook:license_fees`, `extract:governing_law` |
-
-Reports: [`experiments/stub_matrix/REPORT.md`](experiments/stub_matrix/REPORT.md) (full matrix) Â· [`experiments/live_gemini/REPORT.md`](experiments/live_gemini/REPORT.md) (partial live smoke report)
-
-## Contract data
-
-Real contracts from SEC EDGAR EX-10 in [`legalDocs/contracts/public/`](legalDocs/contracts/public/). Decoys are corruptions of each parse, not separate synthetic docs. See [`context/phases/MULTI_TYPE.md`](context/phases/MULTI_TYPE.md) for the five-type design.
-
-```powershell
-python -m benchmark.fetch_contracts --limit 3
-```
-
 ## Layout
 
 ```
